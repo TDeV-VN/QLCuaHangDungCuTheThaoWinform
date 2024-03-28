@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btTabPageBaoCao = new System.Windows.Forms.Button();
+            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btTabPageKhachHang = new System.Windows.Forms.Button();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
@@ -55,10 +58,9 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelSportShop = new System.Windows.Forms.Panel();
             this.btSportShop = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btTabPageBaoCao = new System.Windows.Forms.Button();
-            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
@@ -74,8 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
             this.panelTongQuan1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,12 +92,50 @@
             this.panel1.Size = new System.Drawing.Size(267, 886);
             this.panel1.TabIndex = 0;
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btTabPageBaoCao);
+            this.panel10.Controls.Add(this.iconPictureBox5);
+            this.panel10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.panel10.Location = new System.Drawing.Point(0, 672);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(264, 70);
+            this.panel10.TabIndex = 6;
+            // 
+            // btTabPageBaoCao
+            // 
+            this.btTabPageBaoCao.FlatAppearance.BorderSize = 0;
+            this.btTabPageBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTabPageBaoCao.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btTabPageBaoCao.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btTabPageBaoCao.Location = new System.Drawing.Point(36, 9);
+            this.btTabPageBaoCao.Name = "btTabPageBaoCao";
+            this.btTabPageBaoCao.Size = new System.Drawing.Size(228, 58);
+            this.btTabPageBaoCao.TabIndex = 4;
+            this.btTabPageBaoCao.Text = "Báo cáo";
+            this.btTabPageBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTabPageBaoCao.UseVisualStyleBackColor = true;
+            // 
+            // iconPictureBox5
+            // 
+            this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.iconPictureBox5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
+            this.iconPictureBox5.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox5.IconSize = 41;
+            this.iconPictureBox5.Location = new System.Drawing.Point(0, 13);
+            this.iconPictureBox5.Name = "iconPictureBox5";
+            this.iconPictureBox5.Size = new System.Drawing.Size(41, 41);
+            this.iconPictureBox5.TabIndex = 4;
+            this.iconPictureBox5.TabStop = false;
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.btTabPageKhachHang);
             this.panel9.Controls.Add(this.iconPictureBox4);
             this.panel9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel9.Location = new System.Drawing.Point(0, 379);
+            this.panel9.Location = new System.Drawing.Point(0, 337);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(264, 70);
             this.panel9.TabIndex = 5;
@@ -137,7 +175,7 @@
             this.panel3.Controls.Add(this.iconPictureBox3);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(0, 201);
+            this.panel3.Location = new System.Drawing.Point(0, 154);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(264, 179);
             this.panel3.TabIndex = 8;
@@ -242,7 +280,7 @@
             this.panelSoQuy1.Controls.Add(this.panel6);
             this.panelSoQuy1.Controls.Add(this.iconPictureBox6);
             this.panelSoQuy1.Controls.Add(this.label14);
-            this.panelSoQuy1.Location = new System.Drawing.Point(3, 455);
+            this.panelSoQuy1.Location = new System.Drawing.Point(0, 413);
             this.panelSoQuy1.Name = "panelSoQuy1";
             this.panelSoQuy1.Size = new System.Drawing.Size(264, 253);
             this.panelSoQuy1.TabIndex = 9;
@@ -345,7 +383,7 @@
             this.panelTongQuan1.Controls.Add(this.btTabPageTongQuan);
             this.panelTongQuan1.Controls.Add(this.iconPictureBox1);
             this.panelTongQuan1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panelTongQuan1.Location = new System.Drawing.Point(0, 128);
+            this.panelTongQuan1.Location = new System.Drawing.Point(0, 81);
             this.panelTongQuan1.Name = "panelTongQuan1";
             this.panelTongQuan1.Size = new System.Drawing.Size(264, 70);
             this.panelTongQuan1.TabIndex = 3;
@@ -384,12 +422,12 @@
             this.panelSportShop.Location = new System.Drawing.Point(0, 0);
             this.panelSportShop.Margin = new System.Windows.Forms.Padding(4);
             this.panelSportShop.Name = "panelSportShop";
-            this.panelSportShop.Size = new System.Drawing.Size(267, 123);
+            this.panelSportShop.Size = new System.Drawing.Size(267, 83);
             this.panelSportShop.TabIndex = 1;
             // 
             // btSportShop
             // 
-            this.btSportShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btSportShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btSportShop.FlatAppearance.BorderSize = 0;
             this.btSportShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSportShop.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -397,54 +435,16 @@
             this.btSportShop.Location = new System.Drawing.Point(0, 0);
             this.btSportShop.Margin = new System.Windows.Forms.Padding(4);
             this.btSportShop.Name = "btSportShop";
-            this.btSportShop.Size = new System.Drawing.Size(264, 121);
+            this.btSportShop.Size = new System.Drawing.Size(264, 74);
             this.btSportShop.TabIndex = 2;
             this.btSportShop.Text = "SportShop";
             this.btSportShop.UseVisualStyleBackColor = false;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.btTabPageBaoCao);
-            this.panel10.Controls.Add(this.iconPictureBox5);
-            this.panel10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Location = new System.Drawing.Point(3, 706);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(264, 70);
-            this.panel10.TabIndex = 6;
-            // 
-            // btTabPageBaoCao
-            // 
-            this.btTabPageBaoCao.FlatAppearance.BorderSize = 0;
-            this.btTabPageBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTabPageBaoCao.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btTabPageBaoCao.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btTabPageBaoCao.Location = new System.Drawing.Point(36, 9);
-            this.btTabPageBaoCao.Name = "btTabPageBaoCao";
-            this.btTabPageBaoCao.Size = new System.Drawing.Size(228, 58);
-            this.btTabPageBaoCao.TabIndex = 4;
-            this.btTabPageBaoCao.Text = "Báo cáo";
-            this.btTabPageBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTabPageBaoCao.UseVisualStyleBackColor = true;
-            // 
-            // iconPictureBox5
-            // 
-            this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.iconPictureBox5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
-            this.iconPictureBox5.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox5.IconSize = 41;
-            this.iconPictureBox5.Location = new System.Drawing.Point(0, 13);
-            this.iconPictureBox5.Name = "iconPictureBox5";
-            this.iconPictureBox5.Size = new System.Drawing.Size(41, 41);
-            this.iconPictureBox5.TabIndex = 4;
-            this.iconPictureBox5.TabStop = false;
             // 
             // QLCuaHangDungCuTheThao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1422, 803);
+            this.ClientSize = new System.Drawing.Size(1422, 793);
             this.Controls.Add(this.btSportShop);
             this.Controls.Add(this.panelSportShop);
             this.Controls.Add(this.panel1);
@@ -455,6 +455,8 @@
             this.Text = "QLCuaHangDungCuTheThao";
             this.Load += new System.EventHandler(this.QLCuaHangDungCuTheThao_Load);
             this.panel1.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -472,8 +474,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
             this.panelTongQuan1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
