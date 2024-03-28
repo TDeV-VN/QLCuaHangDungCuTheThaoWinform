@@ -54,3 +54,4 @@ E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.TrustInfo.xml
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.exe.manifest
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.application
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\FontAwesome.Sharp.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\RJCodeAdvance.RJControls.dll

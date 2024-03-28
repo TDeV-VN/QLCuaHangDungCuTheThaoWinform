@@ -126,14 +126,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI.exe" size="16840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI.exe" size="20936">
       <assemblyIdentity name="GUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>i2lT4DmEAz4ZLzkaxH7rKtJYZ9RS6rY/z6ZYUoDrh5k=</dsig:DigestValue>
+        <dsig:DigestValue>D67oT9hZzXVafVap6MxqpHQqVKKt2itwaxd2VGbsEsg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -170,6 +170,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>GZ5qdORq6IGtI4ZWFpzqo5Diws6AOElLqsI2wReDjZ8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RJCodeAdvance.RJControls.dll" size="40448">
+      <assemblyIdentity name="RJCodeAdvance.RJControls" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kB+ZbncF3Aaf0YBAKDqpeSRveTsDxIGUxNvpwUZQdM8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
