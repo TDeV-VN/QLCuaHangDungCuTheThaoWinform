@@ -1,0 +1,9 @@
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\bin\Release\DAL.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\bin\Release\DAL.pdb
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\bin\Release\DTO.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\bin\Release\DTO.pdb
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\obj\Release\DAL.csproj.CopyComplete
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\obj\Release\DAL.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\DAL\obj\Release\DAL.pdb
