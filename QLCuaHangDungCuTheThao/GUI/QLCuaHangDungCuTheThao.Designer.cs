@@ -74,29 +74,29 @@
             this.btIconUser = new FontAwesome.Sharp.IconButton();
             this.panelPageTaoDonHang = new System.Windows.Forms.Panel();
             this.GrBHoaDon_pageTaoHoaDon = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbTongTien_pageTaoHoaDon = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbMaNV_pageTaoHoaDon = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.GrBDonHang_pageTaoHoaDon = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbGhiChu_pageTaoHoaDon = new RJCodeAdvance.RJControls.RJTextBox();
+            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.radioChuyenKhoan = new RJCodeAdvance.RJControls.RJRadioButton();
+            this.radioTienMat = new RJCodeAdvance.RJControls.RJRadioButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbTienThua_pageTaoHoaDon = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.radioTienMat = new RJCodeAdvance.RJControls.RJRadioButton();
-            this.radioChuyenKhoan = new RJCodeAdvance.RJControls.RJRadioButton();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.tbGhiChu_pageTaoHoaDon = new RJCodeAdvance.RJControls.RJTextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbTongTien_pageTaoHoaDon = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbMaNV_pageTaoHoaDon = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.GrBDonHang_pageTaoHoaDon = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -125,8 +125,8 @@
             this.panel12.SuspendLayout();
             this.panelPageTaoDonHang.SuspendLayout();
             this.GrBHoaDon_pageTaoHoaDon.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -728,140 +728,6 @@
             this.GrBHoaDon_pageTaoHoaDon.TabIndex = 0;
             this.GrBHoaDon_pageTaoHoaDon.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(90, 53);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "100,000,000 VNĐ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(1, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Chiết khấu:";
-            // 
-            // lbTongTien_pageTaoHoaDon
-            // 
-            this.lbTongTien_pageTaoHoaDon.AutoSize = true;
-            this.lbTongTien_pageTaoHoaDon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbTongTien_pageTaoHoaDon.Location = new System.Drawing.Point(90, 25);
-            this.lbTongTien_pageTaoHoaDon.Name = "lbTongTien_pageTaoHoaDon";
-            this.lbTongTien_pageTaoHoaDon.Size = new System.Drawing.Size(108, 17);
-            this.lbTongTien_pageTaoHoaDon.TabIndex = 5;
-            this.lbTongTien_pageTaoHoaDon.Text = "100,000,000 VNĐ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(1, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 20);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Tổng tiền:";
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(46)))));
-            this.rjTextBox1.BorderRadius = 12;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(14, 65);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(229, 31);
-            this.rjTextBox1.TabIndex = 2;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(10, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Số điện thoại khách hàng:";
-            // 
-            // lbMaNV_pageTaoHoaDon
-            // 
-            this.lbMaNV_pageTaoHoaDon.AutoSize = true;
-            this.lbMaNV_pageTaoHoaDon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbMaNV_pageTaoHoaDon.Location = new System.Drawing.Point(123, 18);
-            this.lbMaNV_pageTaoHoaDon.Name = "lbMaNV_pageTaoHoaDon";
-            this.lbMaNV_pageTaoHoaDon.Size = new System.Drawing.Size(47, 17);
-            this.lbMaNV_pageTaoHoaDon.TabIndex = 0;
-            this.lbMaNV_pageTaoHoaDon.Text = "NV000";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(10, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mã nhân viên:";
-            // 
-            // GrBDonHang_pageTaoHoaDon
-            // 
-            this.GrBDonHang_pageTaoHoaDon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.GrBDonHang_pageTaoHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.GrBDonHang_pageTaoHoaDon.Name = "GrBDonHang_pageTaoHoaDon";
-            this.GrBDonHang_pageTaoHoaDon.Size = new System.Drawing.Size(928, 703);
-            this.GrBDonHang_pageTaoHoaDon.TabIndex = 1;
-            this.GrBDonHang_pageTaoHoaDon.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(1, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 21);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Số tiền khách phải trả:";
-            // 
-            // lbSoTienKhachPhaiTra_pageTaoHoaDon
-            // 
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.AutoSize = true;
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Location = new System.Drawing.Point(8, 121);
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Name = "lbSoTienKhachPhaiTra_pageTaoHoaDon";
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Size = new System.Drawing.Size(214, 32);
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.TabIndex = 10;
-            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Text = "100,000,000 VNĐ";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lbMaNV_pageTaoHoaDon);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.rjTextBox1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 10);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 108);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label12);
@@ -886,116 +752,15 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
-            // label9
+            // label12
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(6, 184);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 20);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Số tiền khách đưa:";
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(46)))));
-            this.rjTextBox2.BorderRadius = 12;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(14, 208);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(229, 31);
-            this.rjTextBox2.TabIndex = 3;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(6, 247);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 20);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Tiền thừa:";
-            // 
-            // lbTienThua_pageTaoHoaDon
-            // 
-            this.lbTienThua_pageTaoHoaDon.AutoSize = true;
-            this.lbTienThua_pageTaoHoaDon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbTienThua_pageTaoHoaDon.Location = new System.Drawing.Point(90, 250);
-            this.lbTienThua_pageTaoHoaDon.Name = "lbTienThua_pageTaoHoaDon";
-            this.lbTienThua_pageTaoHoaDon.Size = new System.Drawing.Size(108, 17);
-            this.lbTienThua_pageTaoHoaDon.TabIndex = 12;
-            this.lbTienThua_pageTaoHoaDon.Text = "100,000,000 VNĐ";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label11.Location = new System.Drawing.Point(4, 432);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(180, 20);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Phương thức thanh toán:";
-            // 
-            // radioTienMat
-            // 
-            this.radioTienMat.AutoSize = true;
-            this.radioTienMat.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.radioTienMat.Location = new System.Drawing.Point(19, 457);
-            this.radioTienMat.MinimumSize = new System.Drawing.Size(0, 21);
-            this.radioTienMat.Name = "radioTienMat";
-            this.radioTienMat.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioTienMat.Size = new System.Drawing.Size(76, 21);
-            this.radioTienMat.TabIndex = 15;
-            this.radioTienMat.TabStop = true;
-            this.radioTienMat.Text = "Tiền mặt";
-            this.radioTienMat.UnCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
-            this.radioTienMat.UseVisualStyleBackColor = true;
-            // 
-            // radioChuyenKhoan
-            // 
-            this.radioChuyenKhoan.AutoSize = true;
-            this.radioChuyenKhoan.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.radioChuyenKhoan.Location = new System.Drawing.Point(101, 457);
-            this.radioChuyenKhoan.MinimumSize = new System.Drawing.Size(0, 21);
-            this.radioChuyenKhoan.Name = "radioChuyenKhoan";
-            this.radioChuyenKhoan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioChuyenKhoan.Size = new System.Drawing.Size(104, 21);
-            this.radioChuyenKhoan.TabIndex = 16;
-            this.radioChuyenKhoan.TabStop = true;
-            this.radioChuyenKhoan.Text = "Chuyển khoản";
-            this.radioChuyenKhoan.UnCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
-            this.radioChuyenKhoan.UseVisualStyleBackColor = true;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 12;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(14, 499);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(227, 40);
-            this.rjButton1.TabIndex = 17;
-            this.rjButton1.Text = "THANH TOÁN";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label12.Location = new System.Drawing.Point(6, 273);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 20);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Ghi chú đơn hàng:";
             // 
             // tbGhiChu_pageTaoHoaDon
             // 
@@ -1019,15 +784,250 @@
             this.tbGhiChu_pageTaoHoaDon.Texts = "";
             this.tbGhiChu_pageTaoHoaDon.UnderlinedStyle = false;
             // 
-            // label12
+            // rjButton1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label12.Location = new System.Drawing.Point(6, 273);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 20);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Ghi chú đơn hàng:";
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 12;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(14, 499);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(227, 40);
+            this.rjButton1.TabIndex = 17;
+            this.rjButton1.Text = "THANH TOÁN";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // radioChuyenKhoan
+            // 
+            this.radioChuyenKhoan.AutoSize = true;
+            this.radioChuyenKhoan.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.radioChuyenKhoan.Location = new System.Drawing.Point(101, 457);
+            this.radioChuyenKhoan.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioChuyenKhoan.Name = "radioChuyenKhoan";
+            this.radioChuyenKhoan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioChuyenKhoan.Size = new System.Drawing.Size(110, 21);
+            this.radioChuyenKhoan.TabIndex = 16;
+            this.radioChuyenKhoan.TabStop = true;
+            this.radioChuyenKhoan.Text = "Chuyển khoản";
+            this.radioChuyenKhoan.UnCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
+            this.radioChuyenKhoan.UseVisualStyleBackColor = true;
+            // 
+            // radioTienMat
+            // 
+            this.radioTienMat.AutoSize = true;
+            this.radioTienMat.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.radioTienMat.Location = new System.Drawing.Point(19, 457);
+            this.radioTienMat.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioTienMat.Name = "radioTienMat";
+            this.radioTienMat.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioTienMat.Size = new System.Drawing.Size(79, 21);
+            this.radioTienMat.TabIndex = 15;
+            this.radioTienMat.TabStop = true;
+            this.radioTienMat.Text = "Tiền mặt";
+            this.radioTienMat.UnCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
+            this.radioTienMat.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.Location = new System.Drawing.Point(4, 432);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(180, 20);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Phương thức thanh toán:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label10.Location = new System.Drawing.Point(6, 247);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 20);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Tiền thừa:";
+            // 
+            // lbTienThua_pageTaoHoaDon
+            // 
+            this.lbTienThua_pageTaoHoaDon.AutoSize = true;
+            this.lbTienThua_pageTaoHoaDon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTienThua_pageTaoHoaDon.Location = new System.Drawing.Point(90, 250);
+            this.lbTienThua_pageTaoHoaDon.Name = "lbTienThua_pageTaoHoaDon";
+            this.lbTienThua_pageTaoHoaDon.Size = new System.Drawing.Size(108, 17);
+            this.lbTienThua_pageTaoHoaDon.TabIndex = 12;
+            this.lbTienThua_pageTaoHoaDon.Text = "100,000,000 VNĐ";
+            // 
+            // rjTextBox2
+            // 
+            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
+            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(46)))));
+            this.rjTextBox2.BorderRadius = 12;
+            this.rjTextBox2.BorderSize = 2;
+            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox2.Location = new System.Drawing.Point(14, 208);
+            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox2.Multiline = false;
+            this.rjTextBox2.Name = "rjTextBox2";
+            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox2.PasswordChar = false;
+            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox2.PlaceholderText = "";
+            this.rjTextBox2.Size = new System.Drawing.Size(229, 31);
+            this.rjTextBox2.TabIndex = 3;
+            this.rjTextBox2.Texts = "";
+            this.rjTextBox2.UnderlinedStyle = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.Location = new System.Drawing.Point(6, 184);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 20);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Số tiền khách đưa:";
+            // 
+            // lbSoTienKhachPhaiTra_pageTaoHoaDon
+            // 
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.AutoSize = true;
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Location = new System.Drawing.Point(8, 121);
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Name = "lbSoTienKhachPhaiTra_pageTaoHoaDon";
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Size = new System.Drawing.Size(214, 32);
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.TabIndex = 10;
+            this.lbSoTienKhachPhaiTra_pageTaoHoaDon.Text = "100,000,000 VNĐ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(1, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 20);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Tổng tiền:";
+            // 
+            // lbTongTien_pageTaoHoaDon
+            // 
+            this.lbTongTien_pageTaoHoaDon.AutoSize = true;
+            this.lbTongTien_pageTaoHoaDon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTongTien_pageTaoHoaDon.Location = new System.Drawing.Point(90, 25);
+            this.lbTongTien_pageTaoHoaDon.Name = "lbTongTien_pageTaoHoaDon";
+            this.lbTongTien_pageTaoHoaDon.Size = new System.Drawing.Size(108, 17);
+            this.lbTongTien_pageTaoHoaDon.TabIndex = 5;
+            this.lbTongTien_pageTaoHoaDon.Text = "100,000,000 VNĐ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(1, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(184, 21);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Số tiền khách phải trả:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(1, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Chiết khấu:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(90, 53);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "100,000,000 VNĐ";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lbMaNV_pageTaoHoaDon);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.rjTextBox1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(250, 108);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(10, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mã nhân viên:";
+            // 
+            // lbMaNV_pageTaoHoaDon
+            // 
+            this.lbMaNV_pageTaoHoaDon.AutoSize = true;
+            this.lbMaNV_pageTaoHoaDon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbMaNV_pageTaoHoaDon.Location = new System.Drawing.Point(123, 18);
+            this.lbMaNV_pageTaoHoaDon.Name = "lbMaNV_pageTaoHoaDon";
+            this.lbMaNV_pageTaoHoaDon.Size = new System.Drawing.Size(47, 17);
+            this.lbMaNV_pageTaoHoaDon.TabIndex = 0;
+            this.lbMaNV_pageTaoHoaDon.Text = "NV000";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(10, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Số điện thoại khách hàng:";
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(46)))));
+            this.rjTextBox1.BorderRadius = 12;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(14, 65);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "";
+            this.rjTextBox1.Size = new System.Drawing.Size(229, 31);
+            this.rjTextBox1.TabIndex = 2;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
+            // GrBDonHang_pageTaoHoaDon
+            // 
+            this.GrBDonHang_pageTaoHoaDon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.GrBDonHang_pageTaoHoaDon.Location = new System.Drawing.Point(0, 0);
+            this.GrBDonHang_pageTaoHoaDon.Name = "GrBDonHang_pageTaoHoaDon";
+            this.GrBDonHang_pageTaoHoaDon.Size = new System.Drawing.Size(928, 703);
+            this.GrBDonHang_pageTaoHoaDon.TabIndex = 1;
+            this.GrBDonHang_pageTaoHoaDon.TabStop = false;
             // 
             // QLCuaHangDungCuTheThao
             // 
@@ -1039,7 +1039,8 @@
             this.Controls.Add(this.btSportShop);
             this.Controls.Add(this.panelSportShop);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLCuaHangDungCuTheThao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLCuaHangDungCuTheThao";
@@ -1075,10 +1076,10 @@
             this.panel12.ResumeLayout(false);
             this.panelPageTaoDonHang.ResumeLayout(false);
             this.GrBHoaDon_pageTaoHoaDon.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

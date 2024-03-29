@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{02718E2B-0641-480F-AB31-D0D21487059D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtanComponent", "ArtanComponent\ArtanComponent.csproj", "{4207479D-231F-4293-9CBC-3868B2AC83DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{23EC1066-C713-4C17-B870-C1AE11E29374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23EC1066-C713-4C17-B870-C1AE11E29374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23EC1066-C713-4C17-B870-C1AE11E29374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4207479D-231F-4293-9CBC-3868B2AC83DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4207479D-231F-4293-9CBC-3868B2AC83DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4207479D-231F-4293-9CBC-3868B2AC83DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4207479D-231F-4293-9CBC-3868B2AC83DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

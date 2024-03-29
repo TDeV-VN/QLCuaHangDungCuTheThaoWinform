@@ -1,0 +1,6 @@
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\ArtanComponent\bin\Debug\ArtanComponent.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\ArtanComponent\bin\Debug\ArtanComponent.pdb
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.csproj.AssemblyReference.cache
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.csproj.CoreCompileInputs.cache
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.pdb
