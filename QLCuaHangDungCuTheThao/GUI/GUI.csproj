@@ -90,6 +90,66 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCao.Designer.cs">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhMucSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhMucSanPham.Designer.cs">
+      <DependentUpon>FormDanhMucSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhSachDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachDonHang.Designer.cs">
+      <DependentUpon>FormDanhSachDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhSachSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachSanPham.Designer.cs">
+      <DependentUpon>FormDanhSachSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuChi.Designer.cs">
+      <DependentUpon>FormPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuThu.Designer.cs">
+      <DependentUpon>FormPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSoQuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSoQuy.Designer.cs">
+      <DependentUpon>FormSoQuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTaoDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaoDonHang.Designer.cs">
+      <DependentUpon>FormTaoDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTongQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTongQuan.Designer.cs">
+      <DependentUpon>FormTongQuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLCuaHangDungCuTheThao.cs">
@@ -98,6 +158,42 @@
     <Compile Include="QLCuaHangDungCuTheThao.Designer.cs">
       <DependentUpon>QLCuaHangDungCuTheThao.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCRowTaoDH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRowTaoDH.Designer.cs">
+      <DependentUpon>UCRowTaoDH.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormBaoCao.resx">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhMucSanPham.resx">
+      <DependentUpon>FormDanhMucSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachDonHang.resx">
+      <DependentUpon>FormDanhSachDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachSanPham.resx">
+      <DependentUpon>FormDanhSachSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuChi.resx">
+      <DependentUpon>FormPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuThu.resx">
+      <DependentUpon>FormPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSoQuy.resx">
+      <DependentUpon>FormSoQuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTaoDonHang.resx">
+      <DependentUpon>FormTaoDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTongQuan.resx">
+      <DependentUpon>FormTongQuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -109,6 +205,9 @@
     </Compile>
     <EmbeddedResource Include="QLCuaHangDungCuTheThao.resx">
       <DependentUpon>QLCuaHangDungCuTheThao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRowTaoDH.resx">
+      <DependentUpon>UCRowTaoDH.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="GUI_TemporaryKey.pfx" />
     <None Include="packages.config" />

@@ -55,3 +55,16 @@ E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.exe.manifest
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.application
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\FontAwesome.Sharp.dll
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\RJCodeAdvance.RJControls.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\ArtanComponent.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\ArtanComponent.pdb
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.UCRowTaoDH.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormBaoCao.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormDanhMucSanPham.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormDanhSachDonHang.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormDanhSachSanPham.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormKhachHang.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormPhieuChi.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormPhieuThu.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormSoQuy.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormTaoDonHang.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormTongQuan.resources
