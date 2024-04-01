@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,7 +76,6 @@ namespace GUI
         /*tìm kiếm để thêm sp vào đơn hàng*/
         private void tbSearchSP_pageTaoDH_TextChanged(object sender, EventArgs e)
         {
-
             string text = tbThemSP_pageTaoDonHang.Texts;
             if (text.Length >= 4)
             {
@@ -96,6 +96,12 @@ namespace GUI
             {
                 GrVThemSPResult_pageTaoDonHang.Height = 0;
             }
+        }
+
+        private void btTaoDonMoi_pageTaoDonHang_Click(object sender, EventArgs e)
+        {
+            HoaDon hd = new HoaDon(TaoDonHang.AutoGenerateMaHD());
+            lbMaDH.Text = hd.MaHD;
         }
         private void GrVThemSPResult_pageTaoDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -194,6 +200,8 @@ namespace GUI
                 MessageBox.Show("Thành tiền đã được cập nhật");
             }
         }
+
+
         /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/
     }
 }

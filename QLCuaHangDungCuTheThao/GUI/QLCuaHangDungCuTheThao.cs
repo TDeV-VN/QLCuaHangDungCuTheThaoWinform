@@ -28,6 +28,7 @@ namespace GUI
         static private FormPhieuChi formPhieuChi = new FormPhieuChi();
         static private FormSoQuy formSoQuy = new FormSoQuy();
         static private FormBaoCao formBaoCao = new FormBaoCao();
+        static private FormDangNhap formDangNhap = new FormDangNhap();
 
         static private Panel panelPageTongQuan = formTongQuan.PanelPageTongQuan;
         static private Panel panelPageTaoDonHang = formTaoDonHang.PanelPageTaoDonHang;
@@ -49,10 +50,13 @@ namespace GUI
         private void btSportShop_Click(object sender, EventArgs e)
         {
             btTabPageTongQuan_Click(sender, e);
+            //test
+            formDangNhap.Show();
         }
         private void btTabPageTongQuan_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Tổng quan");
+            RemoveAllPagePanel();
             panelPageTongQuan.Location = new Point(227, 68);
             this.Controls.Add(panelPageTongQuan);
 
@@ -61,48 +65,75 @@ namespace GUI
         private void btTabPageTaoDon_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Tạo đơn hàng");
+            RemoveAllPagePanel();
+            panelPageTaoDonHang.Location = new Point(227, 68);
+            this.Controls.Add(panelPageTaoDonHang);
 
         }
 
         private void btTabPageDanhSachDH_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Danh sách đơn hàng");
+            RemoveAllPagePanel();
+            panelPageDanhSachDonHang.Location = new Point(227, 68);
+            this.Controls.Add(panelPageDanhSachDonHang);
 
         }
 
         private void btTabPageDanhSachSP_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Danh sách sản phẩm");
+            RemoveAllPagePanel();
+            panelPageDanhSachSanPham.Location = new Point(227, 68);
+            this.Controls.Add(panelPageDanhSachSanPham);
         }
 
         private void btTabPageDanhMucSP_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Danh mục sản phẩm");
+            RemoveAllPagePanel();
+            panelPageDanhMucSanPham.Location = new Point(227, 68);
+            this.Controls.Add(panelPageDanhMucSanPham);
         }
 
         private void btTabPageKhachHang_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Khách hàng");
+            RemoveAllPagePanel();
+            panelPageKhachHang.Location = new Point(227, 68);
+            this.Controls.Add(panelPageKhachHang);
         }
 
         private void btTabPagePhieuThu_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Phiếu thu");
+            RemoveAllPagePanel();
+            panelPagePhieuThu.Location = new Point(227, 68);
+            this.Controls.Add(panelPagePhieuThu);
         }
 
         private void btTabPagePhieuChi_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Phiếu chi");
+            RemoveAllPagePanel();
+            panelPagePhieuChi.Location = new Point(227, 68);
+            this.Controls.Add(panelPagePhieuChi);
         }
 
         private void btTabPageSoQuy_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Sổ quỹ");
+            RemoveAllPagePanel();
+            panelPageSoQuy.Location = new Point(227, 68);
+            this.Controls.Add(panelPageSoQuy);
         }
 
         private void btTabPageBaoCao_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Báo cáo");
+            RemoveAllPagePanel();
+            panelPageBaoCao.Location = new Point(227, 68);
+            this.Controls.Add(panelPageBaoCao);
         }
 
 
@@ -133,6 +164,21 @@ namespace GUI
 
             // vẽ lại vị trí
             lbPageHeader.Left = newLeftPosition;
+        }
+
+        //remove tất cả page panel để chuyển page mới
+        private void RemoveAllPagePanel()
+        {
+            this.Controls.Remove(panelPageTongQuan);
+            this.Controls.Remove(panelPageTaoDonHang);
+            this.Controls.Remove(panelPageDanhSachDonHang);
+            this.Controls.Remove(panelPageDanhSachSanPham);
+            this.Controls.Remove(panelPageDanhMucSanPham);
+            this.Controls.Remove(panelPageKhachHang);
+            this.Controls.Remove(panelPagePhieuThu);
+            this.Controls.Remove(panelPagePhieuChi);
+            this.Controls.Remove(panelPageSoQuy);
+            this.Controls.Remove(panelPageBaoCao);
         }
 
         /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/

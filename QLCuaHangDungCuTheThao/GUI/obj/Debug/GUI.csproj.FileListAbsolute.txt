@@ -68,3 +68,7 @@ E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormPhieuThu.resources
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormSoQuy.resources
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormTaoDonHang.resources
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormTongQuan.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormDangNhap.resources
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\DAL.dll
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\DAL.pdb
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\GUI\bin\Debug\DAL.dll.config

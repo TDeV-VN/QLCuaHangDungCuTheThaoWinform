@@ -46,3 +46,4 @@ E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\BLL\bin\Debug\System.Text.Encodings.Web.xm
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\BLL\bin\Debug\System.Text.Json.xml
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\BLL\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\BLL\bin\Debug\System.ValueTuple.xml
+E:\CNPM\CuoiKy\QLCuaHangDungCuTheThao\BLL\bin\Debug\DAL.dll.config

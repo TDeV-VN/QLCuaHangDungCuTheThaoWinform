@@ -1,7 +1,11 @@
 public class KhachHang {
-    public string SDT{get; set;}
-    public string TenKH{get; set;}
-    public int DiemUuDai{get; set;}
+    private string sdt;
+    private string tenKH;
+    private int diemUuDai;
+
+    public string SDT { get => sdt; set => sdt = value; }
+    public string TenKH { get => tenKH; set => tenKH = value; }
+    public int DiemUuDai { get => diemUuDai; set => diemUuDai = value; }
 
     public KhachHang(string SDT, string TenKH) {
         this.SDT = SDT;
