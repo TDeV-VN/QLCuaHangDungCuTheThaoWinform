@@ -11,22 +11,23 @@ namespace DTO
         private string maHD;
         private string maSP;
         private int soLuong;
-        private int donGia;
-        private int thanhTien;
+        private long donGia;
+        private long thanhTien;
 
         public string MaHD { get => maHD; set => maHD = value; }
         public string MaSP { get => maSP; set => maSP = value; }
-        public int SoLuong { get => soLuong; set => soLuong = value; }
-        public int DonGia { get => donGia; set => donGia = value; }
-        public int ThanhTien { get => thanhTien; set => thanhTien = value; }
+        public int SoLuong { get => soLuong; set { soLuong = value; thanhTien = soLuong * donGia; } }
+        public long DonGia { get => donGia; set => donGia = value; }
+        public long ThanhTien { get => thanhTien;}
 
-        public ChiTietHoaDon(string maHD, string maSP, int soLuong, int donGia, int thanhTien)
+        public ChiTietHoaDon(string maHD, string maSP, int soLuong, long donGia)
         {
             this.MaHD = maHD;
             this.MaSP = maSP;
             this.SoLuong = soLuong;
             this.DonGia = donGia;
-            this.ThanhTien = thanhTien;
+            this.thanhTien = soLuong * donGia;
         }
+
     }
 }

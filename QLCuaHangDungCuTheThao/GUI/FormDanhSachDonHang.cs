@@ -14,40 +14,82 @@ namespace GUI
 {
     public partial class FormDanhSachDonHang : Form
     {
-        private List<HoaDon> listDonHang;
         DanhSachDonHangBLL danhSachDonHangBLL = new DanhSachDonHangBLL();
+        //static private QLCuaHangDungCuTheThao qlCuaHangDungCuTheThao = new QLCuaHangDungCuTheThao();
 
-        //dữ liệu test
-        private void TaoDuLieuTest()
-        {
-            listDonHang.Add(new HoaDon("HD001", "NV001", "0123456789", "Tiền mặt", 10000000, "2021-12-12", 10000000, 10000000, 10000000, 10000000, "Ghi chú 1", "Hoàn thành"));
-            listDonHang.Add(new HoaDon("HD002", "NV002", "0123456789", "Tiền mặt", 0, "2021-12-12", 10000000, 100000, 100000, 0, "Ghi chú 2", "Đã hủy"));
-            listDonHang.Add(new HoaDon("HD003", "NV003", "0123456789", "Tiền mặt", 0, "2021-12-12", 100000, 100000, 100000, 0, "Ghi chú 3", "Hoàn thành"));
-        }
         public FormDanhSachDonHang()
         {
             InitializeComponent();
-            this.listDonHang = danhSachDonHangBLL.ListDonHang;
-            GrVDanhSach.DataSource = listDonHang;
-            FormDanhSachDonHang_Load(this, null);
-            LoadDanhSach();
+            GrVDanhSach.AutoGenerateColumns = false;
+            GrVDanhSach.DataSource = danhSachDonHangBLL.ListDonHang;
         }
         public Panel PanelPageDanhSachDonHang
         {
             get
             {
+                TaoDataChoComboBox();
+                //Hai dòng dưới không hoạt động đúng mong muốn
+                lbSoLuongDonHang.Text = DanhSachDonHangBLL.LaySoLuongDonHangHomNay().ToString() + " đơn hàng";
+                lbTongTienCacDonHang.Text = DanhSachDonHangBLL.LayTongTienHomNay().ToString("N0") + " VNĐ";
+                LoadDanhSach();
                 return panelPageDanhSachDonHang;
             }
         }
 
-        public void FormDanhSachDonHang_Load(object sender, EventArgs e)
+        /*-----------------------------------------------SỰ KIỆN------------------------------------------------*/
+
+        // ngăn chặn tự động chọn dòng đầu tiên trong danh sách
+        private void yourDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            GrVDanhSach.ClearSelection();
         }
+
+        private void btTaoDonHang_Click(object sender, EventArgs e)
+        {
+            //qlCuaHangDungCuTheThao.btTabPageTaoDon_Click(null, null);
+        }
+
+        /*----------------------------------------------- HẾT SỰ KIỆN------------------------------------------------*/
 
         private void LoadDanhSach()
         {
-            TaoDuLieuTest();
+
+
+            GrVDanhSach.AutoGenerateColumns = false;
         }
+
+        //Tạo data cho combobox
+        private void TaoDataChoComboBox()
+        {
+            //Tạo data cho combobox ngày tạo
+            List<string> listNgayTao = new List<string>();
+            listNgayTao.Add("Tất cả");
+            listNgayTao.Add("Hôm nay");
+            listNgayTao.Add("Hôm qua");
+            listNgayTao.Add("Tuần này");
+            listNgayTao.Add("Tháng này");
+            cbNgayTao.DataSource = listNgayTao;
+            cbNgayTao.SelectedItem = "Tất cả";
+
+
+            //Tạo data cho combobox trạng thái
+            List<string> listTrangThai = new List<string>();
+            listTrangThai.Add("Tất cả");
+            listTrangThai.Add("Hoàn thành");
+            listTrangThai.Add("Đã hủy");
+
+            cbTrangThai.DataSource = listTrangThai;
+
+            //Tạo data cho combobox nhân viên
+            List<string> listNhanVien = new List<string>();
+            listNhanVien.Add("Tất cả");
+            listNhanVien.Add("Nguyễn Văn A");
+            listNhanVien.Add("Nguyễn Văn B");
+            listNhanVien.Add("Nguyễn Văn C");
+            listNhanVien.Add("Nguyễn Văn D");
+            cbNhanVien.DataSource = listNhanVien;
+        }
+
 
     }
 }

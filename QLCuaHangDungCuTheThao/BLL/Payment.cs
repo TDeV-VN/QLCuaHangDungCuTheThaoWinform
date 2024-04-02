@@ -23,6 +23,15 @@ namespace BLL
         private static string tenTaiKhoan;
         private static int nganHangId;
 
+        public Payment(int soTienCanThanhToan, string noiDungChuyenKhoan, long soTaiKhoan, string tenTaiKhoan, int nganHangId)
+        {
+            Payment.soTienCanThanhToan = soTienCanThanhToan;
+            Payment.noiDungChuyenKhoan = noiDungChuyenKhoan;
+            Payment.soTaiKhoan = soTaiKhoan;
+            Payment.tenTaiKhoan = tenTaiKhoan;
+            Payment.nganHangId = nganHangId;
+        }
+
         // Phạm vi truy cập và dịch vụ Google Sheets API
         static readonly string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
         static readonly string ApplicationName = "Google Sheet Reader"; // Tên ứng dụng
@@ -44,7 +53,7 @@ namespace BLL
             return image;
         }
 
-        public Image CreatePaymentQR(string format, string template)
+        public Image CreatePaymentQR(string template)
         {
             var apiRequest = new ApiRequestQRCode();
             apiRequest.acqId = nganHangId;
@@ -52,10 +61,10 @@ namespace BLL
             apiRequest.accountName = tenTaiKhoan;
             apiRequest.amount = soTienCanThanhToan;
             apiRequest.addInfo = noiDungChuyenKhoan;
-            apiRequest.format = format; 
+            apiRequest.format = "text"; 
             apiRequest.template = template; //compact, compact2, print
             var jsonRequest = JsonConvert.SerializeObject(apiRequest);
-            // use restsharp for request api.
+            
             var client = new RestClient("https://api.vietqr.io/v2/generate");
             var request = new RestRequest();
 

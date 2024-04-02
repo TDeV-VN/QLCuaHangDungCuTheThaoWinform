@@ -25,7 +25,7 @@ public class HoaDon {
     public string GhiChu { get => ghiChu; set => ghiChu = value; }
     public string TrangThai { get => trangThai; set => trangThai = value; }
 
-    public HoaDon(string MaHD, string MaNV, string SDT, string PhuongThucThanhToan, int ChietKhau, string ThoiGianLap, long TienKhachPhaiTra, long TienKhachDua, long TongTienHang, long TraLai, string GhiChu, string TrangThai) {
+    public HoaDon(string MaHD, string MaNV, string SDT, string PhuongThucThanhToan, int ChietKhau, string ThoiGianLap, long TienKhachPhaiTra, long TienKhachDua, long TongTienHang, long TraLai, string GhiChu) {
         this.MaHD = MaHD;
         this.MaNV = MaNV;
         this.SDT = SDT;
@@ -37,7 +37,7 @@ public class HoaDon {
         this.TongTienHang = TongTienHang; 
         this.TraLai = TraLai; 
         this.GhiChu = GhiChu;
-        this.TrangThai = TrangThai;
+        this.TrangThai = "Hoàn thành";
     }
 
     public HoaDon(string MaHD, string MaNV, string SDT, string PhuongThucThanhToan, string ThoiGianLap, string GhiChu) {

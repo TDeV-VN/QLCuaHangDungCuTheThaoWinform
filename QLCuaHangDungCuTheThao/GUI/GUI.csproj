@@ -156,6 +156,9 @@
     <Compile Include="FormTongQuan.Designer.cs">
       <DependentUpon>FormTongQuan.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyRJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLCuaHangDungCuTheThao.cs">

@@ -96,9 +96,10 @@
     <Compile Include="ApiRequestQRCode.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="DanhSachDonHangBLL.cs" />
+    <Compile Include="GeneralBLL.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TaoDonHangBLL.cs" />
+    <Compile Include="DonHangBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

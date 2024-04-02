@@ -18,6 +18,7 @@ namespace GUI
             Form_Load(this, EventArgs.Empty);
         }
 
+
         static private FormTongQuan formTongQuan = new FormTongQuan();
         static private FormTaoDonHang formTaoDonHang = new FormTaoDonHang();
         static private FormDanhSachDonHang formDanhSachDonHang = new FormDanhSachDonHang();
@@ -41,6 +42,8 @@ namespace GUI
         static private Panel panelPageSoQuy = formSoQuy.PanelPageSoQuy;
         static private Panel panelPageBaoCao = formBaoCao.PanelPageBaoCao;
 
+
+
         /*--------------------------------------------------SỰ KIỆN---------------------------------------------------*/
         /*sự kiện các button tabpage được click*/
         public void Form_Load(object sender, EventArgs e)
@@ -62,7 +65,7 @@ namespace GUI
 
         }
 
-        private void btTabPageTaoDon_Click(object sender, EventArgs e)
+        public void btTabPageTaoDon_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Tạo đơn hàng");
             RemoveAllPagePanel();
