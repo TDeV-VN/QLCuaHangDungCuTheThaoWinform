@@ -1,3 +1,0 @@
-Khoảng cách giữa các tabpage lớn: 7
-kHoảng cách giữa các tabpage nhỏ: 3
-Khoảng cách tabpage lớn và tabpage nhỏ: 3
