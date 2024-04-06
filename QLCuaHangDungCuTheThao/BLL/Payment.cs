@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Text;
+using DTO;
 
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
@@ -17,20 +18,17 @@ namespace BLL
 {
     public class Payment
     {
-        private static int soTienCanThanhToan;
-        private static string noiDungChuyenKhoan;
         private static long soTaiKhoan;
         private static string tenTaiKhoan;
         private static int nganHangId;
 
         public Payment(int soTienCanThanhToan, string noiDungChuyenKhoan, long soTaiKhoan, string tenTaiKhoan, int nganHangId)
         {
-            Payment.soTienCanThanhToan = soTienCanThanhToan;
-            Payment.noiDungChuyenKhoan = noiDungChuyenKhoan;
             Payment.soTaiKhoan = soTaiKhoan;
             Payment.tenTaiKhoan = tenTaiKhoan;
             Payment.nganHangId = nganHangId;
         }
+        /*
 
         // Phạm vi truy cập và dịch vụ Google Sheets API
         static readonly string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
@@ -39,6 +37,8 @@ namespace BLL
         static readonly string SheetName = "Trang tính1";// Tên của Sheet
         static string credentialsFile = "E:\\TH CNPM\\LearnWinform\\KetNoiGoogleSheet\\assets\\qlcuahangdungcuthethao-googlesheet-connect-key.json"; //lấy từ google developer console
         static SheetsService service; // Đối tượng dịch vụ Sheets
+
+        */
 
         /* TẠO QR CODE THANH TOÁN VIETQR
         https://laptrinhvb.net/bai-viet/chuyen-de-csharp/---Csharp----Huong-dan-tao-ma-VietQR-Payment-API-Winform/ac2fb7d424117fd9.html
@@ -53,7 +53,7 @@ namespace BLL
             return image;
         }
 
-        public Image CreatePaymentQR(string template)
+        public Image CreatePaymentQR(int soTienCanThanhToan, string noiDungChuyenKhoan)
         {
             var apiRequest = new ApiRequestQRCode();
             apiRequest.acqId = nganHangId;
@@ -62,7 +62,7 @@ namespace BLL
             apiRequest.amount = soTienCanThanhToan;
             apiRequest.addInfo = noiDungChuyenKhoan;
             apiRequest.format = "text"; 
-            apiRequest.template = template; //compact, compact2, print
+            apiRequest.template = "compact2"; //compact, compact2, print
             var jsonRequest = JsonConvert.SerializeObject(apiRequest);
             
             var client = new RestClient("https://api.vietqr.io/v2/generate");
@@ -93,7 +93,9 @@ namespace BLL
             }
         }
 
-        /*KẾT NỐI GOOGLE SHEET KIỂM TRA GIAO DỊCH*/
+        
+
+        /*KẾT NỐI GOOGLE SHEET KIỂM TRA GIAO DỊCH*//*
         private void InitializeGoogleSheetsAPI()
         {
             GoogleCredential credential;
@@ -144,6 +146,8 @@ namespace BLL
 
             return false;
         }   
-        /*KẾT NỐI GOOGLE SHEET KIỂM TRA GIAO DỊCH*/
+        *//*KẾT NỐI GOOGLE SHEET KIỂM TRA GIAO DỊCH*/
+
+        
     }
 }

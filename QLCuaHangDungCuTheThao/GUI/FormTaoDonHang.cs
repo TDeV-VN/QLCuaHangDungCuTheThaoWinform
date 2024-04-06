@@ -22,8 +22,7 @@ namespace GUI
             btTaoDonMoi_pageTaoDonHang_Click(null, null);
         }
         public Panel PanelPageTaoDonHang
-        {
-            
+        {          
             get
             {
                 return panelPageTaoDonHang;
@@ -32,7 +31,6 @@ namespace GUI
 
         //để dễ kiểm soát việc cập nhật số thứ tự của các dòng trong các danh sách
         public interface ISttUserControl
-
         {
             string STT { get; set; }
         }
