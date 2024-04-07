@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using DTO;
+using System.Windows.Forms;
 
 namespace DAL
 {
     public class DatabaseAccess
     {
-        static string connectionString = @"";
+        static string connectionString = @"Data Source=Tien-laptop;Initial Catalog=QuanLyCuaHangDungCuTheThao;Integrated Security=True;Trust Server Certificate=True";
 
         // Tạo kết nối đến cơ sở dữ liệu
        /* public static Connection GetConnection()
@@ -21,13 +22,45 @@ namespace DAL
         // Lấy tất cả các đơn hàng từ cơ sở dữ liệu
         public static List<HoaDon> GetAllHoaDon()
         {
-            List<HoaDon> listDonHang = new List<HoaDon>();
+            /*List<HoaDon> listDonHang = new List<HoaDon>();
 
             listDonHang.Add(new HoaDon("HD001", "NV001", "0123456789", "Tiền mặt", 10000000, "2021-12-12", 10000000, 10000000, 10000000, 10000000, "Ghi chú 1"));
             listDonHang.Add(new HoaDon("HD002", "NV002", "0123456789", "Tiền mặt", 0, "2021-12-12", 10000000, 100000, 100000, 0, "Ghi chú 2"));
             listDonHang.Add(new HoaDon("HD003", "NV003", "0123456789", "Tiền mặt", 0, "2021-12-12", 100000, 100000, 100000, 0, "Ghi chú 3"));
 
-            return listDonHang;
+            return listDonHang;*/
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM HoaDon";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlDataReader reader = command.ExecuteReader();
+                    List<HoaDon> listDonHang = new List<HoaDon>();
+                    /*while (reader.Read())
+                    {
+                        HoaDon hoaDon = new HoaDon();
+                        hoaDon.MaHD = reader["MaHD"].ToString();
+                        hoaDon.MaNV = reader["MaNV"].ToString();
+                        hoaDon.SDT = reader["SDT"].ToString();
+                        hoaDon.HinhThucThanhToan = reader["HinhThucThanhToan"].ToString();
+                        hoaDon.TongTien = Convert.ToInt32(reader["TongTien"]);
+                        hoaDon.NgayLap = reader["NgayLap"].ToString();
+                        hoaDon.TienKhachDua = Convert.ToInt32(reader["TienKhachDua"]);
+                        hoaDon.TienThua = Convert.ToInt32(reader["TienThua"]);
+                        hoaDon.TienConLai = Convert.ToInt32(reader["TienConLai"]);
+                        hoaDon.GhiChu = reader["GhiChu"].ToString();
+                        listDonHang.Add(hoaDon);
+                    }*/
+                    return listDonHang;
+                }
+            }catch(SqlException ex)
+            {
+                MessageBox.Show(ex + "Loi");
+                return null;
+            }
         }
 
         // Thêm một đơn hàng vào cơ sở dữ liệu
