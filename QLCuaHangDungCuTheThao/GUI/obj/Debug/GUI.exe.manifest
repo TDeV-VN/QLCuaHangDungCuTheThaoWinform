@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="12800">
       <assemblyIdentity name="BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gb8hxtoi1uSQ2uvsk3nz/qIU+7lmbrJAYWBkh4rfa7Y=</dsig:DigestValue>
+        <dsig:DigestValue>mMaAN+4pBBEryP0OmsntV1+tYfUwaTGG7jiZnQ9iC3M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DTO.dll" size="9216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DTO.dll" size="11776">
       <assemblyIdentity name="DTO" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iBDf5fEg1JxoWYMVBlO23madVQNTyOwwhThuIGjhx7c=</dsig:DigestValue>
+        <dsig:DigestValue>33jflvfvXXFpBQW6xpTpAf/mgU8Vz8Zq3NibfbVQGH4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,54 +102,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.dll" size="82944">
-      <assemblyIdentity name="Google.Apis" version="1.67.0.0" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0JhQkvUzJX03fiOLlcucsEedvx5ZgxZOzgmUDqNZ0N4=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Auth.dll" size="230912">
-      <assemblyIdentity name="Google.Apis.Auth" version="1.67.0.0" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UMjWNCUjW8U5ab9Fi5Z061TiZej5R+L0Oq3oJAmUl2o=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Core.dll" size="84992">
-      <assemblyIdentity name="Google.Apis.Core" version="1.67.0.0" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>R5FlK5v0X4AqZDWLnP8Jkh9BnqOctqCJDWOwGbmmYQ8=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Apis.Sheets.v4.dll" size="222720">
-      <assemblyIdentity name="Google.Apis.Sheets.v4" version="1.67.0.3364" publicKeyToken="4B01FA6E34DB77AB" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yfNR8PJPFAvFVU4KGBecs6xLGJ62/buDtTMbn0I0JyU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI.exe" size="72648">
       <assemblyIdentity name="GUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -157,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>u6f5qbBmiHcHUjkbFai2wsyI11pu//13JWnQHNhlRTQ=</dsig:DigestValue>
+        <dsig:DigestValue>8Hn66ZozwdM1N0E6o351P4OPDtcYVs5P+B7TuxlMkmA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

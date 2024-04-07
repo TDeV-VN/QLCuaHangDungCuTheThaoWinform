@@ -15,8 +15,6 @@ namespace GUI
     public partial class FormDanhSachDonHang : Form
     {
         DanhSachDonHangBLL danhSachDonHangBLL = new DanhSachDonHangBLL();
-        //static private QLCuaHangDungCuTheThao qlCuaHangDungCuTheThao = new QLCuaHangDungCuTheThao();
-
         public FormDanhSachDonHang()
         {
             InitializeComponent();
@@ -28,10 +26,6 @@ namespace GUI
             get
             {
                 TaoDataChoComboBox();
-                //Hai dòng dưới không hoạt động đúng mong muốn
-                lbSoLuongDonHang.Text = DanhSachDonHangBLL.LaySoLuongDonHangHomNay().ToString() + " đơn hàng";
-                lbTongTienCacDonHang.Text = DanhSachDonHangBLL.LayTongTienHomNay().ToString("N0") + " VNĐ";
-                LoadDanhSach();
                 return panelPageDanhSachDonHang;
             }
         }
@@ -46,50 +40,26 @@ namespace GUI
 
         private void btTaoDonHang_Click(object sender, EventArgs e)
         {
-            //qlCuaHangDungCuTheThao.btTabPageTaoDon_Click(null, null);
+            QLCuaHangDungCuTheThao qLCuaHangDungCuTheThao = new QLCuaHangDungCuTheThao();
+            qLCuaHangDungCuTheThao.btTabPageTaoDon_Click(null, null);
         }
 
         /*----------------------------------------------- HẾT SỰ KIỆN------------------------------------------------*/
 
-        private void LoadDanhSach()
+        public void setLbSoLuong_TongTien()
         {
-
-
-            GrVDanhSach.AutoGenerateColumns = false;
+            lbSoLuongDonHang.Text = DanhSachDonHangBLL.LaySoLuongDonHangHomNay().ToString() + " đơn hàng";
+            lbTongTienCacDonHang.Text = DanhSachDonHangBLL.LayTongTienHomNay().ToString("N0") + " VNĐ";
         }
 
-        //Tạo data cho combobox
         private void TaoDataChoComboBox()
         {
-            //Tạo data cho combobox ngày tạo
-            List<string> listNgayTao = new List<string>();
-            listNgayTao.Add("Tất cả");
-            listNgayTao.Add("Hôm nay");
-            listNgayTao.Add("Hôm qua");
-            listNgayTao.Add("Tuần này");
-            listNgayTao.Add("Tháng này");
-            cbNgayTao.DataSource = listNgayTao;
+            cbNgayTao.DataSource = DanhSachDonHangBLL.GetDSNgayTao();
             cbNgayTao.SelectedItem = "Tất cả";
-
-
-            //Tạo data cho combobox trạng thái
-            List<string> listTrangThai = new List<string>();
-            listTrangThai.Add("Tất cả");
-            listTrangThai.Add("Hoàn thành");
-            listTrangThai.Add("Đã hủy");
-
-            cbTrangThai.DataSource = listTrangThai;
-
-            //Tạo data cho combobox nhân viên
-            List<string> listNhanVien = new List<string>();
-            listNhanVien.Add("Tất cả");
-            listNhanVien.Add("Nguyễn Văn A");
-            listNhanVien.Add("Nguyễn Văn B");
-            listNhanVien.Add("Nguyễn Văn C");
-            listNhanVien.Add("Nguyễn Văn D");
-            cbNhanVien.DataSource = listNhanVien;
+            cbTrangThai.DataSource = DanhSachDonHangBLL.GetDSTrangThai();
+            cbTrangThai.SelectedItem = "Tất cả";
+            cbNhanVien.DataSource = DanhSachDonHangBLL.GetDSTenNhanVien();
+            cbNhanVien.SelectedItem = "Tất cả";
         }
-
-
     }
 }

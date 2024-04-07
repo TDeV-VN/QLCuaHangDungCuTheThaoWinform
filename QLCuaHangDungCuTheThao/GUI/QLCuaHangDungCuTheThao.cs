@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,10 @@ namespace GUI
             InitializeComponent();
             Form_Load(this, EventArgs.Empty);
         }
-
-
+        
+        static private FormDanhSachDonHang formDanhSachDonHang = new FormDanhSachDonHang();
         static private FormTongQuan formTongQuan = new FormTongQuan();
         static private FormTaoDonHang formTaoDonHang = new FormTaoDonHang();
-        static private FormDanhSachDonHang formDanhSachDonHang = new FormDanhSachDonHang();
         static private FormDanhSachSanPham formDanhSachSanPham = new FormDanhSachSanPham();
         static private FormDanhMucSanPham formDanhMucSanPham = new FormDanhMucSanPham();
         static private FormKhachHang formKhachHang = new FormKhachHang();
@@ -71,7 +71,6 @@ namespace GUI
             RemoveAllPagePanel();
             panelPageTaoDonHang.Location = new Point(227, 68);
             this.Controls.Add(panelPageTaoDonHang);
-
         }
 
         private void btTabPageDanhSachDH_Click(object sender, EventArgs e)
@@ -79,8 +78,8 @@ namespace GUI
             CapNhatViTriLbPageHeader("Danh sách đơn hàng");
             RemoveAllPagePanel();
             panelPageDanhSachDonHang.Location = new Point(227, 68);
+            formDanhSachDonHang.setLbSoLuong_TongTien();
             this.Controls.Add(panelPageDanhSachDonHang);
-
         }
 
         private void btTabPageDanhSachSP_Click(object sender, EventArgs e)

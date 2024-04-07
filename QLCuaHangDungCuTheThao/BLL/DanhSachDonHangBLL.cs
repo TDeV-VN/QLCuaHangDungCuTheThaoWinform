@@ -30,5 +30,34 @@ namespace BLL
             return 1000000;
         }
 
+        //Tạo data cho combobox nhân viên         
+        public static List<string> GetDSTenNhanVien() 
+        {
+            return new List<string> { "Nguyễn Văn A", "Nguyễn Văn B", "Nguyễn Văn C" };
+        }
+
+        //Tạo data cho combobox ngày tạo
+        public static List<string> GetDSNgayTao()
+        {
+            List<string> listNgayTao = new List<string>();
+            listNgayTao.Add("Tất cả");
+            listNgayTao.Add("Hôm nay");
+            listNgayTao.Add("Hôm qua");
+            listNgayTao.Add("Tuần này");
+            listNgayTao.Add("Tháng này");
+            return listNgayTao;
+        }
+
+        //Tạo data cho combobox trạng thái
+        public static List<string> GetDSTrangThai()
+        {
+            List<string> listTrangThai = new List<string>();
+            listTrangThai.Add("Tất cả");
+            listTrangThai.Add("Hoàn thành");
+            listTrangThai.Add("Đã hủy");
+            return listTrangThai;
+        }
+
+
     }
 }
