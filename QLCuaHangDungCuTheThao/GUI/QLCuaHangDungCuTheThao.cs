@@ -45,6 +45,11 @@ namespace GUI
 
 
         /*--------------------------------------------------SỰ KIỆN---------------------------------------------------*/
+        private void btHuongDan_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /*sự kiện các button tabpage được click*/
         public void Form_Load(object sender, EventArgs e)
         {

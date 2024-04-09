@@ -33,7 +33,11 @@ namespace BLL
         //Tạo data cho combobox nhân viên         
         public static List<string> GetDSTenNhanVien() 
         {
-            return new List<string> { "Nguyễn Văn A", "Nguyễn Văn B", "Nguyễn Văn C" };
+            List<string> listTenNhanVien = new List<string>();
+            listTenNhanVien.Add("Tất cả");
+            listTenNhanVien.AddRange(DatabaseAccess.GetDSTenNhanVien());
+            listTenNhanVien.Sort();
+            return listTenNhanVien;
         }
 
         //Tạo data cho combobox ngày tạo

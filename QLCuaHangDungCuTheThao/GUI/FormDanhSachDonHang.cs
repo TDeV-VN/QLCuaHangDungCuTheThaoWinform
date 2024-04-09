@@ -18,6 +18,7 @@ namespace GUI
         public FormDanhSachDonHang()
         {
             InitializeComponent();
+            tbTimKiemDH.Focus();
             GrVDanhSach.AutoGenerateColumns = false;
             GrVDanhSach.DataSource = danhSachDonHangBLL.ListDonHang;
         }
@@ -38,11 +39,11 @@ namespace GUI
             GrVDanhSach.ClearSelection();
         }
 
-        private void btTaoDonHang_Click(object sender, EventArgs e)
+/*        private void btTaoDonHang_Click(object sender, EventArgs e)
         {
             QLCuaHangDungCuTheThao qLCuaHangDungCuTheThao = new QLCuaHangDungCuTheThao();
             qLCuaHangDungCuTheThao.btTabPageTaoDon_Click(null, null);
-        }
+        }*/
 
         /*----------------------------------------------- HẾT SỰ KIỆN------------------------------------------------*/
 

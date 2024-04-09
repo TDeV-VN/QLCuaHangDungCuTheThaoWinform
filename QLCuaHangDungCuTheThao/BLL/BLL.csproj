@@ -171,6 +171,7 @@
   <ItemGroup>
     <Compile Include="ApiRequestQRCode.cs" />
     <Compile Include="DanhSachDonHangBLL.cs" />
+    <Compile Include="DanhSachSanPhamBLL.cs" />
     <Compile Include="GeneralBLL.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

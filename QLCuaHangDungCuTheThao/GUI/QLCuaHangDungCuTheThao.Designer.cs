@@ -73,6 +73,8 @@
             this.btIconUser = new FontAwesome.Sharp.IconButton();
             this.btIconUser_text = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btHuongDan = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -99,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelFormHeader.SuspendLayout();
             this.pnlTaiKhoan_pageTaoDonHang.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -614,6 +617,7 @@
             // panelFormHeader
             // 
             this.panelFormHeader.BackColor = System.Drawing.Color.Transparent;
+            this.panelFormHeader.Controls.Add(this.panel12);
             this.panelFormHeader.Controls.Add(this.lbPageHeader);
             this.panelFormHeader.Controls.Add(this.pnlTaiKhoan_pageTaoDonHang);
             this.panelFormHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -688,6 +692,35 @@
             this.panel17.Size = new System.Drawing.Size(910, 40);
             this.panel17.TabIndex = 1;
             // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btHuongDan);
+            this.panel12.Location = new System.Drawing.Point(6, 20);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(34, 30);
+            this.panel12.TabIndex = 9;
+            // 
+            // btHuongDan
+            // 
+            this.btHuongDan.BackColor = System.Drawing.Color.Transparent;
+            this.btHuongDan.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btHuongDan.BorderColor = System.Drawing.Color.DimGray;
+            this.btHuongDan.BorderRadius = 15;
+            this.btHuongDan.BorderSize = 2;
+            this.btHuongDan.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btHuongDan.FlatAppearance.BorderSize = 0;
+            this.btHuongDan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHuongDan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btHuongDan.ForeColor = System.Drawing.Color.DimGray;
+            this.btHuongDan.Location = new System.Drawing.Point(0, 0);
+            this.btHuongDan.Name = "btHuongDan";
+            this.btHuongDan.Size = new System.Drawing.Size(30, 30);
+            this.btHuongDan.TabIndex = 0;
+            this.btHuongDan.Text = " ?";
+            this.btHuongDan.TextColor = System.Drawing.Color.DimGray;
+            this.btHuongDan.UseVisualStyleBackColor = false;
+            this.btHuongDan.Click += new System.EventHandler(this.btHuongDan_Click);
+            // 
             // QLCuaHangDungCuTheThao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -732,6 +765,7 @@
             this.panelFormHeader.ResumeLayout(false);
             this.panelFormHeader.PerformLayout();
             this.pnlTaiKhoan_pageTaoDonHang.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -783,5 +817,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label lbPageHeader;
+        private System.Windows.Forms.Panel panel12;
+        private RJCodeAdvance.RJControls.RJButton btHuongDan;
     }
 }

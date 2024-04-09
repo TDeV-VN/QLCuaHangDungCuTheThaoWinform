@@ -3,8 +3,8 @@ public class SanPham {
     private string maDM;
     private string tenSP;
     private int tonKho;
-    private long giaNhap;
-    private long giaBan;
+    private int giaNhap;
+    private int giaBan;
     private bool moBan;
     private string moTa;
 
@@ -12,12 +12,12 @@ public class SanPham {
     public string MaDM { get => maDM; set => maDM = value; }
     public string TenSP { get => tenSP; set => tenSP = value; }
     public int TonKho { get => tonKho; set => tonKho = value; }
-    public long GiaNhap { get => giaNhap; set => giaNhap = value; }
-    public long GiaBan { get => giaBan; set => giaBan = value; }
+    public int GiaNhap { get => giaNhap; set => giaNhap = value; }
+    public int GiaBan { get => giaBan; set => giaBan = value; }
     public bool MoBan { get => moBan; set => moBan = value; }
     public string MoTa { get => moTa; set => moTa = value; }
 
-    public SanPham(string MaSP, string MaDM, string TenSP, int TonKho, long GiaNhap, long GiaBan, bool MoBan, string MoTa) {
+    public SanPham(string MaSP, string MaDM, string TenSP, int TonKho, int GiaNhap, int GiaBan, bool MoBan, string MoTa) {
         this.MaSP = MaSP;
         this.MaDM = MaDM;
         this.TenSP = TenSP;
