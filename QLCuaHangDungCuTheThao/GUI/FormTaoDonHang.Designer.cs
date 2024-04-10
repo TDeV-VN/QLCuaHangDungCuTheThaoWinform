@@ -30,29 +30,34 @@
         {
             this.panelPageTaoDonHang = new System.Windows.Forms.Panel();
             this.GrBHoaDon_pageTaoDonHan = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tbSDT_pageTaoDonHang = new RJCodeAdvance.RJControls.RJTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbMaNV_pageTaoDonHang = new System.Windows.Forms.Label();
             this.label2_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2_pageTaoDonHang = new System.Windows.Forms.GroupBox();
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.label6_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lbChietKhau_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.label5_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lbTongTien_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.label8_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.lbMaDH = new System.Windows.Forms.Label();
-            this.label12_pageTaoDonHang = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label12_pageTaoDonHang = new System.Windows.Forms.Label();
             this.tbGhiChu_pageTaoDonHang = new RJCodeAdvance.RJControls.RJTextBox();
             this.btThanhToan_pageTaoDonHang = new RJCodeAdvance.RJControls.RJButton();
             this.radioChuyenKhoan_pageTaoDonHang = new RJCodeAdvance.RJControls.RJRadioButton();
             this.radioTienMat_pageTaoDonHang = new RJCodeAdvance.RJControls.RJRadioButton();
             this.label11_pageTaoDonHan = new System.Windows.Forms.Label();
-            this.label10_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.lbTienThua_pageTaoDonHang = new System.Windows.Forms.Label();
             this.tbSoTienKhachDua_pageTaoDonHang = new RJCodeAdvance.RJControls.RJTextBox();
             this.label9_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.label8_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.lbTongTien_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.label6_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.label5_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.lbChietKhau_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.lbMaNV_pageTaoDonHang = new System.Windows.Forms.Label();
-            this.tbSDT_pageTaoDonHang = new RJCodeAdvance.RJControls.RJTextBox();
-            this.label3_pageTaoDonHang = new System.Windows.Forms.Label();
             this.GrBDonHang_pageTaoDonHang = new System.Windows.Forms.GroupBox();
             this.GrVThemSPResult_pageTaoDonHang = new System.Windows.Forms.DataGridView();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +68,9 @@
             this.tbThemSP_pageTaoDonHang = new RJCodeAdvance.RJControls.RJTextBox();
             this.GrBDanhSach1_pageTaoDonHang = new System.Windows.Forms.GroupBox();
             this.flpRows_DanhSach1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lbTienThua_pageTaoDonHang = new System.Windows.Forms.Label();
+            this.label10_pageTaoDonHang = new System.Windows.Forms.Label();
             this.pnlTitle_DanhSach1 = new System.Windows.Forms.Panel();
             this.artanPanel1 = new ArtanComponent.ArtanPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,12 +82,19 @@
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.panelPageTaoDonHang.SuspendLayout();
             this.GrBHoaDon_pageTaoDonHan.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.groupBox2_pageTaoDonHang.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.GrBDonHang_pageTaoDonHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrVThemSPResult_pageTaoDonHang)).BeginInit();
             this.panelSearch__pageTaoDonHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9_pageTaoDonHang)).BeginInit();
             this.GrBDanhSach1_pageTaoDonHang.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.pnlTitle_DanhSach1.SuspendLayout();
             this.artanPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -96,11 +111,11 @@
             // 
             // GrBHoaDon_pageTaoDonHan
             // 
-            this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.label2_pageTaoDonHang);
+            this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.panel4);
+            this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.panel2);
+            this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.panel3);
+            this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.panel1);
             this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.groupBox2_pageTaoDonHang);
-            this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.lbMaNV_pageTaoDonHang);
-            this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.tbSDT_pageTaoDonHang);
-            this.GrBHoaDon_pageTaoDonHan.Controls.Add(this.label3_pageTaoDonHang);
             this.GrBHoaDon_pageTaoDonHan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GrBHoaDon_pageTaoDonHan.Location = new System.Drawing.Point(928, 0);
             this.GrBHoaDon_pageTaoDonHan.Name = "GrBHoaDon_pageTaoDonHan";
@@ -108,36 +123,120 @@
             this.GrBHoaDon_pageTaoDonHan.TabIndex = 0;
             this.GrBHoaDon_pageTaoDonHan.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.tbSDT_pageTaoDonHang);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(3, 87);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.panel4.Size = new System.Drawing.Size(254, 36);
+            this.panel4.TabIndex = 3;
+            // 
+            // tbSDT_pageTaoDonHang
+            // 
+            this.tbSDT_pageTaoDonHang.BackColor = System.Drawing.SystemColors.Window;
+            this.tbSDT_pageTaoDonHang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
+            this.tbSDT_pageTaoDonHang.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.tbSDT_pageTaoDonHang.BorderRadius = 12;
+            this.tbSDT_pageTaoDonHang.BorderSize = 2;
+            this.tbSDT_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbSDT_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbSDT_pageTaoDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbSDT_pageTaoDonHang.Location = new System.Drawing.Point(10, 0);
+            this.tbSDT_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSDT_pageTaoDonHang.Multiline = false;
+            this.tbSDT_pageTaoDonHang.Name = "tbSDT_pageTaoDonHang";
+            this.tbSDT_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbSDT_pageTaoDonHang.PasswordChar = false;
+            this.tbSDT_pageTaoDonHang.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbSDT_pageTaoDonHang.PlaceholderText = "";
+            this.tbSDT_pageTaoDonHang.Size = new System.Drawing.Size(234, 32);
+            this.tbSDT_pageTaoDonHang.TabIndex = 2;
+            this.tbSDT_pageTaoDonHang.Texts = "";
+            this.tbSDT_pageTaoDonHang.UnderlinedStyle = false;
+            this.tbSDT_pageTaoDonHang._TextChanged += new System.EventHandler(this.tbSDT_pageTaoDonHang__TextChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label3_pageTaoDonHang);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 62);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(254, 25);
+            this.panel2.TabIndex = 0;
+            // 
+            // label3_pageTaoDonHang
+            // 
+            this.label3_pageTaoDonHang.AutoSize = true;
+            this.label3_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3_pageTaoDonHang.Location = new System.Drawing.Point(0, 0);
+            this.label3_pageTaoDonHang.Name = "label3_pageTaoDonHang";
+            this.label3_pageTaoDonHang.Size = new System.Drawing.Size(187, 20);
+            this.label3_pageTaoDonHang.TabIndex = 1;
+            this.label3_pageTaoDonHang.Text = "Số điện thoại khách hàng:";
+            this.label3_pageTaoDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lbMaNV_pageTaoDonHang);
+            this.panel3.Controls.Add(this.label2_pageTaoDonHang);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 40);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(254, 22);
+            this.panel3.TabIndex = 0;
+            // 
+            // lbMaNV_pageTaoDonHang
+            // 
+            this.lbMaNV_pageTaoDonHang.AutoSize = true;
+            this.lbMaNV_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbMaNV_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbMaNV_pageTaoDonHang.Location = new System.Drawing.Point(107, 0);
+            this.lbMaNV_pageTaoDonHang.Name = "lbMaNV_pageTaoDonHang";
+            this.lbMaNV_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.lbMaNV_pageTaoDonHang.Size = new System.Drawing.Size(67, 17);
+            this.lbMaNV_pageTaoDonHang.TabIndex = 0;
+            this.lbMaNV_pageTaoDonHang.Text = "NV000";
+            this.lbMaNV_pageTaoDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label2_pageTaoDonHang
             // 
             this.label2_pageTaoDonHang.AutoSize = true;
+            this.label2_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2_pageTaoDonHang.Location = new System.Drawing.Point(3, 37);
+            this.label2_pageTaoDonHang.Location = new System.Drawing.Point(0, 0);
             this.label2_pageTaoDonHang.Name = "label2_pageTaoDonHang";
             this.label2_pageTaoDonHang.Size = new System.Drawing.Size(107, 20);
             this.label2_pageTaoDonHang.TabIndex = 0;
             this.label2_pageTaoDonHang.Text = "Mã nhân viên:";
+            this.label2_pageTaoDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(254, 24);
+            this.panel1.TabIndex = 4;
             // 
             // groupBox2_pageTaoDonHang
             // 
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.lbMaDH);
+            this.groupBox2_pageTaoDonHang.Controls.Add(this.panel8);
+            this.groupBox2_pageTaoDonHang.Controls.Add(this.lbSoTienKhachPhaiTra_pageTaoDonHang);
+            this.groupBox2_pageTaoDonHang.Controls.Add(this.label6_pageTaoDonHang);
+            this.groupBox2_pageTaoDonHang.Controls.Add(this.panel7);
+            this.groupBox2_pageTaoDonHang.Controls.Add(this.panel6);
+            this.groupBox2_pageTaoDonHang.Controls.Add(this.panel5);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.label12_pageTaoDonHang);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.label1);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.tbGhiChu_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.btThanhToan_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.radioChuyenKhoan_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.radioTienMat_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.label11_pageTaoDonHan);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.label10_pageTaoDonHang);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.lbTienThua_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.tbSoTienKhachDua_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.label9_pageTaoDonHang);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.lbSoTienKhachPhaiTra_pageTaoDonHang);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.label8_pageTaoDonHang);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.lbTongTien_pageTaoDonHang);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.label6_pageTaoDonHang);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.label5_pageTaoDonHang);
-            this.groupBox2_pageTaoDonHang.Controls.Add(this.lbChietKhau_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2_pageTaoDonHang.Location = new System.Drawing.Point(3, 119);
             this.groupBox2_pageTaoDonHang.Name = "groupBox2_pageTaoDonHang";
@@ -145,15 +244,128 @@
             this.groupBox2_pageTaoDonHang.TabIndex = 3;
             this.groupBox2_pageTaoDonHang.TabStop = false;
             // 
+            // lbSoTienKhachPhaiTra_pageTaoDonHang
+            // 
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.AutoSize = true;
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Location = new System.Drawing.Point(29, 128);
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(0);
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Name = "lbSoTienKhachPhaiTra_pageTaoDonHang";
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Size = new System.Drawing.Size(196, 30);
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.TabIndex = 10;
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Text = "100,000,000 VNĐ";
+            this.lbSoTienKhachPhaiTra_pageTaoDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6_pageTaoDonHang
+            // 
+            this.label6_pageTaoDonHang.AutoSize = true;
+            this.label6_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6_pageTaoDonHang.Location = new System.Drawing.Point(3, 90);
+            this.label6_pageTaoDonHang.Name = "label6_pageTaoDonHang";
+            this.label6_pageTaoDonHang.Size = new System.Drawing.Size(184, 21);
+            this.label6_pageTaoDonHang.TabIndex = 9;
+            this.label6_pageTaoDonHang.Text = "Số tiền khách phải trả:";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.lbChietKhau_pageTaoDonHang);
+            this.panel7.Controls.Add(this.label5_pageTaoDonHang);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(3, 66);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(248, 24);
+            this.panel7.TabIndex = 0;
+            // 
+            // lbChietKhau_pageTaoDonHang
+            // 
+            this.lbChietKhau_pageTaoDonHang.AutoSize = true;
+            this.lbChietKhau_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbChietKhau_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbChietKhau_pageTaoDonHang.Location = new System.Drawing.Point(86, 0);
+            this.lbChietKhau_pageTaoDonHang.Name = "lbChietKhau_pageTaoDonHang";
+            this.lbChietKhau_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.lbChietKhau_pageTaoDonHang.Size = new System.Drawing.Size(136, 17);
+            this.lbChietKhau_pageTaoDonHang.TabIndex = 7;
+            this.lbChietKhau_pageTaoDonHang.Text = "100,000,000 VNĐ";
+            // 
+            // label5_pageTaoDonHang
+            // 
+            this.label5_pageTaoDonHang.AutoSize = true;
+            this.label5_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label5_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5_pageTaoDonHang.Location = new System.Drawing.Point(0, 0);
+            this.label5_pageTaoDonHang.Name = "label5_pageTaoDonHang";
+            this.label5_pageTaoDonHang.Size = new System.Drawing.Size(86, 20);
+            this.label5_pageTaoDonHang.TabIndex = 8;
+            this.label5_pageTaoDonHang.Text = "Chiết khấu:";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.lbTongTien_pageTaoDonHang);
+            this.panel6.Controls.Add(this.label8_pageTaoDonHang);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(3, 41);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(248, 25);
+            this.panel6.TabIndex = 0;
+            // 
+            // lbTongTien_pageTaoDonHang
+            // 
+            this.lbTongTien_pageTaoDonHang.AutoSize = true;
+            this.lbTongTien_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbTongTien_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTongTien_pageTaoDonHang.Location = new System.Drawing.Point(78, 0);
+            this.lbTongTien_pageTaoDonHang.Name = "lbTongTien_pageTaoDonHang";
+            this.lbTongTien_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.lbTongTien_pageTaoDonHang.Size = new System.Drawing.Size(143, 17);
+            this.lbTongTien_pageTaoDonHang.TabIndex = 5;
+            this.lbTongTien_pageTaoDonHang.Text = "100,000,000 VNĐ";
+            // 
+            // label8_pageTaoDonHang
+            // 
+            this.label8_pageTaoDonHang.AutoSize = true;
+            this.label8_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8_pageTaoDonHang.Location = new System.Drawing.Point(0, 0);
+            this.label8_pageTaoDonHang.Name = "label8_pageTaoDonHang";
+            this.label8_pageTaoDonHang.Size = new System.Drawing.Size(78, 20);
+            this.label8_pageTaoDonHang.TabIndex = 6;
+            this.label8_pageTaoDonHang.Text = "Tổng tiền:";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lbMaDH);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 16);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(248, 25);
+            this.panel5.TabIndex = 0;
+            // 
             // lbMaDH
             // 
             this.lbMaDH.AutoSize = true;
+            this.lbMaDH.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbMaDH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbMaDH.Location = new System.Drawing.Point(113, 16);
+            this.lbMaDH.Location = new System.Drawing.Point(105, 0);
             this.lbMaDH.Name = "lbMaDH";
-            this.lbMaDH.Size = new System.Drawing.Size(82, 17);
+            this.lbMaDH.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbMaDH.Size = new System.Drawing.Size(92, 17);
             this.lbMaDH.TabIndex = 5;
             this.lbMaDH.Text = "HD00000001";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Mã đơn hàng:";
             // 
             // label12_pageTaoDonHang
             // 
@@ -164,16 +376,6 @@
             this.label12_pageTaoDonHang.Size = new System.Drawing.Size(135, 20);
             this.label12_pageTaoDonHang.TabIndex = 19;
             this.label12_pageTaoDonHang.Text = "Ghi chú đơn hàng:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(1, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Mã đơn hàng:";
             // 
             // tbGhiChu_pageTaoDonHang
             // 
@@ -257,26 +459,6 @@
             this.label11_pageTaoDonHan.TabIndex = 14;
             this.label11_pageTaoDonHan.Text = "Phương thức thanh toán:";
             // 
-            // label10_pageTaoDonHang
-            // 
-            this.label10_pageTaoDonHang.AutoSize = true;
-            this.label10_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10_pageTaoDonHang.Location = new System.Drawing.Point(6, 247);
-            this.label10_pageTaoDonHang.Name = "label10_pageTaoDonHang";
-            this.label10_pageTaoDonHang.Size = new System.Drawing.Size(77, 20);
-            this.label10_pageTaoDonHang.TabIndex = 13;
-            this.label10_pageTaoDonHang.Text = "Tiền thừa:";
-            // 
-            // lbTienThua_pageTaoDonHang
-            // 
-            this.lbTienThua_pageTaoDonHang.AutoSize = true;
-            this.lbTienThua_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbTienThua_pageTaoDonHang.Location = new System.Drawing.Point(110, 250);
-            this.lbTienThua_pageTaoDonHang.Name = "lbTienThua_pageTaoDonHang";
-            this.lbTienThua_pageTaoDonHang.Size = new System.Drawing.Size(108, 17);
-            this.lbTienThua_pageTaoDonHang.TabIndex = 12;
-            this.lbTienThua_pageTaoDonHang.Text = "100,000,000 VNĐ";
-            // 
             // tbSoTienKhachDua_pageTaoDonHang
             // 
             this.tbSoTienKhachDua_pageTaoDonHang.BackColor = System.Drawing.SystemColors.Window;
@@ -308,112 +490,6 @@
             this.label9_pageTaoDonHang.Size = new System.Drawing.Size(135, 20);
             this.label9_pageTaoDonHang.TabIndex = 11;
             this.label9_pageTaoDonHang.Text = "Số tiền khách đưa:";
-            // 
-            // lbSoTienKhachPhaiTra_pageTaoDonHang
-            // 
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.AutoSize = true;
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Location = new System.Drawing.Point(29, 129);
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(0);
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Name = "lbSoTienKhachPhaiTra_pageTaoDonHang";
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Size = new System.Drawing.Size(196, 30);
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.TabIndex = 10;
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.Text = "100,000,000 VNĐ";
-            this.lbSoTienKhachPhaiTra_pageTaoDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8_pageTaoDonHang
-            // 
-            this.label8_pageTaoDonHang.AutoSize = true;
-            this.label8_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8_pageTaoDonHang.Location = new System.Drawing.Point(1, 42);
-            this.label8_pageTaoDonHang.Name = "label8_pageTaoDonHang";
-            this.label8_pageTaoDonHang.Size = new System.Drawing.Size(78, 20);
-            this.label8_pageTaoDonHang.TabIndex = 6;
-            this.label8_pageTaoDonHang.Text = "Tổng tiền:";
-            // 
-            // lbTongTien_pageTaoDonHang
-            // 
-            this.lbTongTien_pageTaoDonHang.AutoSize = true;
-            this.lbTongTien_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbTongTien_pageTaoDonHang.Location = new System.Drawing.Point(110, 45);
-            this.lbTongTien_pageTaoDonHang.Name = "lbTongTien_pageTaoDonHang";
-            this.lbTongTien_pageTaoDonHang.Size = new System.Drawing.Size(108, 17);
-            this.lbTongTien_pageTaoDonHang.TabIndex = 5;
-            this.lbTongTien_pageTaoDonHang.Text = "100,000,000 VNĐ";
-            // 
-            // label6_pageTaoDonHang
-            // 
-            this.label6_pageTaoDonHang.AutoSize = true;
-            this.label6_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6_pageTaoDonHang.Location = new System.Drawing.Point(1, 96);
-            this.label6_pageTaoDonHang.Name = "label6_pageTaoDonHang";
-            this.label6_pageTaoDonHang.Size = new System.Drawing.Size(184, 21);
-            this.label6_pageTaoDonHang.TabIndex = 9;
-            this.label6_pageTaoDonHang.Text = "Số tiền khách phải trả:";
-            // 
-            // label5_pageTaoDonHang
-            // 
-            this.label5_pageTaoDonHang.AutoSize = true;
-            this.label5_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5_pageTaoDonHang.Location = new System.Drawing.Point(1, 62);
-            this.label5_pageTaoDonHang.Name = "label5_pageTaoDonHang";
-            this.label5_pageTaoDonHang.Size = new System.Drawing.Size(86, 20);
-            this.label5_pageTaoDonHang.TabIndex = 8;
-            this.label5_pageTaoDonHang.Text = "Chiết khấu:";
-            // 
-            // lbChietKhau_pageTaoDonHang
-            // 
-            this.lbChietKhau_pageTaoDonHang.AutoSize = true;
-            this.lbChietKhau_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbChietKhau_pageTaoDonHang.Location = new System.Drawing.Point(110, 65);
-            this.lbChietKhau_pageTaoDonHang.Name = "lbChietKhau_pageTaoDonHang";
-            this.lbChietKhau_pageTaoDonHang.Size = new System.Drawing.Size(108, 17);
-            this.lbChietKhau_pageTaoDonHang.TabIndex = 7;
-            this.lbChietKhau_pageTaoDonHang.Text = "100,000,000 VNĐ";
-            // 
-            // lbMaNV_pageTaoDonHang
-            // 
-            this.lbMaNV_pageTaoDonHang.AutoSize = true;
-            this.lbMaNV_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbMaNV_pageTaoDonHang.Location = new System.Drawing.Point(116, 39);
-            this.lbMaNV_pageTaoDonHang.Name = "lbMaNV_pageTaoDonHang";
-            this.lbMaNV_pageTaoDonHang.Size = new System.Drawing.Size(47, 17);
-            this.lbMaNV_pageTaoDonHang.TabIndex = 0;
-            this.lbMaNV_pageTaoDonHang.Text = "NV000";
-            // 
-            // tbSDT_pageTaoDonHang
-            // 
-            this.tbSDT_pageTaoDonHang.BackColor = System.Drawing.SystemColors.Window;
-            this.tbSDT_pageTaoDonHang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
-            this.tbSDT_pageTaoDonHang.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.tbSDT_pageTaoDonHang.BorderRadius = 12;
-            this.tbSDT_pageTaoDonHang.BorderSize = 2;
-            this.tbSDT_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbSDT_pageTaoDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbSDT_pageTaoDonHang.Location = new System.Drawing.Point(17, 82);
-            this.tbSDT_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(4);
-            this.tbSDT_pageTaoDonHang.Multiline = false;
-            this.tbSDT_pageTaoDonHang.Name = "tbSDT_pageTaoDonHang";
-            this.tbSDT_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbSDT_pageTaoDonHang.PasswordChar = false;
-            this.tbSDT_pageTaoDonHang.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbSDT_pageTaoDonHang.PlaceholderText = "";
-            this.tbSDT_pageTaoDonHang.Size = new System.Drawing.Size(229, 32);
-            this.tbSDT_pageTaoDonHang.TabIndex = 2;
-            this.tbSDT_pageTaoDonHang.Texts = "";
-            this.tbSDT_pageTaoDonHang.UnderlinedStyle = false;
-            this.tbSDT_pageTaoDonHang._TextChanged += new System.EventHandler(this.tbSDT_pageTaoDonHang__TextChanged);
-            // 
-            // label3_pageTaoDonHang
-            // 
-            this.label3_pageTaoDonHang.AutoSize = true;
-            this.label3_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3_pageTaoDonHang.Location = new System.Drawing.Point(4, 58);
-            this.label3_pageTaoDonHang.Name = "label3_pageTaoDonHang";
-            this.label3_pageTaoDonHang.Size = new System.Drawing.Size(187, 20);
-            this.label3_pageTaoDonHang.TabIndex = 1;
-            this.label3_pageTaoDonHang.Text = "Số điện thoại khách hàng:";
             // 
             // GrBDonHang_pageTaoDonHang
             // 
@@ -563,6 +639,38 @@
             this.flpRows_DanhSach1.TabIndex = 1;
             this.flpRows_DanhSach1.Resize += new System.EventHandler(this.flpRows_DanhSach1_Resize);
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.lbTienThua_pageTaoDonHang);
+            this.panel8.Controls.Add(this.label10_pageTaoDonHang);
+            this.panel8.Location = new System.Drawing.Point(3, 247);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(245, 26);
+            this.panel8.TabIndex = 0;
+            // 
+            // lbTienThua_pageTaoDonHang
+            // 
+            this.lbTienThua_pageTaoDonHang.AutoSize = true;
+            this.lbTienThua_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbTienThua_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTienThua_pageTaoDonHang.Location = new System.Drawing.Point(77, 0);
+            this.lbTienThua_pageTaoDonHang.Name = "lbTienThua_pageTaoDonHang";
+            this.lbTienThua_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.lbTienThua_pageTaoDonHang.Size = new System.Drawing.Size(138, 17);
+            this.lbTienThua_pageTaoDonHang.TabIndex = 12;
+            this.lbTienThua_pageTaoDonHang.Text = "100,000,000 VNĐ";
+            // 
+            // label10_pageTaoDonHang
+            // 
+            this.label10_pageTaoDonHang.AutoSize = true;
+            this.label10_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label10_pageTaoDonHang.Location = new System.Drawing.Point(0, 0);
+            this.label10_pageTaoDonHang.Name = "label10_pageTaoDonHang";
+            this.label10_pageTaoDonHang.Size = new System.Drawing.Size(77, 20);
+            this.label10_pageTaoDonHang.TabIndex = 13;
+            this.label10_pageTaoDonHang.Text = "Tiền thừa:";
+            // 
             // pnlTitle_DanhSach1
             // 
             this.pnlTitle_DanhSach1.BackColor = System.Drawing.Color.Transparent;
@@ -702,14 +810,26 @@
             this.Text = "FormTaoDonHang";
             this.panelPageTaoDonHang.ResumeLayout(false);
             this.GrBHoaDon_pageTaoDonHan.ResumeLayout(false);
-            this.GrBHoaDon_pageTaoDonHan.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.groupBox2_pageTaoDonHang.ResumeLayout(false);
             this.groupBox2_pageTaoDonHang.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.GrBDonHang_pageTaoDonHang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GrVThemSPResult_pageTaoDonHang)).EndInit();
             this.panelSearch__pageTaoDonHang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9_pageTaoDonHang)).EndInit();
             this.GrBDanhSach1_pageTaoDonHang.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.pnlTitle_DanhSach1.ResumeLayout(false);
             this.artanPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -764,5 +884,13 @@
         private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.Label lbMaDH;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
     }
 }

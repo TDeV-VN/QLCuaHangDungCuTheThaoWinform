@@ -20,6 +20,9 @@ namespace GUI
         {
             InitializeComponent();
             btTaoDonMoi_pageTaoDonHang_Click(null, null);
+            //test
+            lbTienThua_pageTaoDonHang.Text = "100,000,000 VNĐ";
+            lbMaNV_pageTaoDonHang.Text = "NV001";
         }
         public Panel PanelPageTaoDonHang
         {          
