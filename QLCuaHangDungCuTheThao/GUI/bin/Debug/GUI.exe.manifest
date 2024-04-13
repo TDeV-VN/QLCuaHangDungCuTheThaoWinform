@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>h0IjgH8l+IH7S44l/mH2LVxDQaMhWBo9nT3Zu0vqaUU=</dsig:DigestValue>
+        <dsig:DigestValue>s5yqSlBYjmTgdhgGon0oVYLPYgGEB5KB+erL10qxnb8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,19 +85,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dL+8pXpF/iHhbNBsC3DfcgE+BxI+0XCPgc9hNj21uCo=</dsig:DigestValue>
+        <dsig:DigestValue>jLqMo3PrQZAH5o/h3jO8cXrR5SJQyEzcNLZl/suWVho=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="6144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="10240">
       <assemblyIdentity name="DAL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bsc0GcupZ45qNBdX3y0qKLs2+OqSNeZ71vSDFiSSQ10=</dsig:DigestValue>
+        <dsig:DigestValue>n+1LnyznzXmTkMWBI/JwGcwimysxFo3pdxKhcy4ECgM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xgBXM+zKjCeq8qZelYPqcH1NHLfNj/GrCZvVjHMma/0=</dsig:DigestValue>
+        <dsig:DigestValue>uL7slwFEjjd3CDZYIeJV0A/NVG6Cs5J0ellOhV7unS4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -126,14 +126,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI.exe" size="82888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI.exe" size="83912">
       <assemblyIdentity name="GUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>txA8Dclk04u2cgPPci72gxpUZR+INEb9E6ICc5W8TO8=</dsig:DigestValue>
+        <dsig:DigestValue>ZBn4Y7WRNBC4CEIjiayMDMGpR+66WAMAiygkIBhjE3M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

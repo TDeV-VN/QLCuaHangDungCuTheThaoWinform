@@ -51,16 +51,10 @@ namespace BLL
         // Gợi ý sản phẩm khi tìm kiếm sản phẩm
         public static DataTable LoadResults_For_SearchSPTextbox(string text)
         {
-            //test
             DataTable dt = new DataTable();
             dt.Columns.Add("MaSP");
             dt.Columns.Add("TenSP");
-            dt.Rows.Add("SP00001", "Áo thun nam");
-            dt.Rows.Add("SP00002", "Áo thun nữ");
-            dt.Rows.Add("SP00003", "Quần jean nam");
-            dt.Rows.Add("SP00004", "Quần jean nữ");
-
-            return dt;
+            return DatabaseAccess.findSanPhamByUncompletedString(text);
         }
 
         //Lấy chi tiết hóa đơn trong listChiTietHD
@@ -103,8 +97,12 @@ namespace BLL
 
         public bool TaoDonHang()
         {
-            
-            
+            // test start
+            HoaDon hd = new HoaDon(AutoGenerateMaHD(), "NV001", "09098282727", "chuyển khoản", 25, "2023-4-2", 9000000, 10000000, 9000000, 1000000, "Đan lưới màu Hồng");
+            List<ChiTietHoaDon> cthd = new List<ChiTietHoaDon>();
+            cthd.Add(new ChiTietHoaDon(AutoGenerateMaHD(), "SP00001", 3, 3000000));
+            DatabaseAccess.ThemDonHang(hd, cthd);
+            // test end
             return false;
         }
 

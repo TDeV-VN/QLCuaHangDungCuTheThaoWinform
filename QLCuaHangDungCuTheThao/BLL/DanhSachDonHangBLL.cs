@@ -22,12 +22,12 @@ namespace BLL
 
         public static int LaySoLuongDonHangHomNay()
         {
-            return 3;
+            return DatabaseAccess.laySoLuongDonHangHomNay();
         }
 
         public static long LayTongTienHomNay()
         {
-            return 1000000;
+            return DatabaseAccess.layDoanhThuHomNay() ;
         }
 
         //Tạo data cho combobox nhân viên         

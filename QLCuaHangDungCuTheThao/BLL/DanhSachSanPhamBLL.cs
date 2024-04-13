@@ -23,9 +23,22 @@ namespace BLL
             this.Listsanpham.Columns.Add("TenSP", typeof(string));
             this.Listsanpham.Columns.Add("DanhMuc", typeof(string));
             this.Listsanpham.Columns.Add("TonKho", typeof(int));
-
-            this.listsanpham.Rows.Add(Image.FromFile("E:\\AnhDungCuTheThao\\anhGiay.png"), "SP00001", "Áo thể thao nam", "Áo", 100);
-            this.listsanpham.Rows.Add(Image.FromFile("E:\\AnhDungCuTheThao\\anhGiay.png"), "SP00002", "Áo thể thao nam", "Áo", 100);
+            List<SanPham> listAllSanPham = DatabaseAccess.GetAllSanPham();
+            foreach(SanPham sp in listAllSanPham)
+            {
+                string urlImg = DatabaseAccess.GetAvatarURLSanPham(sp.MaSP);
+                if (urlImg != "")
+                {
+                    this.Listsanpham.Rows.Add(Image.FromFile(urlImg), sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
+                }
+                else
+                {
+                    // Không tìm thấy url ảnh đại diện sẽ gán ảnh đại diện bằng null
+                    this.Listsanpham.Rows.Add(null, sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
+                }
+            }
+            //this.listsanpham.Rows.Add(Image.FromFile("E:\\AnhDungCuTheThao\\anhGiay.png"), "SP00001", "Áo thể thao nam", "Áo", 100);
+            //this.listsanpham.Rows.Add(Image.FromFile("E:\\AnhDungCuTheThao\\anhGiay.png"), "SP00002", "Áo thể thao nam", "Áo", 100);
         }
 
         /*Tạo data cho các combobox*/

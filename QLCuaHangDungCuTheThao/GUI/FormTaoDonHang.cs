@@ -153,7 +153,7 @@ namespace GUI
         {
             DonHangBLL.HoaDon.MaNV = lbMaNV_pageTaoDonHang.Text;
             DonHangBLL.HoaDon.GhiChu = tbGhiChu_pageTaoDonHang.Texts;
-            DonHangBLL.HoaDon.PhuongThucThanhToan = radioTienMat_pageTaoDonHang.Checked ? "Tiền mặt" : "Chuyển khoản";
+            DonHangBLL.HoaDon.PhuongThucThanhToan = radioTienMat_pageTaoDonHang.Checked ? "Tiền mặt" : "Chuyển khoản"; 
             DonHangBLL.TaoDonHang();
         }
         /*------------------------------------------------HẾT CÁC SỰ KIỆN-------------------------------------------------*/
