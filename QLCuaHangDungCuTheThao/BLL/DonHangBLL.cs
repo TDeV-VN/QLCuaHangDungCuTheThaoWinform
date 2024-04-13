@@ -113,5 +113,12 @@ namespace BLL
             //In hóa đơn
         }
 
+        //Xóa chi tiết hóa đơn
+        public void XoaChiTietHoaDon(string maSP)
+        {
+            ChiTietHoaDon cthd = GetChiTietHoaDon(maSP);
+            UpdateSoLuongChiTietHoaDon(maSP, 0);
+            listChiTietHD.Remove(cthd);
+        }
     }
 }

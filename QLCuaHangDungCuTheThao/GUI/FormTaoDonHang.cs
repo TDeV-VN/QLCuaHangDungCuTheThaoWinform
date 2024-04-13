@@ -21,8 +21,8 @@ namespace GUI
             InitializeComponent();
             btTaoDonMoi_pageTaoDonHang_Click(null, null);
             //test
-            lbTienThua_pageTaoDonHang.Text = "100,000,000 VNĐ";
-            lbMaNV_pageTaoDonHang.Text = "NV001";
+            //lbTienThua_pageTaoDonHang.Text = "100,000,000 VNĐ";
+            //lbMaNV_pageTaoDonHang.Text = "NV001";
         }
         public Panel PanelPageTaoDonHang
         {          
@@ -195,8 +195,13 @@ namespace GUI
 
         {
             UCRowTaoDH ucRowTaoDH = sender as UCRowTaoDH;
+            DonHangBLL.XoaChiTietHoaDon(ucRowTaoDH.MaSP);
             flpRows_DanhSach1.Controls.Remove(ucRowTaoDH);
             UpdateSTT(flpRows_DanhSach1);
+            //cập nhật các label
+            CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
+            lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
+            lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";
         }
 
         private void Uc_TbSoLuongChanged(object sender, EventArgs e)

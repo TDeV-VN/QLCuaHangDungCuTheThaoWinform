@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{02718E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtanComponent", "ArtanComponent\ArtanComponent.csproj", "{4207479D-231F-4293-9CBC-3868B2AC83DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{E1768DFE-E31B-44B2-A681-2D2A54159C6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{4207479D-231F-4293-9CBC-3868B2AC83DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4207479D-231F-4293-9CBC-3868B2AC83DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4207479D-231F-4293-9CBC-3868B2AC83DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1768DFE-E31B-44B2-A681-2D2A54159C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1768DFE-E31B-44B2-A681-2D2A54159C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1768DFE-E31B-44B2-A681-2D2A54159C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1768DFE-E31B-44B2-A681-2D2A54159C6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
