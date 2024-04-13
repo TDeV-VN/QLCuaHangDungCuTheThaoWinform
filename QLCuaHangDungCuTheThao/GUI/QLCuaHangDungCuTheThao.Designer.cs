@@ -65,16 +65,15 @@
             this.panelTongQuan1 = new System.Windows.Forms.Panel();
             this.btTabPageTongQuan = new System.Windows.Forms.Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panelSportShop = new System.Windows.Forms.Panel();
             this.btSportShop = new System.Windows.Forms.Button();
             this.panelFormHeader = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btHuongDan = new RJCodeAdvance.RJControls.RJButton();
             this.lbPageHeader = new System.Windows.Forms.Label();
             this.pnlTaiKhoan_pageTaoDonHang = new System.Windows.Forms.Panel();
             this.btIconUser = new FontAwesome.Sharp.IconButton();
             this.btIconUser_text = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btHuongDan = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -100,13 +99,15 @@
             this.panelTongQuan1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelFormHeader.SuspendLayout();
-            this.pnlTaiKhoan_pageTaoDonHang.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.pnlTaiKhoan_pageTaoDonHang.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel1.Controls.Add(this.btSportShop);
             this.panel1.Controls.Add(this.btTabPageBaoCao);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.panel10);
@@ -246,7 +247,7 @@
             this.label1.Location = new System.Drawing.Point(32, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 32);
+            this.label1.Size = new System.Drawing.Size(157, 41);
             this.label1.TabIndex = 4;
             this.label1.Text = "Sản phẩm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,7 +429,7 @@
             this.label7.Location = new System.Drawing.Point(32, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 32);
+            this.label7.Size = new System.Drawing.Size(156, 41);
             this.label7.TabIndex = 4;
             this.label7.Text = "Đơn hàng";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -544,7 +545,7 @@
             this.label14.Location = new System.Drawing.Point(32, 0);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 32);
+            this.label14.Size = new System.Drawing.Size(114, 41);
             this.label14.TabIndex = 4;
             this.label14.Text = "Sổ quỹ";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -566,10 +567,10 @@
             this.btTabPageTongQuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTabPageTongQuan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btTabPageTongQuan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btTabPageTongQuan.Location = new System.Drawing.Point(35, 7);
+            this.btTabPageTongQuan.Location = new System.Drawing.Point(27, 7);
             this.btTabPageTongQuan.Margin = new System.Windows.Forms.Padding(2);
             this.btTabPageTongQuan.Name = "btTabPageTongQuan";
-            this.btTabPageTongQuan.Size = new System.Drawing.Size(186, 47);
+            this.btTabPageTongQuan.Size = new System.Drawing.Size(194, 47);
             this.btTabPageTongQuan.TabIndex = 4;
             this.btTabPageTongQuan.Text = "Tổng quan";
             this.btTabPageTongQuan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -591,22 +592,15 @@
             this.iconPictureBox1.TabIndex = 4;
             this.iconPictureBox1.TabStop = false;
             // 
-            // panelSportShop
-            // 
-            this.panelSportShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelSportShop.Location = new System.Drawing.Point(0, 1);
-            this.panelSportShop.Name = "panelSportShop";
-            this.panelSportShop.Size = new System.Drawing.Size(200, 67);
-            this.panelSportShop.TabIndex = 1;
-            // 
             // btSportShop
             // 
-            this.btSportShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btSportShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btSportShop.Dock = System.Windows.Forms.DockStyle.Top;
             this.btSportShop.FlatAppearance.BorderSize = 0;
             this.btSportShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSportShop.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btSportShop.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btSportShop.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btSportShop.Location = new System.Drawing.Point(0, 1);
+            this.btSportShop.Location = new System.Drawing.Point(0, 0);
             this.btSportShop.Name = "btSportShop";
             this.btSportShop.Size = new System.Drawing.Size(227, 60);
             this.btSportShop.TabIndex = 2;
@@ -627,15 +621,44 @@
             this.panelFormHeader.Size = new System.Drawing.Size(1188, 68);
             this.panelFormHeader.TabIndex = 3;
             // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btHuongDan);
+            this.panel12.Location = new System.Drawing.Point(6, 20);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(34, 34);
+            this.panel12.TabIndex = 9;
+            // 
+            // btHuongDan
+            // 
+            this.btHuongDan.BackColor = System.Drawing.Color.Transparent;
+            this.btHuongDan.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btHuongDan.BorderColor = System.Drawing.Color.DimGray;
+            this.btHuongDan.BorderRadius = 15;
+            this.btHuongDan.BorderSize = 2;
+            this.btHuongDan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btHuongDan.FlatAppearance.BorderSize = 0;
+            this.btHuongDan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHuongDan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btHuongDan.ForeColor = System.Drawing.Color.DimGray;
+            this.btHuongDan.Location = new System.Drawing.Point(0, 0);
+            this.btHuongDan.Name = "btHuongDan";
+            this.btHuongDan.Size = new System.Drawing.Size(34, 34);
+            this.btHuongDan.TabIndex = 0;
+            this.btHuongDan.Text = " ?";
+            this.btHuongDan.TextColor = System.Drawing.Color.DimGray;
+            this.btHuongDan.UseVisualStyleBackColor = false;
+            this.btHuongDan.Click += new System.EventHandler(this.btHuongDan_Click);
+            // 
             // lbPageHeader
             // 
             this.lbPageHeader.AutoSize = true;
             this.lbPageHeader.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbPageHeader.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbPageHeader.Location = new System.Drawing.Point(492, 9);
+            this.lbPageHeader.Location = new System.Drawing.Point(491, 5);
             this.lbPageHeader.Margin = new System.Windows.Forms.Padding(0);
             this.lbPageHeader.Name = "lbPageHeader";
-            this.lbPageHeader.Size = new System.Drawing.Size(204, 47);
+            this.lbPageHeader.Size = new System.Drawing.Size(258, 60);
             this.lbPageHeader.TabIndex = 8;
             this.lbPageHeader.Text = "Tổng quan";
             this.lbPageHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -692,43 +715,12 @@
             this.panel17.Size = new System.Drawing.Size(910, 40);
             this.panel17.TabIndex = 1;
             // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.btHuongDan);
-            this.panel12.Location = new System.Drawing.Point(6, 20);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(34, 30);
-            this.panel12.TabIndex = 9;
-            // 
-            // btHuongDan
-            // 
-            this.btHuongDan.BackColor = System.Drawing.Color.Transparent;
-            this.btHuongDan.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btHuongDan.BorderColor = System.Drawing.Color.DimGray;
-            this.btHuongDan.BorderRadius = 15;
-            this.btHuongDan.BorderSize = 2;
-            this.btHuongDan.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btHuongDan.FlatAppearance.BorderSize = 0;
-            this.btHuongDan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHuongDan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btHuongDan.ForeColor = System.Drawing.Color.DimGray;
-            this.btHuongDan.Location = new System.Drawing.Point(0, 0);
-            this.btHuongDan.Name = "btHuongDan";
-            this.btHuongDan.Size = new System.Drawing.Size(30, 30);
-            this.btHuongDan.TabIndex = 0;
-            this.btHuongDan.Text = " ?";
-            this.btHuongDan.TextColor = System.Drawing.Color.DimGray;
-            this.btHuongDan.UseVisualStyleBackColor = false;
-            this.btHuongDan.Click += new System.EventHandler(this.btHuongDan_Click);
-            // 
             // QLCuaHangDungCuTheThao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1415, 766);
             this.Controls.Add(this.panelFormHeader);
-            this.Controls.Add(this.btSportShop);
-            this.Controls.Add(this.panelSportShop);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -764,16 +756,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelFormHeader.ResumeLayout(false);
             this.panelFormHeader.PerformLayout();
-            this.pnlTaiKhoan_pageTaoDonHang.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            this.pnlTaiKhoan_pageTaoDonHang.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelSportShop;
         private System.Windows.Forms.Button btSportShop;
         private System.Windows.Forms.Panel panelTongQuan1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;

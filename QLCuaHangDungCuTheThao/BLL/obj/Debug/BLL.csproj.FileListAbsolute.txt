@@ -93,7 +93,6 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\bin\Debug\Syste
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\bin\Debug\System.ValueTuple.xml
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.dll
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.pdb
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\bin\Debug\Microsoft.Data.SqlClient.dll
@@ -147,3 +146,4 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\bin\Debug\Syste
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\bin\Debug\DTO.dll.config
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\bin\Debug\System.Configuration.ConfigurationManager.xml
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\bin\Debug\System.Security.Permissions.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.csproj.Up2Date

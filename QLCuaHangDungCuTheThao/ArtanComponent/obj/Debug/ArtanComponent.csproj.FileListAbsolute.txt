@@ -77,6 +77,6 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\ArtanComponent\bin\
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\ArtanComponent\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.csproj.AssemblyReference.cache
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.csproj.CoreCompileInputs.cache
-E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.csproj.CopyComplete
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.dll
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanComponent.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\ArtanComponent\obj\Debug\ArtanCom.30E6FEAE.Up2Date

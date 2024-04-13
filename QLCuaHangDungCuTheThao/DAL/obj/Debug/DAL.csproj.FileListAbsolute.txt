@@ -151,7 +151,7 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\bin\Debug\zh-Ha
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\obj\Debug\DAL.dll
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\obj\Debug\DAL.pdb
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\bin\Debug\DTO.dll.config
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\DAL\obj\Debug\DAL.csproj.Up2Date
