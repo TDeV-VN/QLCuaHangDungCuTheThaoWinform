@@ -620,15 +620,7 @@
             this.btTaoDonMoi_pageTaoDonHang.TextColor = System.Drawing.Color.White;
             this.btTaoDonMoi_pageTaoDonHang.UseVisualStyleBackColor = false;
             this.btTaoDonMoi_pageTaoDonHang.Click += new System.EventHandler(this.btTaoDonMoi_pageTaoDonHang_Click);
-            // 
-            // panelSearch__pageTaoDonHang
-            // 
-            this.panelSearch__pageTaoDonHang.Controls.Add(this.iconPictureBox9_pageTaoDonHang);
-            this.panelSearch__pageTaoDonHang.Controls.Add(this.tbThemSP_pageTaoDonHang);
-            this.panelSearch__pageTaoDonHang.Location = new System.Drawing.Point(124, 42);
-            this.panelSearch__pageTaoDonHang.Name = "panelSearch__pageTaoDonHang";
-            this.panelSearch__pageTaoDonHang.Size = new System.Drawing.Size(781, 40);
-            this.panelSearch__pageTaoDonHang.TabIndex = 3;
+
             // 
             // iconPictureBox9_pageTaoDonHang
             // 

@@ -7,6 +7,7 @@ using DTO;
 using DAL;
 using System.Data;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace BLL
 {
@@ -24,19 +25,26 @@ namespace BLL
             this.Listsanpham.Columns.Add("DanhMuc", typeof(string));
             this.Listsanpham.Columns.Add("TonKho", typeof(int));
             List<SanPham> listAllSanPham = DatabaseAccess.GetAllSanPham();
-            foreach(SanPham sp in listAllSanPham)
+            try
             {
-                string urlImg = DatabaseAccess.GetAvatarURLSanPham(sp.MaSP);
-                if (urlImg != "")
+                foreach (SanPham sp in listAllSanPham)
                 {
-                    this.Listsanpham.Rows.Add(Image.FromFile(urlImg), sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
+                    string urlImg = DatabaseAccess.GetAvatarURLSanPham(sp.MaSP);
+                    if (urlImg != "")
+                    {
+                        this.Listsanpham.Rows.Add(Image.FromFile(urlImg), sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
+                    }
+                    else
+                    {
+                        // Không tìm thấy url ảnh đại diện sẽ gán ảnh đại diện bằng null
+                        this.Listsanpham.Rows.Add(null, sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
+                    }
                 }
-                else
-                {
-                    // Không tìm thấy url ảnh đại diện sẽ gán ảnh đại diện bằng null
-                    this.Listsanpham.Rows.Add(null, sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
-                }
+            } catch (Exception e)
+            {
+                MessageBox.Show("Lỗi hàm khởi tạo DanhSachSanPhamBLL: " + e);
             }
+            
         }
 
         /*Tạo data cho các combobox*/
