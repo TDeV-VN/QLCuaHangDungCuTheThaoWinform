@@ -72,8 +72,11 @@ namespace GUI
             string text = tbThemSP_pageTaoDonHang.Texts;
             if (text.Length >= 4)
             {
+                DataTable dt = DonHangBLL.LoadResults_For_SearchSPTextbox(text);
+                GrVThemSPResult_pageTaoDonHang.DataSource = dt;
 
-                GrVThemSPResult_pageTaoDonHang.DataSource = DonHangBLL.LoadResults_For_SearchSPTextbox(text);
+                
+
                 if (GrVThemSPResult_pageTaoDonHang.Rows.Count > 0)
                 {
                     GrVThemSPResult_pageTaoDonHang.Height = GrVThemSPResult_pageTaoDonHang.RowCount * 30;

@@ -51,8 +51,9 @@ namespace BLL
         public List<string> getDanhMuc()
         {
             List<string> listDanhMuc = new List<string>();
-            listDanhMuc.Add("Tất cả");
             listDanhMuc.AddRange(DatabaseAccess.GetAllDanhMuc());
+            listDanhMuc.Sort();
+            listDanhMuc.Insert(0, "Tất cả");
             return listDanhMuc;
         }
         public List<string> getTrangThai()

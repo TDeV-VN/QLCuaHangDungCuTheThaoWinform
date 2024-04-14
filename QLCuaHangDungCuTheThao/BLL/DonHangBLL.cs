@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.WebSockets;
+using System.Windows.Forms;
 using DAL;
 using DTO;
 
@@ -41,7 +42,7 @@ namespace BLL
                 UpdateSoLuongChiTietHoaDon(masp, GetChiTietHoaDon(masp).SoLuong + 1);
                 return false;
             }
-            SanPham sp = DatabaseAccess.GetSanPham(masp);
+            SanPham sp = DatabaseAccess.GetSanPham(masp);            
             ChiTietHoaDon cthd = new ChiTietHoaDon(HoaDon.MaHD, sp.MaSP, 1, sp.GiaBan);
             ListChiTietHD.Add(cthd);
             UpdateSoLuongChiTietHoaDon(masp, 1); //để cập nhật tiền

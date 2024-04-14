@@ -34,9 +34,9 @@ namespace BLL
         public static List<string> GetDSTenNhanVien() 
         {
             List<string> listTenNhanVien = new List<string>();
-            listTenNhanVien.Add("Tất cả");
             listTenNhanVien.AddRange(DatabaseAccess.GetDSTenNhanVien());
             listTenNhanVien.Sort();
+            listTenNhanVien.Insert(0, "Tất cả");
             return listTenNhanVien;
         }
 

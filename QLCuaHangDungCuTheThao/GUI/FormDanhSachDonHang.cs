@@ -60,6 +60,7 @@ namespace GUI
             cbTrangThai.DataSource = DanhSachDonHangBLL.GetDSTrangThai();
             cbTrangThai.SelectedItem = "Tất cả";
             cbNhanVien.DataSource = DanhSachDonHangBLL.GetDSTenNhanVien();
+
             cbNhanVien.SelectedItem = "Tất cả";
         }
     }
