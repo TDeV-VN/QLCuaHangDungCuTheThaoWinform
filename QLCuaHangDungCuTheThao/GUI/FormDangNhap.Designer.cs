@@ -31,16 +31,21 @@
             this.lbSaiMatKhau = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbMatKhau = new RJCodeAdvance.RJControls.RJTextBox();
-            this.lbSaiSDT = new System.Windows.Forms.Label();
-            this.lb = new System.Windows.Forms.Label();
-            this.tbSDT = new RJCodeAdvance.RJControls.RJTextBox();
+            this.lbSaiEmail = new System.Windows.Forms.Label();
+            this.tbEmail = new RJCodeAdvance.RJControls.RJTextBox();
             this.btDangNhap = new RJCodeAdvance.RJControls.RJButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbQuenMK = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btClose = new RJCodeAdvance.RJControls.RJButton();
+            this.panelDangNhap = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.btQuayLai = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
+            this.panelDangNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbSaiMatKhau
@@ -85,51 +90,39 @@
             this.tbMatKhau.TabIndex = 7;
             this.tbMatKhau.Texts = "";
             this.tbMatKhau.UnderlinedStyle = false;
-            this.tbMatKhau._TextChanged += new System.EventHandler(this.tbMatKhau__TextChanged);
             // 
-            // lbSaiSDT
+            // lbSaiEmail
             // 
-            this.lbSaiSDT.AutoSize = true;
-            this.lbSaiSDT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbSaiSDT.ForeColor = System.Drawing.Color.Brown;
-            this.lbSaiSDT.Location = new System.Drawing.Point(18, 132);
-            this.lbSaiSDT.Name = "lbSaiSDT";
-            this.lbSaiSDT.Size = new System.Drawing.Size(181, 13);
-            this.lbSaiSDT.TabIndex = 6;
-            this.lbSaiSDT.Text = "Số điện thoại này chưa được đăng ký";
+            this.lbSaiEmail.AutoSize = true;
+            this.lbSaiEmail.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbSaiEmail.ForeColor = System.Drawing.Color.Brown;
+            this.lbSaiEmail.Location = new System.Drawing.Point(18, 132);
+            this.lbSaiEmail.Name = "lbSaiEmail";
+            this.lbSaiEmail.Size = new System.Drawing.Size(121, 13);
+            this.lbSaiEmail.TabIndex = 6;
+            this.lbSaiEmail.Text = "Tài khoản không tồn tại";
             // 
-            // lb
+            // tbEmail
             // 
-            this.lb.AutoSize = true;
-            this.lb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb.Location = new System.Drawing.Point(17, 71);
-            this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(111, 21);
-            this.lb.TabIndex = 3;
-            this.lb.Text = "Số điện thoại";
-            // 
-            // tbSDT
-            // 
-            this.tbSDT.BackColor = System.Drawing.SystemColors.Window;
-            this.tbSDT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
-            this.tbSDT.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
-            this.tbSDT.BorderRadius = 12;
-            this.tbSDT.BorderSize = 2;
-            this.tbSDT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbSDT.Location = new System.Drawing.Point(12, 96);
-            this.tbSDT.Margin = new System.Windows.Forms.Padding(4);
-            this.tbSDT.Multiline = false;
-            this.tbSDT.Name = "tbSDT";
-            this.tbSDT.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbSDT.PasswordChar = false;
-            this.tbSDT.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbSDT.PlaceholderText = "";
-            this.tbSDT.Size = new System.Drawing.Size(250, 32);
-            this.tbSDT.TabIndex = 1;
-            this.tbSDT.Texts = "";
-            this.tbSDT.UnderlinedStyle = false;
-            this.tbSDT._TextChanged += new System.EventHandler(this.tbSDT__TextChanged);
+            this.tbEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.tbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(44)))));
+            this.tbEmail.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
+            this.tbEmail.BorderRadius = 12;
+            this.tbEmail.BorderSize = 2;
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbEmail.Location = new System.Drawing.Point(12, 96);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.tbEmail.Multiline = false;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbEmail.PasswordChar = false;
+            this.tbEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbEmail.PlaceholderText = "";
+            this.tbEmail.Size = new System.Drawing.Size(250, 32);
+            this.tbEmail.TabIndex = 1;
+            this.tbEmail.Texts = "";
+            this.tbEmail.UnderlinedStyle = false;
             // 
             // btDangNhap
             // 
@@ -140,6 +133,7 @@
             this.btDangNhap.BorderSize = 0;
             this.btDangNhap.FlatAppearance.BorderSize = 0;
             this.btDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btDangNhap.ForeColor = System.Drawing.Color.White;
             this.btDangNhap.Location = new System.Drawing.Point(46, 226);
             this.btDangNhap.Name = "btDangNhap";
@@ -152,56 +146,72 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbQuenMK);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.tbSDT);
+            this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.btDangNhap);
-            this.groupBox1.Controls.Add(this.lb);
             this.groupBox1.Controls.Add(this.lbSaiMatKhau);
-            this.groupBox1.Controls.Add(this.lbSaiSDT);
+            this.groupBox1.Controls.Add(this.lbSaiEmail);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tbMatKhau);
-            this.groupBox1.Location = new System.Drawing.Point(35, 59);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Location = new System.Drawing.Point(251, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(273, 362);
+            this.groupBox1.Size = new System.Drawing.Size(273, 355);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
+            // 
+            // lbQuenMK
+            // 
+            this.lbQuenMK.AutoSize = true;
+            this.lbQuenMK.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbQuenMK.Location = new System.Drawing.Point(18, 288);
+            this.lbQuenMK.Name = "lbQuenMK";
+            this.lbQuenMK.Size = new System.Drawing.Size(91, 13);
+            this.lbQuenMK.TabIndex = 15;
+            this.lbQuenMK.TabStop = true;
+            this.lbQuenMK.Text = "Quên mật khẩu?";
+            this.lbQuenMK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbQuenMK_LinkClicked);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(17, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 21);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Email / Mã nhân viên";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(15, 305);
+            this.label7.Location = new System.Drawing.Point(18, 314);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(253, 13);
+            this.label7.Size = new System.Drawing.Size(173, 13);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Vui lòng liên hệ quản lý hoặc quản trị viên hệ thống";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(45, 286);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Quên mật khẩu / chưa có tài khoản?";
+            this.label7.Text = "Chưa có tài khoản? Liên hệ quản lý";
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(39, 22);
+            this.label5.Location = new System.Drawing.Point(39, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(193, 40);
             this.label5.TabIndex = 11;
             this.label5.Text = "ĐĂNG NHẬP";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btClose
             // 
-            this.btClose.BackColor = System.Drawing.Color.GhostWhite;
-            this.btClose.BackgroundColor = System.Drawing.Color.GhostWhite;
+            this.btClose.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btClose.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.btClose.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btClose.BorderRadius = 12;
             this.btClose.BorderSize = 0;
@@ -209,7 +219,7 @@
             this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btClose.ForeColor = System.Drawing.Color.MediumPurple;
-            this.btClose.Location = new System.Drawing.Point(310, 12);
+            this.btClose.Location = new System.Drawing.Point(658, 12);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(30, 30);
             this.btClose.TabIndex = 12;
@@ -218,28 +228,76 @@
             this.btClose.UseVisualStyleBackColor = false;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
+            // panelDangNhap
+            // 
+            this.panelDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDangNhap.Controls.Add(this.iconPictureBox1);
+            this.panelDangNhap.Controls.Add(this.groupBox1);
+            this.panelDangNhap.Location = new System.Drawing.Point(76, 67);
+            this.panelDangNhap.Name = "panelDangNhap";
+            this.panelDangNhap.Size = new System.Drawing.Size(524, 355);
+            this.panelDangNhap.TabIndex = 13;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconPictureBox1.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Black;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Black;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 252;
+            this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(252, 355);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPictureBox1.TabIndex = 12;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // btQuayLai
+            // 
+            this.btQuayLai.BackColor = System.Drawing.Color.Transparent;
+            this.btQuayLai.FlatAppearance.BorderSize = 0;
+            this.btQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQuayLai.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btQuayLai.IconColor = System.Drawing.Color.Black;
+            this.btQuayLai.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btQuayLai.IconSize = 25;
+            this.btQuayLai.Location = new System.Drawing.Point(12, 16);
+            this.btQuayLai.Name = "btQuayLai";
+            this.btQuayLai.Size = new System.Drawing.Size(40, 25);
+            this.btQuayLai.TabIndex = 14;
+            this.btQuayLai.UseVisualStyleBackColor = false;
+            this.btQuayLai.Click += new System.EventHandler(this.btQuayLai_Click);
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(352, 490);
+            this.ClientSize = new System.Drawing.Size(700, 500);
+            this.Controls.Add(this.btQuayLai);
+            this.Controls.Add(this.panelDangNhap);
             this.Controls.Add(this.btClose);
-            this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangNhap";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelDangNhap.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lb;
-        private RJCodeAdvance.RJControls.RJTextBox tbSDT;
-        private System.Windows.Forms.Label lbSaiSDT;
+        private RJCodeAdvance.RJControls.RJTextBox tbEmail;
+        private System.Windows.Forms.Label lbSaiEmail;
         private System.Windows.Forms.Label lbSaiMatKhau;
         private System.Windows.Forms.Label label4;
         private RJCodeAdvance.RJControls.RJTextBox tbMatKhau;
@@ -247,7 +305,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private RJCodeAdvance.RJControls.RJButton btClose;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel lbQuenMK;
+        private System.Windows.Forms.Panel panelDangNhap;
+        private FontAwesome.Sharp.IconButton btQuayLai;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

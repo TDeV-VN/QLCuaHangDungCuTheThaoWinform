@@ -29,7 +29,6 @@ namespace GUI
         static private FormPhieuChi formPhieuChi = new FormPhieuChi();
         static private FormSoQuy formSoQuy = new FormSoQuy();
         static private FormBaoCao formBaoCao = new FormBaoCao();
-        static private FormDangNhap formDangNhap = new FormDangNhap();
 
         static private Panel panelPageTongQuan = formTongQuan.PanelPageTongQuan;
         static private Panel panelPageTaoDonHang = formTaoDonHang.PanelPageTaoDonHang;
@@ -59,6 +58,7 @@ namespace GUI
         {
             btTabPageTongQuan_Click(sender, e);
             //test
+            FormDangNhap formDangNhap = new FormDangNhap();
             formDangNhap.Show();
         }
         private void btTabPageTongQuan_Click(object sender, EventArgs e)

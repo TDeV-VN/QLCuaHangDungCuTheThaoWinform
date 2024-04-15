@@ -174,3 +174,5 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\DTO.d
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\System.Configuration.ConfigurationManager.xml
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\System.Security.Permissions.xml
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.csproj.Up2Date
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormDatLaiMatKhau.resources
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormOTP.resources

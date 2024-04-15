@@ -17,20 +17,16 @@ namespace GUI
             InitializeComponent();
             tbMatKhau.PasswordChar = true;
             lbSaiMatKhau.Visible = false;
-            lbSaiSDT.Visible = false;
-            tbSDT.Focus();
+            lbSaiEmail.Visible = false;
+            tbEmail.Focus();
+            formOTP.XacThuc += formOTP_btXacThuc_Click;
         }
 
-        private void tbSDT__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbMatKhau__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        static private FormOTP formOTP = new FormOTP();
+        static private FormDatLaiMatKhau formDatLaiMatKhau = new FormDatLaiMatKhau();
+        static private Panel panelDatLaiMatKhau = formDatLaiMatKhau.PanelDatLaiMatKhau;
+        static private Panel panelOTP = formOTP.PanelOTP;
+/*-------------------------------SỰ KIỆN------------------------------------------------------*/
         private void btDangNhap_Click(object sender, EventArgs e)
         {
 
@@ -39,6 +35,40 @@ namespace GUI
         private void btClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btQuayLai_Click(object sender, EventArgs e)
+        {
+            if (this.Controls.Contains(panelDatLaiMatKhau))
+            {
+                this.Controls.Remove(panelDatLaiMatKhau);
+                panelDangNhap.Location = new Point(76, 67);
+                this.Controls.Add(panelOTP);
+            } else if (this.Controls.Contains(panelOTP))
+            {
+                this.Controls.Remove(panelOTP);
+                panelDatLaiMatKhau.Location = new Point(76, 67);
+                this.Controls.Add(panelDangNhap);
+            }
+        }
+
+        private void lbQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Controls.Remove(panelDangNhap);
+            panelDatLaiMatKhau.Location = new Point(76, 67);
+            this.Controls.Add(panelOTP);
+            
+        }
+/*-----------------------------HÀM--------------------------*/
+        //Xử lý sự kiện xác thực OTP từ formOTP
+        private void formOTP_btXacThuc_Click(string otp)
+        {
+            //Check OTP
+
+            //Nếu đúng
+            this.Controls.Remove(panelOTP);
+            panelDatLaiMatKhau.Location = new Point(76, 67);
+            this.Controls.Add(panelDatLaiMatKhau);
         }
     }
 }
