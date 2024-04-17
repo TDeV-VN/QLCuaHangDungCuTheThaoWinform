@@ -39,15 +39,22 @@ namespace GUI
 
         private void btThemSP_Click(object sender, EventArgs e)
         {
-
+            FormThemSP formThemSP = new FormThemSP();
+            formThemSP.ShowDialog();
         }
 
         private void btXoaSP_Click(object sender, EventArgs e)
         {
 
         }
-        /*----------------------------------------------- HẾT SỰ KIỆN------------------------------------------------*/
-        private void taoDataChoComboBox()
+
+        private void GrVDanhSach_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormChiTietSP formChiTietSP = new FormChiTietSP();
+            formChiTietSP.ShowDialog();
+        }
+    /*----------------------------------------------- HẾT SỰ KIỆN------------------------------------------------*/
+    private void taoDataChoComboBox()
         {
             cbDanhMuc.DataSource = danhSachSanPhamBLL.getDanhMuc();
             cbDanhMuc.SelectedItem = "Tất cả";

@@ -59,7 +59,7 @@ namespace GUI
             btTabPageTongQuan_Click(sender, e);
             //test
             FormDangNhap formDangNhap = new FormDangNhap();
-            formDangNhap.Show();
+            formDangNhap.ShowDialog();
         }
         private void btTabPageTongQuan_Click(object sender, EventArgs e)
         {
