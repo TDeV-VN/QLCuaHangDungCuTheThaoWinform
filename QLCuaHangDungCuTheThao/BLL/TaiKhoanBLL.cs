@@ -42,5 +42,10 @@ namespace BLL
                 return null;
             }
         }
+
+        private string maHoaMatKhau(string matKhau)
+        {
+            return "pass";
+        }
     }
 }

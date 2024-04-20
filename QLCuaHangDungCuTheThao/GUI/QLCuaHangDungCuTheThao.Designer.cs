@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btSportShop = new System.Windows.Forms.Button();
             this.btTabPageBaoCao = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -65,7 +66,6 @@
             this.panelTongQuan1 = new System.Windows.Forms.Panel();
             this.btTabPageTongQuan = new System.Windows.Forms.Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.btSportShop = new System.Windows.Forms.Button();
             this.panelFormHeader = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btHuongDan = new RJCodeAdvance.RJControls.RJButton();
@@ -121,16 +121,32 @@
             this.panel1.Size = new System.Drawing.Size(227, 766);
             this.panel1.TabIndex = 0;
             // 
+            // btSportShop
+            // 
+            this.btSportShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btSportShop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btSportShop.FlatAppearance.BorderSize = 0;
+            this.btSportShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSportShop.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btSportShop.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btSportShop.Location = new System.Drawing.Point(0, 0);
+            this.btSportShop.Name = "btSportShop";
+            this.btSportShop.Size = new System.Drawing.Size(227, 60);
+            this.btSportShop.TabIndex = 2;
+            this.btSportShop.Text = "SportShop";
+            this.btSportShop.UseVisualStyleBackColor = false;
+            this.btSportShop.Click += new System.EventHandler(this.btSportShop_Click);
+            // 
             // btTabPageBaoCao
             // 
             this.btTabPageBaoCao.FlatAppearance.BorderSize = 0;
             this.btTabPageBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTabPageBaoCao.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btTabPageBaoCao.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btTabPageBaoCao.Location = new System.Drawing.Point(47, 694);
+            this.btTabPageBaoCao.Location = new System.Drawing.Point(38, 694);
             this.btTabPageBaoCao.Margin = new System.Windows.Forms.Padding(2);
             this.btTabPageBaoCao.Name = "btTabPageBaoCao";
-            this.btTabPageBaoCao.Size = new System.Drawing.Size(171, 47);
+            this.btTabPageBaoCao.Size = new System.Drawing.Size(180, 47);
             this.btTabPageBaoCao.TabIndex = 4;
             this.btTabPageBaoCao.Text = "Báo cáo";
             this.btTabPageBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,11 +219,11 @@
             // 
             this.iconPictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.iconPictureBox8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconPictureBox8.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            this.iconPictureBox8.IconChar = FontAwesome.Sharp.IconChar.Box;
             this.iconPictureBox8.IconColor = System.Drawing.Color.WhiteSmoke;
             this.iconPictureBox8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox8.IconSize = 31;
-            this.iconPictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.iconPictureBox8.Location = new System.Drawing.Point(0, 1);
             this.iconPictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox8.Name = "iconPictureBox8";
             this.iconPictureBox8.Size = new System.Drawing.Size(31, 33);
@@ -247,7 +263,7 @@
             this.label1.Location = new System.Drawing.Point(32, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 41);
+            this.label1.Size = new System.Drawing.Size(126, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Sản phẩm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,7 +286,7 @@
             this.iconPictureBox5.IconColor = System.Drawing.Color.WhiteSmoke;
             this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox5.IconSize = 31;
-            this.iconPictureBox5.Location = new System.Drawing.Point(0, 11);
+            this.iconPictureBox5.Location = new System.Drawing.Point(0, 15);
             this.iconPictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox5.Name = "iconPictureBox5";
             this.iconPictureBox5.Size = new System.Drawing.Size(31, 33);
@@ -312,7 +328,7 @@
             this.iconPictureBox4.IconColor = System.Drawing.Color.WhiteSmoke;
             this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox4.IconSize = 31;
-            this.iconPictureBox4.Location = new System.Drawing.Point(0, 11);
+            this.iconPictureBox4.Location = new System.Drawing.Point(0, 16);
             this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox4.Name = "iconPictureBox4";
             this.iconPictureBox4.Size = new System.Drawing.Size(31, 33);
@@ -429,7 +445,7 @@
             this.label7.Location = new System.Drawing.Point(32, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 41);
+            this.label7.Size = new System.Drawing.Size(126, 32);
             this.label7.TabIndex = 4;
             this.label7.Text = "Đơn hàng";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -530,7 +546,7 @@
             this.iconPictureBox6.IconColor = System.Drawing.Color.WhiteSmoke;
             this.iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox6.IconSize = 31;
-            this.iconPictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.iconPictureBox6.Location = new System.Drawing.Point(0, 4);
             this.iconPictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox6.Name = "iconPictureBox6";
             this.iconPictureBox6.Size = new System.Drawing.Size(31, 33);
@@ -545,7 +561,7 @@
             this.label14.Location = new System.Drawing.Point(32, 0);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 41);
+            this.label14.Size = new System.Drawing.Size(92, 32);
             this.label14.TabIndex = 4;
             this.label14.Text = "Sổ quỹ";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -585,28 +601,12 @@
             this.iconPictureBox1.IconColor = System.Drawing.Color.WhiteSmoke;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 31;
-            this.iconPictureBox1.Location = new System.Drawing.Point(0, 11);
+            this.iconPictureBox1.Location = new System.Drawing.Point(0, 15);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(31, 33);
             this.iconPictureBox1.TabIndex = 4;
             this.iconPictureBox1.TabStop = false;
-            // 
-            // btSportShop
-            // 
-            this.btSportShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btSportShop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btSportShop.FlatAppearance.BorderSize = 0;
-            this.btSportShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSportShop.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btSportShop.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btSportShop.Location = new System.Drawing.Point(0, 0);
-            this.btSportShop.Name = "btSportShop";
-            this.btSportShop.Size = new System.Drawing.Size(227, 60);
-            this.btSportShop.TabIndex = 2;
-            this.btSportShop.Text = "SportShop";
-            this.btSportShop.UseVisualStyleBackColor = false;
-            this.btSportShop.Click += new System.EventHandler(this.btSportShop_Click);
             // 
             // panelFormHeader
             // 
@@ -658,7 +658,7 @@
             this.lbPageHeader.Location = new System.Drawing.Point(491, 5);
             this.lbPageHeader.Margin = new System.Windows.Forms.Padding(0);
             this.lbPageHeader.Name = "lbPageHeader";
-            this.lbPageHeader.Size = new System.Drawing.Size(258, 60);
+            this.lbPageHeader.Size = new System.Drawing.Size(204, 47);
             this.lbPageHeader.TabIndex = 8;
             this.lbPageHeader.Text = "Tổng quan";
             this.lbPageHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -717,7 +717,7 @@
             // 
             // QLCuaHangDungCuTheThao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1415, 766);
             this.Controls.Add(this.panelFormHeader);
