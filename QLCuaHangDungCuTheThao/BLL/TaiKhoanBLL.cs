@@ -6,6 +6,9 @@ namespace BLL
 {
     public class TaiKhoanBLL
     {
+        private static TaiKhoan taiKhoan = new TaiKhoan();
+        public static TaiKhoan TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
+
         private static String randomCode;
         public static String to;
 

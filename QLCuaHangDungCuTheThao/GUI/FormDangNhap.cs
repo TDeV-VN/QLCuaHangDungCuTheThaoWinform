@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,11 @@ namespace GUI
 /*-------------------------------SỰ KIỆN------------------------------------------------------*/
         private void btDangNhap_Click(object sender, EventArgs e)
         {
-
+            //test
+            TaiKhoanBLL.TaiKhoan.Role = true;
+            TaiKhoanBLL.TaiKhoan.MaNV = "NV001";
+            TaiKhoanBLL.TaiKhoan.TrangThai = true;
+            this.Close();
         }
 
         private void btClose_Click(object sender, EventArgs e)

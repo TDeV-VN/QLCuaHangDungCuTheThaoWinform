@@ -1,12 +1,7 @@
 ﻿using BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace GUI
@@ -29,6 +24,8 @@ namespace GUI
         static private FormPhieuChi formPhieuChi = new FormPhieuChi();
         static private FormSoQuy formSoQuy = new FormSoQuy();
         static private FormBaoCao formBaoCao = new FormBaoCao();
+        static private FormDangNhap formDangNhap = new FormDangNhap();
+
 
         static private Panel panelPageTongQuan = formTongQuan.PanelPageTongQuan;
         static private Panel panelPageTaoDonHang = formTaoDonHang.PanelPageTaoDonHang;
@@ -53,21 +50,21 @@ namespace GUI
         public void Form_Load(object sender, EventArgs e)
         {
             btTabPageTongQuan_Click(sender, e);
+            formDangNhap.ShowDialog();
+            dangNhap();
         }
+
         private void btSportShop_Click(object sender, EventArgs e)
         {
             btTabPageTongQuan_Click(sender, e);
-            //test
-            FormDangNhap formDangNhap = new FormDangNhap();
-            formDangNhap.ShowDialog();
         }
+
         private void btTabPageTongQuan_Click(object sender, EventArgs e)
         {
             CapNhatViTriLbPageHeader("Tổng quan");
             RemoveAllPagePanel();
             panelPageTongQuan.Location = new Point(227, 68);
             this.Controls.Add(panelPageTongQuan);
-
         }
 
         public void btTabPageTaoDon_Click(object sender, EventArgs e)
@@ -188,6 +185,53 @@ namespace GUI
             this.Controls.Remove(panelPageBaoCao);
         }
 
+        private void dangNhap()
+        {
+            if (TaiKhoanBLL.TaiKhoan.MaNV != "" && TaiKhoanBLL.TaiKhoan.TrangThai == true) //Đã đăng nhập tài khoản đang hoạt động
+            {
+                //Kích hoạt tất cả chức năng
+                foreach (Control control in panel1.Controls)
+                {
+                    if (control.Name.Equals("btSportShop") || control.Name.Equals("panelTongQuan1")) continue;
+                    control.Enabled = true;
+                }
+                iconPictureBox3.IconColor = Color.WhiteSmoke;
+                iconPictureBox8.IconColor = Color.WhiteSmoke;
+                iconPictureBox4.IconColor = Color.WhiteSmoke;
+                iconPictureBox6.IconColor = Color.WhiteSmoke;
+                iconPictureBox5.IconColor = Color.WhiteSmoke;
+
+                if (TaiKhoanBLL.TaiKhoan.Role == true) //Quan ly
+                {
+                    btTabPageBaoCao.Enabled = true;
+                    iconPictureBox5.IconColor = Color.WhiteSmoke;
+                }
+                else //Nhan vien
+                {
+                    btTabPageBaoCao.Enabled = false;
+                    iconPictureBox5.IconColor = Color.FromArgb(12, 14, 16);
+                }
+
+            }
+            else //Chưa đăng nhập
+            {
+                //Vô hiệu hóa tất cả chức năng
+                foreach (Control control in panel1.Controls)
+                {
+                    if (control.Name.Equals("btSportShop") || control.Name.Equals("panelTongQuan1")) continue;
+                    control.Enabled = false;
+                }
+                iconPictureBox3.IconColor = Color.FromArgb(12, 14, 16);
+                iconPictureBox8.IconColor = Color.FromArgb(12, 14, 16);
+                iconPictureBox4.IconColor = Color.FromArgb(12, 14, 16);
+                iconPictureBox6.IconColor = Color.FromArgb(12, 14, 16);
+                iconPictureBox5.IconColor = Color.FromArgb(12, 14, 16);
+            }
+            if (TaiKhoanBLL.TaiKhoan.MaNV != "" && TaiKhoanBLL.TaiKhoan.TrangThai == false) //Đã đăng nhập tài khoản bị vô hiệu hóa
+            {
+                MessageBox.Show("Tài khoản của bạn đã bị vô hiệu hóa. Vui lòng liên hệ quản lý để biết thêm chi tiết.");
+            }
+        }
         /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/
     }
 }
