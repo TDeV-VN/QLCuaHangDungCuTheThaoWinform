@@ -178,3 +178,5 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.F
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormOTP.resources
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormChiTietSP.resources
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormThemSP.resources
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormSuaChiTietSP.resources
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormXemChiTietSP.resources

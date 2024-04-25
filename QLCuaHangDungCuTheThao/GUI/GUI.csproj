@@ -196,6 +196,18 @@
     <Compile Include="FormBaoCao.Designer.cs">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXemChiTietSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemChiTietSP.Designer.cs">
+      <DependentUpon>FormXemChiTietSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaChiTietSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaChiTietSP.Designer.cs">
+      <DependentUpon>FormSuaChiTietSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +308,12 @@
     </Compile>
     <EmbeddedResource Include="FormBaoCao.resx">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemChiTietSP.resx">
+      <DependentUpon>FormXemChiTietSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaChiTietSP.resx">
+      <DependentUpon>FormSuaChiTietSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemSP.resx">
       <DependentUpon>FormThemSP.cs</DependentUpon>
