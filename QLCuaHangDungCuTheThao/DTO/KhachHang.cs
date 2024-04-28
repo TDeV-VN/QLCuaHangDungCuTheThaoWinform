@@ -1,6 +1,6 @@
-public class KhachHang {
+﻿public class KhachHang {
     private string sdt;
-    private string tenKH;
+    private string tenKH; //Bỏ
     private int diemUuDai;
 
     public string SDT { get => sdt; set => sdt = value; }

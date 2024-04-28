@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using DTO;
 using System.Data;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -176,41 +177,52 @@ namespace DAL
         // Thêm một đơn hàng và các chi tiết hóa đơn cảu nó vào cơ sở dữ liệu
         public static bool ThemDonHang(HoaDon hoaDon, List<ChiTietHoaDon> listChiTietHD)
         {
-            connect();
-            // Gọi đến thủ tục add_HoaDon trong SQL để thêm một hóa đơn mới vào CSDL
-            SqlCommand cmdHD = new SqlCommand("addHoaDon", conn);
-            cmdHD.CommandType = CommandType.StoredProcedure;
-            // Truyền các tham số của thủ tục add_HoaDon
-            cmdHD.Parameters.AddWithValue("@maNV", hoaDon.MaNV);
-            cmdHD.Parameters.AddWithValue("@sdt", hoaDon.SDT);
-            cmdHD.Parameters.AddWithValue("@phuongThuc", hoaDon.PhuongThucThanhToan);
-            cmdHD.Parameters.AddWithValue("@chietKhau", hoaDon.ChietKhau);
-            cmdHD.Parameters.AddWithValue("@ngayLap", hoaDon.ThoiGianLap);
-            cmdHD.Parameters.AddWithValue("@tienKhachPhaiTra", hoaDon.TienKhachPhaiTra);
-            cmdHD.Parameters.AddWithValue("@tienKhachDua", hoaDon.TienKhachDua);
-            cmdHD.Parameters.AddWithValue("@tongTien", hoaDon.TongTienHang);
-            cmdHD.Parameters.AddWithValue("@traLai", hoaDon.TraLai);
-            cmdHD.Parameters.AddWithValue("@note", hoaDon.GhiChu);
-            cmdHD.Parameters.AddWithValue("@trangThai", 1);
-            cmdHD.ExecuteNonQuery();
-
-            // Gọi đến thủ tục add_ChiTietHoaDon trong SQL để thêm các chi tiết hóa đơn của hóa đơn bên trên vào CSDL
-            SqlCommand cmdCTHD = new SqlCommand("addChiTietHoaDon", conn);
-            cmdCTHD.CommandType = CommandType.StoredProcedure;
-            foreach (ChiTietHoaDon cthd in listChiTietHD)
+            try
             {
-                // Truyền các tham số của thủ tục add_ChiTietHoaDon
-                cmdCTHD.Parameters.AddWithValue("@maHD", cthd.MaHD);
-                cmdCTHD.Parameters.AddWithValue("@maSP", cthd.MaSP);
-                cmdCTHD.Parameters.AddWithValue("@soLuong", cthd.SoLuong);
-                cmdCTHD.Parameters.AddWithValue("@donGia", cthd.DonGia);
-                cmdCTHD.Parameters.AddWithValue("@thanhTien", cthd.ThanhTien);
-                cmdCTHD.ExecuteNonQuery();
-                // Gọi hàm cập nhật lại số lượng tồn kho
-                updateTonKho(cthd.SoLuong * -1, cthd.MaSP);
+                connect();
+                // Gọi đến thủ tục add_HoaDon trong SQL để thêm một hóa đơn mới vào CSDL
+                SqlCommand cmdHD = new SqlCommand("addHoaDon", conn);
+                cmdHD.CommandType = CommandType.StoredProcedure;
+                // Truyền các tham số của thủ tục add_HoaDon
+                cmdHD.Parameters.AddWithValue("@maNV", hoaDon.MaNV);
+                cmdHD.Parameters.AddWithValue("@sdt", hoaDon.SDT);
+                cmdHD.Parameters.AddWithValue("@phuongThuc", hoaDon.PhuongThucThanhToan);
+                cmdHD.Parameters.AddWithValue("@chietKhau", hoaDon.ChietKhau);
+                cmdHD.Parameters.AddWithValue("@ngayLap", hoaDon.ThoiGianLap);
+                cmdHD.Parameters.AddWithValue("@tienKhachPhaiTra", hoaDon.TienKhachPhaiTra);
+                cmdHD.Parameters.AddWithValue("@tienKhachDua", hoaDon.TienKhachDua);
+                cmdHD.Parameters.AddWithValue("@tongTien", hoaDon.TongTienHang);
+                cmdHD.Parameters.AddWithValue("@traLai", hoaDon.TraLai);
+                cmdHD.Parameters.AddWithValue("@note", hoaDon.GhiChu);
+                cmdHD.Parameters.AddWithValue("@trangThai", 1);
+                cmdHD.ExecuteNonQuery();
+
+                // Gọi đến thủ tục add_ChiTietHoaDon trong SQL để thêm các chi tiết hóa đơn của hóa đơn bên trên vào CSDL
+                SqlCommand cmdCTHD = new SqlCommand("addChiTietHoaDon", conn);
+                cmdCTHD.CommandType = CommandType.StoredProcedure;
+                foreach (ChiTietHoaDon cthd in listChiTietHD)
+                {
+                    // Truyền các tham số của thủ tục add_ChiTietHoaDon
+                    cmdCTHD.Parameters.AddWithValue("@maHD", cthd.MaHD);
+                    cmdCTHD.Parameters.AddWithValue("@maSP", cthd.MaSP);
+                    cmdCTHD.Parameters.AddWithValue("@soLuong", cthd.SoLuong);
+                    cmdCTHD.Parameters.AddWithValue("@donGia", cthd.DonGia);
+                    cmdCTHD.Parameters.AddWithValue("@thanhTien", cthd.ThanhTien);
+                    cmdCTHD.ExecuteNonQuery();
+                    // Gọi hàm cập nhật lại số lượng tồn kho
+                    updateTonKho(cthd.SoLuong * -1, cthd.MaSP);
+                }
+                conn.Close();
+                return true;
+            } catch (Exception e)
+            {
+                MessageBox.Show("Loi: " + e);
+                //return false;
+                //test
+                return true;
             }
-            conn.Close();
-            return true;
+
+            
         }
 
         public static List<string> GetAllDanhMuc()
@@ -241,5 +253,37 @@ namespace DAL
             return listTenNhanVien;
         }
 
+        //Lấy điêm tích lũy của khách hàng
+        public static int layDiem(string sdt)
+        {
+            return 10;
+        }
+
+        //Thêm khách hàng mới vào cơ sở dữ liệu
+        public static void themKhachHang(string sdt)
+        {
+            
+        }
+
+        //Cập nhật điểm tích lũy của khách hàng
+        public static void capNhatDiem(string sdt, int diem)
+        {
+            
+        }
+
+        public static string layTenTaiKhoan()
+        {
+            return "Nguyễn Văn A";
+        }
+
+        public static int layNganHangId()
+        {
+            return 970422;
+        }
+
+        public static long laySoTaiKhoan()
+        {
+            return 123456789;
+        }
     }
 }

@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static GUI.FormTaoDonHang;
 using static GUI.QLCuaHangDungCuTheThao;
 
 namespace GUI
 {
-    public partial class UCRowTaoDH : UserControl
+    public partial class UCRowTaoDH : UserControl, ISttUserControl
     {
         public UCRowTaoDH()
         {

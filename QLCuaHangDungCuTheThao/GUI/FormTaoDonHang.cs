@@ -20,6 +20,7 @@ namespace GUI
         {
             InitializeComponent();
             btTaoDonMoi_pageTaoDonHang_Click(null, null);
+            notifyIcon1.Icon = SystemIcons.Information;
             //test
             //lbTienThua_pageTaoDonHang.Text = "100,000,000 VNĐ";
             //lbMaNV_pageTaoDonHang.Text = "NV001";
@@ -42,9 +43,13 @@ namespace GUI
 
         private void tbSDT_pageTaoDonHang__TextChanged(object sender, EventArgs e)
         {
-            if (tbSDT_pageTaoDonHang.Texts.Length >= 10)
+            if (tbSDT_pageTaoDonHang.Texts.Length == 10)
             {
-                DonHangBLL.NhapSDT(tbSDT_pageTaoDonHang.Texts);
+                DonHangBLL.nhapSDT(tbSDT_pageTaoDonHang.Texts);
+                tbSoTienKhachDua_pageTaoDonHang__TextChanged(null, null);
+                CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
+                lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
+                lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";
             }
         }
 
@@ -143,6 +148,8 @@ namespace GUI
                     }
                 }
             }
+            DonHangBLL.tinhChietKhau();
+            tbSoTienKhachDua_pageTaoDonHang__TextChanged(null, null);
             CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
             lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
             lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";
@@ -150,10 +157,25 @@ namespace GUI
 
         private void btThanhToan_pageTaoDonHang_Click(object sender, EventArgs e)
         {
-            DonHangBLL.HoaDon.MaNV = lbMaNV_pageTaoDonHang.Text;
-            DonHangBLL.HoaDon.GhiChu = tbGhiChu_pageTaoDonHang.Texts;
-            DonHangBLL.HoaDon.PhuongThucThanhToan = radioTienMat_pageTaoDonHang.Checked ? "Tiền mặt" : "Chuyển khoản"; 
-            DonHangBLL.TaoDonHang();
+            string pttt = radioTienMat_pageTaoDonHang.Checked ? "Tiền mặt" : "Chuyển khoản";
+            if (DonHangBLL.TaoDonHang(lbMaNV_pageTaoDonHang.Text, tbGhiChu_pageTaoDonHang.Texts, pttt))
+            {
+                notifyIcon1.ShowBalloonTip(5000);
+                //in hóa đơn
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.Size = new Size(1400, 1000); //Đặt kích thước của PrintPreviewDialog
+                printPreviewDialog1.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Tạo đơn hàng không thành công");
+            }
+        }
+
+        private void tbSoTienKhachDua_pageTaoDonHang__TextChanged(object sender, EventArgs e)
+        {
+            DonHangBLL.tinhTienThua(tbSoTienKhachDua_pageTaoDonHang.Texts);
+            lbTienThua_pageTaoDonHang.Text = DonHangBLL.HoaDon.TraLai.ToString("N0") + " VNĐ";
         }
         /*------------------------------------------------HẾT CÁC SỰ KIỆN-------------------------------------------------*/
 
@@ -195,8 +217,10 @@ namespace GUI
         {
             UCRowTaoDH ucRowTaoDH = sender as UCRowTaoDH;
             DonHangBLL.XoaChiTietHoaDon(ucRowTaoDH.MaSP);
+            DonHangBLL.tinhChietKhau();
             flpRows_DanhSach1.Controls.Remove(ucRowTaoDH);
             UpdateSTT(flpRows_DanhSach1);
+            tbSoTienKhachDua_pageTaoDonHang__TextChanged(null, null);
             //cập nhật các label
             CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
             lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
@@ -217,12 +241,27 @@ namespace GUI
             else
             {
                 DonHangBLL.UpdateSoLuongChiTietHoaDon(ucRowTaoDH.MaSP, ucRowTaoDH.SoLuong);
+                DonHangBLL.tinhChietKhau();
+                tbSoTienKhachDua_pageTaoDonHang__TextChanged(null, null);
                 ucRowTaoDH.ThanhTien = DonHangBLL.GetChiTietHoaDon(ucRowTaoDH.MaSP).ThanhTien.ToString();
                 CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
                 lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
                 lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";
             }
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            // Đặt chiều rộng trang in khổ A4
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("A4", 827, 1169);
+
+            // Lấy kích thước của toàn trang in, bao gồm cả lề
+            float pageWidth = printDocument1.DefaultPageSettings.PaperSize.Width;
+            float pageHeight = printDocument1.DefaultPageSettings.PaperSize.Height;
+            DonHangBLL.veHoaDon(e, pageWidth, pageHeight);
+        }
+
+
         /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/
     }
 }
