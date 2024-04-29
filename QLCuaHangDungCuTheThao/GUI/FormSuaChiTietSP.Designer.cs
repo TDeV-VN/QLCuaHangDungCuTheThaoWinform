@@ -28,11 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btClose = new RJCodeAdvance.RJControls.RJButton();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panelSuaChiTietSP = new System.Windows.Forms.Panel();
+            this.panelAvatar = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnImage = new RJCodeAdvance.RJControls.RJButton();
+            this.btnAvatar = new RJCodeAdvance.RJControls.RJButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.GrVDanhMuc = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GrVTrangThai = new System.Windows.Forms.DataGridView();
+            this.trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbMoTa = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbMaSP = new RJCodeAdvance.RJControls.RJTextBox();
@@ -57,12 +67,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.dialogChonAnh = new System.Windows.Forms.OpenFileDialog();
-            this.GrVTrangThai = new System.Windows.Forms.DataGridView();
-            this.trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GrVDanhMuc = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel12.SuspendLayout();
             this.panelSuaChiTietSP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrVDanhMuc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrVTrangThai)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -71,8 +81,6 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrVTrangThai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GrVDanhMuc)).BeginInit();
             this.SuspendLayout();
             // 
             // btClose
@@ -108,6 +116,12 @@
             // 
             // panelSuaChiTietSP
             // 
+            this.panelSuaChiTietSP.Controls.Add(this.panelAvatar);
+            this.panelSuaChiTietSP.Controls.Add(this.flowLayoutPanel1);
+            this.panelSuaChiTietSP.Controls.Add(this.pictureBox3);
+            this.panelSuaChiTietSP.Controls.Add(this.btnImage);
+            this.panelSuaChiTietSP.Controls.Add(this.btnAvatar);
+            this.panelSuaChiTietSP.Controls.Add(this.pictureBox2);
             this.panelSuaChiTietSP.Controls.Add(this.GrVDanhMuc);
             this.panelSuaChiTietSP.Controls.Add(this.GrVTrangThai);
             this.panelSuaChiTietSP.Controls.Add(this.tbMoTa);
@@ -124,6 +138,169 @@
             this.panelSuaChiTietSP.Size = new System.Drawing.Size(1300, 448);
             this.panelSuaChiTietSP.TabIndex = 12;
             // 
+            // panelAvatar
+            // 
+            this.panelAvatar.Location = new System.Drawing.Point(12, 110);
+            this.panelAvatar.Name = "panelAvatar";
+            this.panelAvatar.Size = new System.Drawing.Size(289, 62);
+            this.panelAvatar.TabIndex = 13;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 250);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(289, 186);
+            this.flowLayoutPanel1.TabIndex = 13;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::GUI.Properties.Resources.camera;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 64);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnImage
+            // 
+            this.btnImage.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnImage.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnImage.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnImage.BorderRadius = 0;
+            this.btnImage.BorderSize = 0;
+            this.btnImage.FlatAppearance.BorderSize = 0;
+            this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImage.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnImage.ForeColor = System.Drawing.Color.White;
+            this.btnImage.Location = new System.Drawing.Point(53, 209);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(223, 35);
+            this.btnImage.TabIndex = 18;
+            this.btnImage.Text = "Ảnh";
+            this.btnImage.TextColor = System.Drawing.Color.White;
+            this.btnImage.UseVisualStyleBackColor = false;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // btnAvatar
+            // 
+            this.btnAvatar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAvatar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAvatar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAvatar.BorderRadius = 0;
+            this.btnAvatar.BorderSize = 0;
+            this.btnAvatar.FlatAppearance.BorderSize = 0;
+            this.btnAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvatar.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnAvatar.ForeColor = System.Drawing.Color.White;
+            this.btnAvatar.Location = new System.Drawing.Point(53, 64);
+            this.btnAvatar.Name = "btnAvatar";
+            this.btnAvatar.Size = new System.Drawing.Size(223, 35);
+            this.btnAvatar.TabIndex = 17;
+            this.btnAvatar.Text = "Ảnh chính";
+            this.btnAvatar.TextColor = System.Drawing.Color.White;
+            this.btnAvatar.UseVisualStyleBackColor = false;
+            this.btnAvatar.Click += new System.EventHandler(this.btnAvatar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.camera;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 209);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // GrVDanhMuc
+            // 
+            this.GrVDanhMuc.AllowUserToAddRows = false;
+            this.GrVDanhMuc.AllowUserToDeleteRows = false;
+            this.GrVDanhMuc.AllowUserToOrderColumns = true;
+            this.GrVDanhMuc.AllowUserToResizeColumns = false;
+            this.GrVDanhMuc.AllowUserToResizeRows = false;
+            this.GrVDanhMuc.BackgroundColor = System.Drawing.Color.Moccasin;
+            this.GrVDanhMuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GrVDanhMuc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.GrVDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrVDanhMuc.ColumnHeadersVisible = false;
+            this.GrVDanhMuc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GrVDanhMuc.DefaultCellStyle = dataGridViewCellStyle1;
+            this.GrVDanhMuc.GridColor = System.Drawing.Color.Moccasin;
+            this.GrVDanhMuc.Location = new System.Drawing.Point(766, 178);
+            this.GrVDanhMuc.Margin = new System.Windows.Forms.Padding(4);
+            this.GrVDanhMuc.Name = "GrVDanhMuc";
+            this.GrVDanhMuc.RowHeadersVisible = false;
+            this.GrVDanhMuc.RowHeadersWidth = 51;
+            this.GrVDanhMuc.RowTemplate.Height = 30;
+            this.GrVDanhMuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GrVDanhMuc.Size = new System.Drawing.Size(300, 254);
+            this.GrVDanhMuc.TabIndex = 14;
+            this.GrVDanhMuc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrVDanhMuc_CellClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "danhMuc";
+            this.dataGridViewTextBoxColumn1.HeaderText = "danhMuc";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // GrVTrangThai
+            // 
+            this.GrVTrangThai.AllowUserToAddRows = false;
+            this.GrVTrangThai.AllowUserToDeleteRows = false;
+            this.GrVTrangThai.AllowUserToOrderColumns = true;
+            this.GrVTrangThai.AllowUserToResizeColumns = false;
+            this.GrVTrangThai.AllowUserToResizeRows = false;
+            this.GrVTrangThai.BackgroundColor = System.Drawing.Color.Moccasin;
+            this.GrVTrangThai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GrVTrangThai.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.GrVTrangThai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrVTrangThai.ColumnHeadersVisible = false;
+            this.GrVTrangThai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.trangThai});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GrVTrangThai.DefaultCellStyle = dataGridViewCellStyle2;
+            this.GrVTrangThai.GridColor = System.Drawing.Color.Moccasin;
+            this.GrVTrangThai.Location = new System.Drawing.Point(766, 357);
+            this.GrVTrangThai.Margin = new System.Windows.Forms.Padding(4);
+            this.GrVTrangThai.Name = "GrVTrangThai";
+            this.GrVTrangThai.RowHeadersVisible = false;
+            this.GrVTrangThai.RowHeadersWidth = 51;
+            this.GrVTrangThai.RowTemplate.Height = 30;
+            this.GrVTrangThai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GrVTrangThai.Size = new System.Drawing.Size(233, 75);
+            this.GrVTrangThai.TabIndex = 13;
+            this.GrVTrangThai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrVTrangThai_CellClick);
+            // 
+            // trangThai
+            // 
+            this.trangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.trangThai.DataPropertyName = "trangThai";
+            this.trangThai.HeaderText = "trangThai";
+            this.trangThai.MinimumWidth = 6;
+            this.trangThai.Name = "trangThai";
+            this.trangThai.ReadOnly = true;
+            // 
             // tbMoTa
             // 
             this.tbMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -134,6 +311,7 @@
             this.tbMoTa.Name = "tbMoTa";
             this.tbMoTa.Size = new System.Drawing.Size(525, 270);
             this.tbMoTa.TabIndex = 11;
+            this.tbMoTa.Enter += new System.EventHandler(this.tbMoTa_Enter);
             // 
             // panel3
             // 
@@ -260,6 +438,8 @@
             this.tbTonKho.TabIndex = 1;
             this.tbTonKho.Texts = "";
             this.tbTonKho.UnderlinedStyle = false;
+            this.tbTonKho.Enter += new System.EventHandler(this.tbTonKho_Enter);
+            this.tbTonKho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTonKho_KeyPress);
             // 
             // label7
             // 
@@ -305,6 +485,8 @@
             this.tbGiaBan.TabIndex = 1;
             this.tbGiaBan.Texts = "";
             this.tbGiaBan.UnderlinedStyle = false;
+            this.tbGiaBan.Enter += new System.EventHandler(this.tbGiaBan_Enter);
+            this.tbGiaBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbGiaBan_KeyPress);
             // 
             // label6
             // 
@@ -350,6 +532,8 @@
             this.tbGiaNhap.TabIndex = 1;
             this.tbGiaNhap.Texts = "";
             this.tbGiaNhap.UnderlinedStyle = false;
+            this.tbGiaNhap.Enter += new System.EventHandler(this.tbGiaNhap_Enter);
+            this.tbGiaNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbGiaNhap_KeyPress);
             // 
             // label5
             // 
@@ -442,6 +626,7 @@
             this.tbTenSP.TabIndex = 1;
             this.tbTenSP.Texts = "";
             this.tbTenSP.UnderlinedStyle = false;
+            this.tbTenSP.Enter += new System.EventHandler(this.tbTenSP_Enter);
             // 
             // label3
             // 
@@ -465,90 +650,6 @@
             this.panel11.Size = new System.Drawing.Size(1300, 50);
             this.panel11.TabIndex = 15;
             // 
-            // GrVTrangThai
-            // 
-            this.GrVTrangThai.AllowUserToAddRows = false;
-            this.GrVTrangThai.AllowUserToDeleteRows = false;
-            this.GrVTrangThai.AllowUserToOrderColumns = true;
-            this.GrVTrangThai.AllowUserToResizeColumns = false;
-            this.GrVTrangThai.AllowUserToResizeRows = false;
-            this.GrVTrangThai.BackgroundColor = System.Drawing.Color.Moccasin;
-            this.GrVTrangThai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GrVTrangThai.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GrVTrangThai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrVTrangThai.ColumnHeadersVisible = false;
-            this.GrVTrangThai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.trangThai});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GrVTrangThai.DefaultCellStyle = dataGridViewCellStyle2;
-            this.GrVTrangThai.GridColor = System.Drawing.Color.Moccasin;
-            this.GrVTrangThai.Location = new System.Drawing.Point(766, 357);
-            this.GrVTrangThai.Margin = new System.Windows.Forms.Padding(4);
-            this.GrVTrangThai.Name = "GrVTrangThai";
-            this.GrVTrangThai.RowHeadersVisible = false;
-            this.GrVTrangThai.RowHeadersWidth = 51;
-            this.GrVTrangThai.RowTemplate.Height = 30;
-            this.GrVTrangThai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GrVTrangThai.Size = new System.Drawing.Size(233, 75);
-            this.GrVTrangThai.TabIndex = 13;
-            // 
-            // trangThai
-            // 
-            this.trangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.trangThai.DataPropertyName = "trangThai";
-            this.trangThai.HeaderText = "trangThai";
-            this.trangThai.MinimumWidth = 6;
-            this.trangThai.Name = "trangThai";
-            this.trangThai.ReadOnly = true;
-            // 
-            // GrVDanhMuc
-            // 
-            this.GrVDanhMuc.AllowUserToAddRows = false;
-            this.GrVDanhMuc.AllowUserToDeleteRows = false;
-            this.GrVDanhMuc.AllowUserToOrderColumns = true;
-            this.GrVDanhMuc.AllowUserToResizeColumns = false;
-            this.GrVDanhMuc.AllowUserToResizeRows = false;
-            this.GrVDanhMuc.BackgroundColor = System.Drawing.Color.Moccasin;
-            this.GrVDanhMuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GrVDanhMuc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GrVDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrVDanhMuc.ColumnHeadersVisible = false;
-            this.GrVDanhMuc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GrVDanhMuc.DefaultCellStyle = dataGridViewCellStyle1;
-            this.GrVDanhMuc.GridColor = System.Drawing.Color.Moccasin;
-            this.GrVDanhMuc.Location = new System.Drawing.Point(766, 178);
-            this.GrVDanhMuc.Margin = new System.Windows.Forms.Padding(4);
-            this.GrVDanhMuc.Name = "GrVDanhMuc";
-            this.GrVDanhMuc.RowHeadersVisible = false;
-            this.GrVDanhMuc.RowHeadersWidth = 51;
-            this.GrVDanhMuc.RowTemplate.Height = 30;
-            this.GrVDanhMuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GrVDanhMuc.Size = new System.Drawing.Size(300, 254);
-            this.GrVDanhMuc.TabIndex = 14;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "danhMuc";
-            this.dataGridViewTextBoxColumn1.HeaderText = "danhMuc";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // FormSuaChiTietSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -565,6 +666,10 @@
             this.panel12.ResumeLayout(false);
             this.panelSuaChiTietSP.ResumeLayout(false);
             this.panelSuaChiTietSP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrVDanhMuc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrVTrangThai)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -573,8 +678,6 @@
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GrVTrangThai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GrVDanhMuc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -612,5 +715,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThai;
         private System.Windows.Forms.DataGridView GrVDanhMuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private RJCodeAdvance.RJControls.RJButton btnImage;
+        private RJCodeAdvance.RJControls.RJButton btnAvatar;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panelAvatar;
     }
 }

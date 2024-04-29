@@ -31,9 +31,9 @@
             this.btClose = new RJCodeAdvance.RJControls.RJButton();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btXoa = new FontAwesome.Sharp.IconButton();
-            this.btSua = new RJCodeAdvance.RJControls.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbHeader = new System.Windows.Forms.Label();
+            this.btSua = new RJCodeAdvance.RJControls.RJButton();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btQuayLai = new FontAwesome.Sharp.IconButton();
             this.panel12.SuspendLayout();
@@ -87,27 +87,7 @@
             this.btXoa.Size = new System.Drawing.Size(51, 50);
             this.btXoa.TabIndex = 14;
             this.btXoa.UseVisualStyleBackColor = true;
-            // 
-            // btSua
-            // 
-            this.btSua.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btSua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btSua.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btSua.BorderRadius = 12;
-            this.btSua.BorderSize = 0;
-            this.btSua.FlatAppearance.BorderSize = 0;
-            this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btSua.ForeColor = System.Drawing.Color.White;
-            this.btSua.Location = new System.Drawing.Point(809, 549);
-            this.btSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(469, 50);
-            this.btSua.TabIndex = 13;
-            this.btSua.Text = "Sửa";
-            this.btSua.TextColor = System.Drawing.Color.White;
-            this.btSua.UseVisualStyleBackColor = false;
-            this.btSua.Click += new System.EventHandler(this.btSua_Click);
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // panel1
             // 
@@ -130,6 +110,27 @@
             this.lbHeader.TabIndex = 0;
             this.lbHeader.Text = "Thông tin sản phẩm";
             this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btSua
+            // 
+            this.btSua.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btSua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btSua.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btSua.BorderRadius = 12;
+            this.btSua.BorderSize = 0;
+            this.btSua.FlatAppearance.BorderSize = 0;
+            this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btSua.ForeColor = System.Drawing.Color.White;
+            this.btSua.Location = new System.Drawing.Point(809, 549);
+            this.btSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(469, 50);
+            this.btSua.TabIndex = 13;
+            this.btSua.Text = "Sửa";
+            this.btSua.TextColor = System.Drawing.Color.White;
+            this.btSua.UseVisualStyleBackColor = false;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // panel11
             // 

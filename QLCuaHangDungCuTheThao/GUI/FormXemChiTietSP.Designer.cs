@@ -148,7 +148,7 @@
             this.tbMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMoTa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbMoTa.Location = new System.Drawing.Point(753, 166);
-            this.tbMoTa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMoTa.Margin = new System.Windows.Forms.Padding(4);
             this.tbMoTa.Multiline = true;
             this.tbMoTa.Name = "tbMoTa";
             this.tbMoTa.Size = new System.Drawing.Size(525, 270);
@@ -494,6 +494,7 @@
             this.btPicLeft.Size = new System.Drawing.Size(45, 34);
             this.btPicLeft.TabIndex = 2;
             this.btPicLeft.UseVisualStyleBackColor = true;
+            this.btPicLeft.Click += new System.EventHandler(this.btPicLeft_Click);
             // 
             // btPicRight
             // 
@@ -508,6 +509,7 @@
             this.btPicRight.Size = new System.Drawing.Size(45, 34);
             this.btPicRight.TabIndex = 3;
             this.btPicRight.UseVisualStyleBackColor = true;
+            this.btPicRight.Click += new System.EventHandler(this.btPicRight_Click);
             // 
             // picBox
             // 
@@ -570,7 +572,7 @@
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
-            this.panel11.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel11.Padding = new System.Windows.Forms.Padding(5);
             this.panel11.Size = new System.Drawing.Size(1300, 50);
             this.panel11.TabIndex = 15;
             // 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using DTO;
 using System.Data;
+using System.Security.Policy;
 
 namespace DAL
 {
@@ -16,8 +17,7 @@ namespace DAL
         // Tạo kết nối đến cơ sở dữ liệu
         public static void connect()
         {
-            //private static string connectionString = @"Data Source=Tien-laptop;Initial Catalog=QuanLyCuaHangDungCuTheThao;Integrated Security=True;Trust Server Certificate=True";
-            string connectionString = @"Data Source=tien-laptop;Initial Catalog=QuanLyCuaHangDungCuTheThao;Integrated Security=True;Trust Server Certificate=True";
+            string connectionString = @"Data Source=LAPTOP-PNPQD2F4;Initial Catalog=QuanLyCuaHangDungCuTheThao;Integrated Security=True;Trust Server Certificate=True";
             conn = new SqlConnection(connectionString);
             conn.Open();
         }
@@ -50,6 +50,139 @@ namespace DAL
             dataAdapter.Fill(dt);
             return dt;
         }
+
+        public static string getTenDanhMucByMaDM(string maDM)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("Select TenDM From DanhMucSanPham Where MaDM = @maDM", conn);
+            cmd.Parameters.AddWithValue("@maDM", maDM);
+            string tenDM = Convert.ToString(cmd.ExecuteScalar());
+            conn.Close();
+            return tenDM;
+        }
+
+        public static List<string> getAllNonAvatarURLSanPham(string maSP)
+        {
+            connect();
+            List<string> listURL = new List<string>();
+            SqlCommand cmd = new SqlCommand("Select ImageURL From HinhAnhSanPham Where Avatar = 0 and MaSP = @maSP", conn);
+            cmd.Parameters.AddWithValue("@maSP", maSP);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            foreach(DataRow dr in dt.Rows)
+            {
+                listURL.Add(dr["ImageURL"].ToString());
+            }
+            return listURL;
+        }
+
+        public static void deleteImage(string maSP, string URL)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("Delete HinhAnhSanPham Where MaSP = @maSP and ImageURL = @imageURL", conn);
+            cmd.Parameters.AddWithValue("@maSP", maSP);
+            cmd.Parameters.AddWithValue("@imageURL", URL);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public static void deleteAvatar(string maSP)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("Delete HinhAnhSanPham Where Avatar = 1 and MaSP = @maSP", conn);
+            cmd.Parameters.AddWithValue("@maSP", maSP);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public static string checkAvatar(string maSP)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("Select ImageURL From HinhAnhSanPham Where Avatar = 1 and MaSP = @maSP", conn);
+            cmd.Parameters.AddWithValue("@maSP", maSP);
+            if (cmd.ExecuteScalar() == null) 
+            {
+                return "";       
+            }
+            return cmd.ExecuteScalar().ToString();
+        }
+
+        public static bool addAvatar(string maSP, string URL)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Insert into HinhAnhSanPham values(@maSP, @imageURL, 1)", conn);
+                cmd.Parameters.AddWithValue("@maSP", maSP);
+                cmd.Parameters.AddWithValue("@imageURL", URL);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return true;
+            }
+            catch
+            {
+                conn.Close();
+                return false;
+            }
+        }
+
+        public static void updateAvatar(string maSP, string URL)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("Update HinhAnhSanPham Set Avatar = 1 Where MaSP = @maSP and ImageURL = @imageURL", conn);
+            cmd.Parameters.AddWithValue("@maSP", maSP);
+            cmd.Parameters.AddWithValue("@imageURL", URL);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public static bool addImage(string maSP, string[] URL)
+        {
+            connect();
+            try
+            {
+                foreach(string url in URL)
+                {
+                    SqlCommand cmd = new SqlCommand("Insert into HinhAnhSanPham values(@maSP, @imageURL, 0)", conn);
+                    cmd.Parameters.AddWithValue("@maSP", maSP);
+                    cmd.Parameters.AddWithValue("@imageURL", url);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                conn.Close();
+                return false;
+            }
+            conn.Close();
+            return true;
+        }
+
+        public static void updateProduct(SanPham product)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Update SanPham Set TenSP = @tenSP, MaDM = @maDM, GiaNhap = @giaNhap, GiaBan = @giaBan, TonKho = @tonKho, MoTa = @moTa, MoBan = @moBan Where MaSP = @maSP;", conn);
+                cmd.Parameters.AddWithValue("@maSP", product.MaSP);
+                cmd.Parameters.AddWithValue("@tenSP", product.TenSP);
+                cmd.Parameters.AddWithValue("@maDM", product.MaDM);
+                cmd.Parameters.AddWithValue("@giaNhap", Convert.ToDecimal(product.GiaNhap));
+                cmd.Parameters.AddWithValue("@giaBan", Convert.ToDecimal(product.GiaBan));
+                cmd.Parameters.AddWithValue("@tonKho", product.TonKho);
+                cmd.Parameters.AddWithValue("@moBan", product.MoBan);
+                cmd.Parameters.AddWithValue("@moTa", product.MoTa);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch
+            {
+                conn.Close();
+            }
+            
+        }
+
 
         // Lấy tất cả các đơn hàng từ cơ sở dữ liệu
         public static List<HoaDon> GetAllHoaDon()
@@ -225,6 +358,15 @@ namespace DAL
             }
             conn.Close();
             return listDanhMuc;
+        }
+
+        public static void getListDanhMuc(DataTable lst)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("Select * From DanhMucSanPham", conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(lst);
+            conn.Close();
         }
 
         public static List<string> GetDSTenNhanVien()
