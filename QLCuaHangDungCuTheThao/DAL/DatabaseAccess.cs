@@ -285,5 +285,11 @@ namespace DAL
         {
             return 8471739304;
         }
+
+        //kiểm tra email có tồn tại trong hệ thống không
+        public static bool kiemTraEmail(string email)
+        {
+            return true;
+        }
     }
 }

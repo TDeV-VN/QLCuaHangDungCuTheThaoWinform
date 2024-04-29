@@ -20,7 +20,7 @@ namespace GUI
             lbSaiMatKhau.Visible = false;
             lbSaiEmail.Visible = false;
             tbEmail.Focus();
-            formOTP.XacThuc += formOTP_btXacThuc_Click;
+            formOTP.XacThuc += formOTP_btXacThucThanhCong;
         }
 
         static private FormOTP formOTP = new FormOTP();
@@ -47,14 +47,12 @@ namespace GUI
             if (this.Controls.Contains(panelDatLaiMatKhau))
             {
                 this.Controls.Remove(panelDatLaiMatKhau);
-                panelDangNhap.Location = new Point(76, 67);
-                this.Controls.Add(panelOTP);
             } else if (this.Controls.Contains(panelOTP))
             {
                 this.Controls.Remove(panelOTP);
-                panelDatLaiMatKhau.Location = new Point(76, 67);
-                this.Controls.Add(panelDangNhap);
             }
+            panelDangNhap.Location = new Point(76, 67);
+            this.Controls.Add(panelDangNhap);
         }
 
         private void lbQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -66,11 +64,8 @@ namespace GUI
         }
 /*-----------------------------HÀM--------------------------*/
         //Xử lý sự kiện xác thực OTP từ formOTP
-        private void formOTP_btXacThuc_Click(string otp)
+        private void formOTP_btXacThucThanhCong()
         {
-            //Check OTP
-
-            //Nếu đúng
             this.Controls.Remove(panelOTP);
             panelDatLaiMatKhau.Location = new Point(76, 67);
             this.Controls.Add(panelDatLaiMatKhau);
