@@ -201,7 +201,10 @@ namespace BLL
                 paymentQR = Payment.createPaymentQR(tienKhachPhaiTra, billCode);
 
             }
-            catch { }
+            catch 
+            { 
+                MessageBox.Show("Lỗi tạo mã QR");
+            }
 
             // Vẽ thời gian in
             SizeF nowSize = e.Graphics.MeasureString(now, font); // Tính toán kích thước của chuỗi

@@ -148,7 +148,7 @@
             this.tbSDT_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbSDT_pageTaoDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbSDT_pageTaoDonHang.Location = new System.Drawing.Point(10, 0);
-            this.tbSDT_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbSDT_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(5);
             this.tbSDT_pageTaoDonHang.Multiline = false;
             this.tbSDT_pageTaoDonHang.Name = "tbSDT_pageTaoDonHang";
             this.tbSDT_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
@@ -391,7 +391,7 @@
             this.tbGhiChu_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbGhiChu_pageTaoDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbGhiChu_pageTaoDonHang.Location = new System.Drawing.Point(14, 297);
-            this.tbGhiChu_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbGhiChu_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(4);
             this.tbGhiChu_pageTaoDonHang.Multiline = true;
             this.tbGhiChu_pageTaoDonHang.Name = "tbGhiChu_pageTaoDonHang";
             this.tbGhiChu_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -473,7 +473,7 @@
             this.tbSoTienKhachDua_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbSoTienKhachDua_pageTaoDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbSoTienKhachDua_pageTaoDonHang.Location = new System.Drawing.Point(14, 208);
-            this.tbSoTienKhachDua_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSoTienKhachDua_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(4);
             this.tbSoTienKhachDua_pageTaoDonHang.Multiline = false;
             this.tbSoTienKhachDua_pageTaoDonHang.Name = "tbSoTienKhachDua_pageTaoDonHang";
             this.tbSoTienKhachDua_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -612,7 +612,7 @@
             this.tbThemSP_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbThemSP_pageTaoDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbThemSP_pageTaoDonHang.Location = new System.Drawing.Point(214, 48);
-            this.tbThemSP_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbThemSP_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(4);
             this.tbThemSP_pageTaoDonHang.Multiline = false;
             this.tbThemSP_pageTaoDonHang.Name = "tbThemSP_pageTaoDonHang";
             this.tbThemSP_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);

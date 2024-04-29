@@ -57,12 +57,13 @@ namespace BLL
 
                 var image = base64ToImage(dataResult.data.qrDataURL.Replace("data:image/png;base64,", ""));
                 return image;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Lỗi tạo mã QR: " + ex);
+                return null;
             }
-            
-            return null;
+
         }
         /* TẠO QR CODE THANH TOÁN VIETQR */
 
