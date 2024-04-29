@@ -11,6 +11,7 @@ using System.Web.WebSockets;
 using System.Windows.Forms;
 using DAL;
 using DTO;
+using System.Text.RegularExpressions;
 
 namespace BLL
 {
@@ -126,15 +127,30 @@ namespace BLL
             hoaDon.TienKhachPhaiTra = hoaDon.TongTienHang - hoaDon.ChietKhau;
         }
 
-        public void tinhTienThua(string tienKhachDua)
+        public bool tinhTienThua(string tienKhachDua)
         {
-            try
+            //Kiểm tra định dạng (ràng buộc chuỗi chỉ được bắt đầu bằng chữ số,
+            //thể chứa dấu phẩy và khoảng trắng, kết thúc bằng chữ số hoặc khoảng trắng
+            //hoặc "VNĐ" hoặc "VND", ngoài ra không chứa chữ nào khác)
+            var regex = new Regex(@"^\d[\d,\s]*((VNĐ|VND)|\d|\s)?$");
+            bool checkFormat = regex.IsMatch(tienKhachDua);
+            if (!checkFormat) return false;
+
+            //Chuyển đổi sang int
+            regex = new Regex(@"[^\d]");
+            string cleanedInput = regex.Replace(tienKhachDua, ""); // Loại bỏ tất cả các ký tự không phải là chữ số
+            if (int.TryParse(cleanedInput, out int result))
             {
-                tienKhachDua = tienKhachDua.Replace(",", "");
-                hoaDon.TienKhachDua = int.Parse(tienKhachDua);
+                hoaDon.TienKhachDua = result;
                 hoaDon.TraLai = hoaDon.TienKhachDua - hoaDon.TienKhachPhaiTra;
+                return true;
+                //test
+                MessageBox.Show(hoaDon.TraLai.ToString());
             }
-            catch { }       
+            else
+            {
+                return false;
+            }     
         }
 
         public bool TaoDonHang(string maNV, string ghiChu, string pttt)
@@ -445,5 +461,21 @@ namespace BLL
             UpdateSoLuongChiTietHoaDon(maSP, 0);
             listChiTietHD.Remove(cthd);
         }
+
+        //Kiểm tra số điện thoại hợp lệ (bắt đầu bằng số 0, có ít nhất 10 chữ số (không tính khoảng trắng) và chỉ chứa khoảng trắng hoặc chữ số)
+        public static bool isValidPhoneNumber(string phoneNumber)
+        {
+            if (!phoneNumber.StartsWith("0")) return false;
+
+            int digitCount = 0;
+            foreach (char c in phoneNumber)
+            {
+                if (char.IsDigit(c)) digitCount++;
+                else if (!char.IsWhiteSpace(c)) return false;
+            }
+
+            return digitCount >= 10;
+        }
+
     }
 }

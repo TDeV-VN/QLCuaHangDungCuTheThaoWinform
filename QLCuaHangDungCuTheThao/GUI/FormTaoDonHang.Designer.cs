@@ -33,6 +33,7 @@
             this.panelPageTaoDonHang = new System.Windows.Forms.Panel();
             this.GrBHoaDon_pageTaoDonHan = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btSDT = new RJCodeAdvance.RJControls.RJButton();
             this.tbSDT_pageTaoDonHang = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3_pageTaoDonHang = new System.Windows.Forms.Label();
@@ -129,6 +130,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btSDT);
             this.panel4.Controls.Add(this.tbSDT_pageTaoDonHang);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 85);
@@ -137,6 +139,26 @@
             this.panel4.Size = new System.Drawing.Size(254, 36);
             this.panel4.TabIndex = 3;
             // 
+            // btSDT
+            // 
+            this.btSDT.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btSDT.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btSDT.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btSDT.BorderRadius = 12;
+            this.btSDT.BorderSize = 0;
+            this.btSDT.FlatAppearance.BorderSize = 0;
+            this.btSDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btSDT.ForeColor = System.Drawing.Color.White;
+            this.btSDT.Location = new System.Drawing.Point(207, 0);
+            this.btSDT.Name = "btSDT";
+            this.btSDT.Size = new System.Drawing.Size(36, 36);
+            this.btSDT.TabIndex = 3;
+            this.btSDT.Text = ">";
+            this.btSDT.TextColor = System.Drawing.Color.White;
+            this.btSDT.UseVisualStyleBackColor = false;
+            this.btSDT.Click += new System.EventHandler(this.btSDT_Click);
+            // 
             // tbSDT_pageTaoDonHang
             // 
             this.tbSDT_pageTaoDonHang.BackColor = System.Drawing.SystemColors.Window;
@@ -144,7 +166,6 @@
             this.tbSDT_pageTaoDonHang.BorderFocusColor = System.Drawing.Color.MediumSlateBlue;
             this.tbSDT_pageTaoDonHang.BorderRadius = 12;
             this.tbSDT_pageTaoDonHang.BorderSize = 2;
-            this.tbSDT_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbSDT_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbSDT_pageTaoDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbSDT_pageTaoDonHang.Location = new System.Drawing.Point(10, 0);
@@ -155,11 +176,10 @@
             this.tbSDT_pageTaoDonHang.PasswordChar = false;
             this.tbSDT_pageTaoDonHang.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbSDT_pageTaoDonHang.PlaceholderText = "";
-            this.tbSDT_pageTaoDonHang.Size = new System.Drawing.Size(234, 36);
+            this.tbSDT_pageTaoDonHang.Size = new System.Drawing.Size(195, 36);
             this.tbSDT_pageTaoDonHang.TabIndex = 2;
             this.tbSDT_pageTaoDonHang.Texts = "";
             this.tbSDT_pageTaoDonHang.UnderlinedStyle = false;
-            this.tbSDT_pageTaoDonHang._TextChanged += new System.EventHandler(this.tbSDT_pageTaoDonHang__TextChanged);
             // 
             // panel2
             // 
@@ -912,5 +932,6 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private RJCodeAdvance.RJControls.RJButton btSDT;
     }
 }

@@ -21,9 +21,6 @@ namespace GUI
             InitializeComponent();
             btTaoDonMoi_pageTaoDonHang_Click(null, null);
             notifyIcon1.Icon = SystemIcons.Information;
-            //test
-            //lbTienThua_pageTaoDonHang.Text = "100,000,000 VNĐ";
-            //lbMaNV_pageTaoDonHang.Text = "NV001";
         }
         public Panel PanelPageTaoDonHang
         {          
@@ -40,16 +37,22 @@ namespace GUI
         }
 
         /*--------------------------------------------------SỰ KIỆN---------------------------------------------------*/
-
-        private void tbSDT_pageTaoDonHang__TextChanged(object sender, EventArgs e)
+        private void btSDT_Click(object sender, EventArgs e)
         {
-            if (tbSDT_pageTaoDonHang.Texts.Length == 10)
+            string phoneNumber = tbSDT_pageTaoDonHang.Texts;
+
+            if (DonHangBLL.isValidPhoneNumber(phoneNumber))
             {
                 DonHangBLL.nhapSDT(tbSDT_pageTaoDonHang.Texts);
                 tbSoTienKhachDua_pageTaoDonHang__TextChanged(null, null);
                 CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
                 lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
                 lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";
+            } else
+            {
+                MessageBox.Show("Định dạng số điện thoại không hợp lệ \n " +
+                    "Yêu cầu: bắt đầu bằng số 0, có ít nhất 10 chữ số (không tính khoảng trắng) " +
+                    "và chỉ chứa khoảng trắng hoặc chữ số.");
             }
         }
 
@@ -174,8 +177,14 @@ namespace GUI
 
         private void tbSoTienKhachDua_pageTaoDonHang__TextChanged(object sender, EventArgs e)
         {
-            DonHangBLL.tinhTienThua(tbSoTienKhachDua_pageTaoDonHang.Texts);
-            lbTienThua_pageTaoDonHang.Text = DonHangBLL.HoaDon.TraLai.ToString("N0") + " VNĐ";
+            if (DonHangBLL.tinhTienThua(tbSoTienKhachDua_pageTaoDonHang.Texts))
+            {
+                lbTienThua_pageTaoDonHang.Text = DonHangBLL.HoaDon.TraLai.ToString("N0") + " VNĐ";
+            }else
+            {
+                MessageBox.Show("Định dạng số tiền khách đưa không hợp lệ.\nYêu cầu: chuỗi chỉ được bắt đầu bằng chữ số," +
+                    "thể chứa dấu phẩy và khoảng trắng, kết thúc bằng chữ số hoặc khoảng trắng, ngoài ra không chứa chữ nào khác");
+            }
         }
         /*------------------------------------------------HẾT CÁC SỰ KIỆN-------------------------------------------------*/
 
@@ -261,7 +270,6 @@ namespace GUI
             DonHangBLL.veHoaDon(e, pageWidth, pageHeight);
         }
 
-
-        /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/
+       /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/
     }
 }
