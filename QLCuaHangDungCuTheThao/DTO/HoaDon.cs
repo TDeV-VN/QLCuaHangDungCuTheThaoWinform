@@ -52,6 +52,7 @@ public class HoaDon {
 
     public HoaDon(string MaHD)
     {
-        this.MaHD = MaHD; 
+        this.MaHD = MaHD;
+        this.SDT = "";
     }
 }

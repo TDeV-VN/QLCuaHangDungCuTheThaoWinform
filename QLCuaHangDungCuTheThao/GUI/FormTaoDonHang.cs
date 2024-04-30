@@ -23,7 +23,7 @@ namespace GUI
             notifyIcon1.Icon = SystemIcons.Information;
             //test
             //lbTienThua_pageTaoDonHang.Text = "100,000,000 VNĐ";
-            //lbMaNV_pageTaoDonHang.Text = "NV001";
+            lbMaNV_pageTaoDonHang.Text = "NV001";
         }
         public Panel PanelPageTaoDonHang
         {          
