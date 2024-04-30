@@ -17,7 +17,7 @@ namespace DAL
         // Tạo kết nối đến cơ sở dữ liệu
         public static void connect()
         {
-            string connectionString = @"Data Source=LAPTOP-PNPQD2F4;Initial Catalog=QuanLyCuaHangDungCuTheThao;Integrated Security=True;Trust Server Certificate=True";
+            string connectionString = @"Data Source=tien-laptop;Initial Catalog=QuanLyCuaHangDungCuTheThao;Integrated Security=True;Trust Server Certificate=True";
             conn = new SqlConnection(connectionString);
             conn.Open();
         }

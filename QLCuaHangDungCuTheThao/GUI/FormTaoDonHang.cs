@@ -44,8 +44,11 @@ namespace GUI
             if (DonHangBLL.isValidPhoneNumber(phoneNumber))
             {
                 DonHangBLL.nhapSDT(tbSDT_pageTaoDonHang.Texts);
-                tbSoTienKhachDua_pageTaoDonHang__TextChanged(null, null);
-                CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
+                if (DonHangBLL.tinhTienThua(tbSoTienKhachDua_pageTaoDonHang.Texts))
+                {
+                    lbTienThua_pageTaoDonHang.Text = DonHangBLL.HoaDon.TraLai.ToString("N0") + " VNĐ";
+                }
+                    CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
                 lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
                 lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";
             } else
@@ -152,8 +155,11 @@ namespace GUI
                 }
             }
             DonHangBLL.tinhChietKhau();
-            tbSoTienKhachDua_pageTaoDonHang__TextChanged(null, null);
-            CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
+            if (DonHangBLL.tinhTienThua(tbSoTienKhachDua_pageTaoDonHang.Texts))
+            {
+                lbTienThua_pageTaoDonHang.Text = DonHangBLL.HoaDon.TraLai.ToString("N0") + " VNĐ";
+            }
+                CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
             lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
             lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";
         }

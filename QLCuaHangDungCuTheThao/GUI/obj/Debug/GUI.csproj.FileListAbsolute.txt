@@ -301,3 +301,4 @@ D:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.c
 D:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.exe
 D:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.pdb
 D:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.ListImage.resources
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.ListImage.resources
