@@ -2,6 +2,8 @@
 using System.Net.Mail;
 using System.Net;
 using DAL;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace BLL
 {
@@ -66,6 +68,30 @@ namespace BLL
         public static bool kiemTraEmailTonTai(string email)
         {
             return DatabaseAccess.kiemTraEmail(email);
+        }
+
+        //Băm mật khẩu
+        public static string hashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+                byte[] hash = sha256.ComputeHash(bytes);
+                return Convert.ToBase64String(hash);
+            }
+        }
+
+        //Kiểm tra mật khẩu
+        public static bool verifyPassword(string enteredPassword)
+        {
+            string storedHash = DatabaseAccess.layMatKhau(TaiKhoan.Email);
+            string enteredHash = hashPassword(enteredPassword);
+            return enteredHash == storedHash;
+        }
+
+        public static void setEmail()
+        {
+            taiKhoan.Email = DatabaseAccess.layEmail(TaiKhoan.MaNV);
         }
     }
 }

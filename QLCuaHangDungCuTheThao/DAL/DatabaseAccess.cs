@@ -291,5 +291,17 @@ namespace DAL
         {
             return true;
         }
+
+        //lấy mật khẩu của tài khoản
+        public static string layMatKhau(string email)
+        {
+            return "123456";
+        }
+
+        //Lây email
+        public static string layEmail(string maNV)
+        {
+            return "thanhtien.z8436@gmail.com";
+        }
     }
 }
