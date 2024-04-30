@@ -292,6 +292,12 @@
     <Compile Include="FormTongQuan.Designer.cs">
       <DependentUpon>FormTongQuan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListImage.Designer.cs">
+      <DependentUpon>ListImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLCuaHangDungCuTheThao.cs">
@@ -357,6 +363,9 @@
     <EmbeddedResource Include="FormTongQuan.resx">
       <DependentUpon>FormTongQuan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListImage.resx">
+      <DependentUpon>ListImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -365,6 +374,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QLCuaHangDungCuTheThao.resx">
       <DependentUpon>QLCuaHangDungCuTheThao.cs</DependentUpon>
@@ -413,6 +423,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

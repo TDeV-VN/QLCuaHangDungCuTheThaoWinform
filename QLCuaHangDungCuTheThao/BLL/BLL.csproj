@@ -176,7 +176,9 @@
     <Compile Include="Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DonHangBLL.cs" />
+    <Compile Include="SuaChiTietSPBLL.cs" />
     <Compile Include="TaiKhoanBLL.cs" />
+    <Compile Include="XemChiTietSPBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

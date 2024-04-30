@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,18 @@ namespace GUI
 {
     public partial class FormChiTietSP : Form
     {
-        public FormChiTietSP()
+        string productID;
+        private FormXemChiTietSP formXemChiTietSP;
+        private FormSuaChiTietSP formSuaChiTietSP;
+        public FormChiTietSP(string maSP)
         {
+            formXemChiTietSP = new FormXemChiTietSP(maSP);
+            formSuaChiTietSP = new FormSuaChiTietSP(maSP);
+            productID = maSP;
             InitializeComponent();
             btQuayLai_Click(null, null);
         }
-        private FormSuaChiTietSP formSuaChiTietSP = new FormSuaChiTietSP();
-        private FormXemChiTietSP formXemChiTietSP = new FormXemChiTietSP();
+         
 
         private void btClose_Click(object sender, EventArgs e)
         {
@@ -27,9 +33,9 @@ namespace GUI
 
         private void btSua_Click(object sender, EventArgs e)
         {
-
             if (btSua.Text == "Sửa")
             {
+                formSuaChiTietSP.formSuaChiTietSP_Load();
                 bool containsPanel = panel12.Controls.ContainsKey("panelChiTietSP");
                 if (containsPanel) panel12.Controls.RemoveByKey("panelChiTietSP");
                 Panel panelSuaChiTietSP = formSuaChiTietSP.PanelSuaChiTietSP;
@@ -41,6 +47,8 @@ namespace GUI
                 lbHeader.Text = "Sửa thông tin sản phẩm";
             } else //Lưu
             {
+                formSuaChiTietSP.updateProduct();
+                formXemChiTietSP.updateInformationDisplay(formSuaChiTietSP.product, formXemChiTietSP.xemChiTietSPBLL.getAvatarURLSanPham(formSuaChiTietSP.product.MaSP), formXemChiTietSP.xemChiTietSPBLL.getAllNonAvatarURLSanPham(formSuaChiTietSP.product.MaSP));
                 bool containsPanel = panel12.Controls.ContainsKey("panelSuaChiTietSP");
                 if (containsPanel) panel12.Controls.RemoveByKey("panelSuaChiTietSP");
                 Panel panelXemChiTietSP = formXemChiTietSP.PanelXemChiTietSP;
@@ -56,6 +64,7 @@ namespace GUI
 
         private void btQuayLai_Click(object sender, EventArgs e)
         {
+            formXemChiTietSP.updateImg(formXemChiTietSP.xemChiTietSPBLL.getAvatarURLSanPham(formSuaChiTietSP.product.MaSP), formXemChiTietSP.xemChiTietSPBLL.getAllNonAvatarURLSanPham(formSuaChiTietSP.product.MaSP));
             bool containsPanel = panel12.Controls.ContainsKey("panelSuaChiTietSP");
             if (containsPanel) panel12.Controls.RemoveByKey("panelSuaChiTietSP");
             Panel panelXemChiTietSP = formXemChiTietSP.PanelXemChiTietSP;
@@ -65,6 +74,11 @@ namespace GUI
             btXoa.Visible = true;
             btQuayLai.Visible = false;
             lbHeader.Text = "Thông tin sản phẩm";
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

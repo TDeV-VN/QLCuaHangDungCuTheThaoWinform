@@ -46,11 +46,12 @@ namespace GUI
         private void btXoaSP_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void GrVDanhSach_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            FormChiTietSP formChiTietSP = new FormChiTietSP();
+            FormChiTietSP formChiTietSP = new FormChiTietSP(danhSachSanPhamBLL.Listsanpham.Rows[e.RowIndex]["MaSP"].ToString());
             formChiTietSP.ShowDialog();
         }
     /*----------------------------------------------- HẾT SỰ KIỆN------------------------------------------------*/
