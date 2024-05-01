@@ -4,6 +4,7 @@ using System.Net;
 using DAL;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace BLL
 {
@@ -55,8 +56,9 @@ namespace BLL
         {
             try
             {
-                MailAddress mail = new MailAddress(email);
-                return true;
+                string pattern = @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$";
+                Regex regex = new Regex(pattern);
+                return regex.IsMatch(email);
             }
             catch (FormatException)
             {

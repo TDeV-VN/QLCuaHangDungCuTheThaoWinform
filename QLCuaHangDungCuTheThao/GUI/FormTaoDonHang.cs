@@ -257,7 +257,10 @@ namespace GUI
             {
                 DonHangBLL.UpdateSoLuongChiTietHoaDon(ucRowTaoDH.MaSP, ucRowTaoDH.SoLuong);
                 DonHangBLL.tinhChietKhau();
-                tbSoTienKhachDua_pageTaoDonHang__TextChanged(null, null);
+                if (DonHangBLL.tinhTienThua(tbSoTienKhachDua_pageTaoDonHang.Texts))
+                {
+                    lbTienThua_pageTaoDonHang.Text = DonHangBLL.HoaDon.TraLai.ToString("N0") + " VNĐ";
+                }
                 ucRowTaoDH.ThanhTien = DonHangBLL.GetChiTietHoaDon(ucRowTaoDH.MaSP).ThanhTien.ToString();
                 CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
                 lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
