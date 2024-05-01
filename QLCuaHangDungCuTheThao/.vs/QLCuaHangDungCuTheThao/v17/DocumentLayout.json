@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E984AA29-A9B9-47B7-B77C-0E5CCD2E0E83}|GUI\\GUI.csproj|e:\\cnpm\\qlcuahangdungcuthethaowinform\\qlcuahangdungcuthethao\\gui\\qlcuahangdungcuthethao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E984AA29-A9B9-47B7-B77C-0E5CCD2E0E83}|GUI\\GUI.csproj|solutionrelative:gui\\qlcuahangdungcuthethao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E984AA29-A9B9-47B7-B77C-0E5CCD2E0E83}|GUI\\GUI.csproj|e:\\cnpm\\qlcuahangdungcuthethaowinform\\qlcuahangdungcuthethao\\gui\\formtaodonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E984AA29-A9B9-47B7-B77C-0E5CCD2E0E83}|GUI\\GUI.csproj|solutionrelative:gui\\formtaodonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9F9F9061-B601-4065-B87C-97BF8DDE0004}|BLL\\BLL.csproj|e:\\cnpm\\qlcuahangdungcuthethaowinform\\qlcuahangdungcuthethao\\bll\\danhsachdonhangbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9F9061-B601-4065-B87C-97BF8DDE0004}|BLL\\BLL.csproj|solutionrelative:bll\\danhsachdonhangbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E984AA29-A9B9-47B7-B77C-0E5CCD2E0E83}|GUI\\GUI.csproj|e:\\cnpm\\qlcuahangdungcuthethaowinform\\qlcuahangdungcuthethao\\gui\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E984AA29-A9B9-47B7-B77C-0E5CCD2E0E83}|GUI\\GUI.csproj|solutionrelative:gui\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9F9061-B601-4065-B87C-97BF8DDE0004}|BLL\\BLL.csproj|e:\\cnpm\\qlcuahangdungcuthethaowinform\\qlcuahangdungcuthethao\\bll\\donhangbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9F9061-B601-4065-B87C-97BF8DDE0004}|BLL\\BLL.csproj|solutionrelative:bll\\donhangbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{12D1AB7A-95FA-4187-8C5F-F81D8DE7F946}|DAL\\DAL.csproj|E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\dal\\databaseaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12D1AB7A-95FA-4187-8C5F-F81D8DE7F946}|DAL\\DAL.csproj|solutionrelative:dal\\databaseaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23EC1066-C713-4C17-B870-C1AE11E29374}|DTO\\DTO.csproj|e:\\cnpm\\qlcuahangdungcuthethaowinform\\qlcuahangdungcuthethao\\dto\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23EC1066-C713-4C17-B870-C1AE11E29374}|DTO\\DTO.csproj|solutionrelative:dto\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +51,93 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "QLCuaHangDungCuTheThao.cs",
+              "DocumentMoniker": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\GUI\\QLCuaHangDungCuTheThao.cs",
+              "RelativeDocumentMoniker": "GUI\\QLCuaHangDungCuTheThao.cs",
+              "ToolTip": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\GUI\\QLCuaHangDungCuTheThao.cs",
+              "RelativeToolTip": "GUI\\QLCuaHangDungCuTheThao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T12:11:00.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormDangNhap.cs",
+              "DocumentMoniker": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\GUI\\FormDangNhap.cs",
+              "RelativeDocumentMoniker": "GUI\\FormDangNhap.cs",
+              "ToolTip": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\GUI\\FormDangNhap.cs",
+              "RelativeToolTip": "GUI\\FormDangNhap.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACMAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T12:08:14.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DanhSachDonHangBLL.cs",
+              "DocumentMoniker": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\BLL\\DanhSachDonHangBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\DanhSachDonHangBLL.cs",
+              "ToolTip": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\BLL\\DanhSachDonHangBLL.cs",
+              "RelativeToolTip": "BLL\\DanhSachDonHangBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T11:58:03.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DonHangBLL.cs",
+              "DocumentMoniker": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\BLL\\DonHangBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\DonHangBLL.cs",
+              "ToolTip": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\BLL\\DonHangBLL.cs",
+              "RelativeToolTip": "BLL\\DonHangBLL.cs",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAzwMQAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T11:54:10.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\DTO\\HoaDon.cs",
+              "RelativeDocumentMoniker": "DTO\\HoaDon.cs",
+              "ToolTip": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\DTO\\HoaDon.cs",
+              "RelativeToolTip": "DTO\\HoaDon.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAzwCwAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T11:53:26.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FormTaoDonHang.cs",
               "DocumentMoniker": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\GUI\\FormTaoDonHang.cs",
               "RelativeDocumentMoniker": "GUI\\FormTaoDonHang.cs",
               "ToolTip": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\GUI\\FormTaoDonHang.cs",
               "RelativeToolTip": "GUI\\FormTaoDonHang.cs",
-              "ViewState": "AQIAAJ8AAAAAAAAAAAAAAC0AAAAiAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T09:49:00.496Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "DatabaseAccess.cs",
               "DocumentMoniker": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\DAL\\DatabaseAccess.cs",
               "RelativeDocumentMoniker": "DAL\\DatabaseAccess.cs",
               "ToolTip": "E:\\CNPM\\QLCuaHangDungCuTheThaoWinform\\QLCuaHangDungCuTheThao\\DAL\\DatabaseAccess.cs",
               "RelativeToolTip": "DAL\\DatabaseAccess.cs",
-              "ViewState": "AQIAAOwBAAAAAAAAAAAjwLEBAAA+AAAA",
+              "ViewState": "AQIAADkBAAAAAAAAAAAxwEQBAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T09:38:16.057Z"
+              "WhenOpened": "2024-05-01T09:38:16.057Z",
+              "EditorCaption": ""
             }
           ]
         }

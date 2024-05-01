@@ -158,7 +158,7 @@ namespace BLL
             hoaDon.MaNV = maNV;
             hoaDon.GhiChu = ghiChu;
             hoaDon.PhuongThucThanhToan = pttt;
-            hoaDon.ThoiGianLap = DateTime.Now.ToString();
+            hoaDon.ThoiGianLap = DateTime.Now;
             //Thêm hóa đơn vào database
             if (DatabaseAccess.ThemDonHang(hoaDon, listChiTietHD))
             {
@@ -194,7 +194,7 @@ namespace BLL
             string storePhone = "0123456789";
             string storeEmail = "sportshoptdtu@gmail.com";
             string billCode = hoaDon.MaHD;
-            string billDate = hoaDon.ThoiGianLap;
+            string billDate = hoaDon.ThoiGianLap.ToString();
             string staffCode = TaiKhoanBLL.TaiKhoan.MaNV;
             string customerPhone = hoaDon.SDT;          
             int tongTien = hoaDon.TongTienHang;

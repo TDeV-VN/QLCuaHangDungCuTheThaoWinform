@@ -71,6 +71,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Tạo đơn hàng");
             RemoveAllPagePanel();
+            panelPageTaoDonHang = formTaoDonHang.PanelPageTaoDonHang;
             panelPageTaoDonHang.Location = new Point(227, 68);
             this.Controls.Add(panelPageTaoDonHang);
         }

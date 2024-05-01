@@ -26,6 +26,7 @@ namespace GUI
         {          
             get
             {
+                lbMaNV_pageTaoDonHang.Text = TaiKhoanBLL.TaiKhoan.MaNV;
                 return panelPageTaoDonHang;
             }
         }

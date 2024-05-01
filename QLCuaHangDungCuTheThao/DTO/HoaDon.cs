@@ -1,10 +1,12 @@
+using System;
+
 public class HoaDon {
     private string maHD;
     private string maNV;
     private string sdt;
     private string phuongThucThanhToan;
     private int chietKhau;
-    private string thoiGianLap;
+    private DateTime thoiGianLap;
     private int tienKhachPhaiTra;
     private int tienKhachDua;
     private int tongTienHang;
@@ -17,7 +19,7 @@ public class HoaDon {
     public string SDT { get => sdt; set => sdt = value; }
     public string PhuongThucThanhToan { get => phuongThucThanhToan; set => phuongThucThanhToan = value; }
     public int ChietKhau { get => chietKhau; set => chietKhau = value; }
-    public string ThoiGianLap { get => thoiGianLap; set => thoiGianLap = value; }
+    public DateTime ThoiGianLap { get => thoiGianLap; set => thoiGianLap = value; }
     public int TienKhachPhaiTra { get => tienKhachPhaiTra; set => tienKhachPhaiTra = value; }
     public int TienKhachDua { get => tienKhachDua; set => tienKhachDua = value; }
     public int TongTienHang { get => tongTienHang; set => tongTienHang = value; }
@@ -25,7 +27,7 @@ public class HoaDon {
     public string GhiChu { get => ghiChu; set => ghiChu = value; }
     public string TrangThai { get => trangThai; set => trangThai = value; }
 
-    public HoaDon(string MaHD, string MaNV, string SDT, string PhuongThucThanhToan, int ChietKhau, string ThoiGianLap, int TienKhachPhaiTra, int TienKhachDua, int TongTienHang, int TraLai, string GhiChu) {
+    public HoaDon(string MaHD, string MaNV, string SDT, string PhuongThucThanhToan, int ChietKhau, DateTime ThoiGianLap, int TienKhachPhaiTra, int TienKhachDua, int TongTienHang, int TraLai, string GhiChu) {
         this.MaHD = MaHD;
         this.MaNV = MaNV;
         this.SDT = SDT;
@@ -40,7 +42,7 @@ public class HoaDon {
         this.TrangThai = "Hoàn thành";
     }
 
-    public HoaDon(string MaHD, string MaNV, string SDT, string PhuongThucThanhToan, string ThoiGianLap, string GhiChu) {
+    public HoaDon(string MaHD, string MaNV, string SDT, string PhuongThucThanhToan, DateTime ThoiGianLap, string GhiChu) {
         this.MaHD = MaHD;
         this.MaNV = MaNV;
         this.SDT = SDT;

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using DTO;
 using System.Data;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DAL
 {
@@ -188,16 +184,25 @@ namespace DAL
         // Lấy tất cả các đơn hàng từ cơ sở dữ liệu
         public static List<HoaDon> GetAllHoaDon()
         {
-            connect();
-            List<HoaDon> listHoaDon = new List<HoaDon>();
-            SqlCommand cmd = new SqlCommand("Select * From HoaDon", conn);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            //
+            try
             {
-                listHoaDon.Add(new HoaDon(Convert.ToString(reader[0]), Convert.ToString(reader[1]), Convert.ToString(reader[2]), Convert.ToString(reader[3]), Convert.ToInt32(reader[4]), Convert.ToString(reader[5]), Convert.ToInt32(reader[6]), Convert.ToInt32(reader[7]), Convert.ToInt32(reader[8]), Convert.ToInt32(reader[9]), Convert.ToString(reader[10])));
+                connect();
+                List<HoaDon> listHoaDon = new List<HoaDon>();
+                SqlCommand cmd = new SqlCommand("Select * From HoaDon", conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    listHoaDon.Add(new HoaDon(Convert.ToString(reader[0]), Convert.ToString(reader[1]), Convert.ToString(reader[2]), Convert.ToString(reader[3]), Convert.ToInt32(reader[4]), Convert.ToDateTime(reader[5]), Convert.ToInt32(reader[6]), Convert.ToInt32(reader[7]), Convert.ToInt32(reader[8]), Convert.ToInt32(reader[9]), Convert.ToString(reader[10])));
+                }
+                conn.Close();
+                return listHoaDon;
+            }catch
+            {
+                conn.Close();
+                return null;
             }
-            conn.Close();
-            return listHoaDon;
+            
 
         }
 
@@ -336,7 +341,7 @@ namespace DAL
                 foreach (ChiTietHoaDon cthd in listChiTietHD)
                 {
                     // Truyền các tham số của thủ tục add_ChiTietHoaDon
-                    cmdCTHD.Parameters.AddWithValue("@maHD", cthd.MaHD);
+                    cmdCTHD.Parameters.AddWithValue("@maHD", hoaDon.MaHD);
                     cmdCTHD.Parameters.AddWithValue("@maSP", cthd.MaSP);
                     cmdCTHD.Parameters.AddWithValue("@soLuong", cthd.SoLuong);
                     cmdCTHD.Parameters.AddWithValue("@donGia", cthd.DonGia);
@@ -349,7 +354,6 @@ namespace DAL
                 return true;
             } catch (Exception e)
             {
-                MessageBox.Show("Loi: " + e);
                 return false;
             }
 
