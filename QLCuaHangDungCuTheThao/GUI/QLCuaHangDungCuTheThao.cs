@@ -143,9 +143,9 @@ namespace GUI
             this.Controls.Add(panelPageSoQuy);
         }
 
-        private void btTabPageBaoCao_Click(object sender, EventArgs e)
+        private void btTabPageBaoCao_Click(object sender, EventArgs e) //Quản lý
         {
-            CapNhatViTriLbPageHeader("Báo cáo");
+            CapNhatViTriLbPageHeader("Quản lý");
             RemoveAllPagePanel();
             panelPageBaoCao = formBaoCao.PanelPageBaoCao;
             panelPageBaoCao.Location = new Point(227, 68);
