@@ -14,18 +14,19 @@ namespace GUI
 {
     public partial class FormDanhSachDonHang : Form
     {
-        DanhSachDonHangBLL danhSachDonHangBLL = new DanhSachDonHangBLL();
+        DanhSachDonHangBLL danhSachDonHangBLL;
         public FormDanhSachDonHang()
         {
             InitializeComponent();
             tbTimKiemDH.Focus();
             GrVDanhSach.AutoGenerateColumns = false;
-            GrVDanhSach.DataSource = danhSachDonHangBLL.ListDonHang;
         }
         public Panel PanelPageDanhSachDonHang
         {
             get
             {
+                danhSachDonHangBLL = new DanhSachDonHangBLL();
+                GrVDanhSach.DataSource = danhSachDonHangBLL.ListDonHang;
                 TaoDataChoComboBox();
                 return panelPageDanhSachDonHang;
             }

@@ -21,6 +21,7 @@ namespace GUI
             lbSaiEmail.Visible = false;
             tbEmail.Focus();
             formOTP.XacThuc += formOTP_btXacThucThanhCong;
+            formDatLaiMatKhau.DatLaiMK += formDatLaiMatKhau_btDatLaiMK;
         }
 
         static private FormOTP formOTP = new FormOTP();
@@ -30,11 +31,21 @@ namespace GUI
 /*-------------------------------SỰ KIỆN------------------------------------------------------*/
         private void btDangNhap_Click(object sender, EventArgs e)
         {
-            //test
-            TaiKhoanBLL.TaiKhoan.Role = true;
-            TaiKhoanBLL.TaiKhoan.MaNV = "NV001";
-            TaiKhoanBLL.TaiKhoan.TrangThai = true;
-            this.Close();
+            if (!TaiKhoanBLL.kiemTraEmailTonTai(tbEmail.Texts))
+            {
+                lbSaiEmail.Visible = true;
+                lbSaiMatKhau.Visible = false;
+            } else if (!TaiKhoanBLL.verifyPassword(tbMatKhau.Texts))
+            {
+                lbSaiMatKhau.Visible = true;
+                lbSaiEmail.Visible = false;
+            } else if (!TaiKhoanBLL.dangNhap())
+            {
+                MessageBox.Show("Tài khoản đã bị khóa, vui lòng liên hệ quản lý!");
+            } else
+            {
+                this.Close();
+            }
         }
 
         private void btClose_Click(object sender, EventArgs e)
@@ -67,8 +78,22 @@ namespace GUI
         private void formOTP_btXacThucThanhCong()
         {
             this.Controls.Remove(panelOTP);
+            panelDatLaiMatKhau = formDatLaiMatKhau.PanelDatLaiMatKhau;
             panelDatLaiMatKhau.Location = new Point(76, 67);
             this.Controls.Add(panelDatLaiMatKhau);
+        }
+
+        //Xử lý sự kiện đặt lại mật khẩu từ formDatLaiMatKhau
+        private void formDatLaiMatKhau_btDatLaiMK()
+        {
+            if (!TaiKhoanBLL.dangNhap())
+            {
+                MessageBox.Show("Tài khoản đã bị khóa, vui lòng liên hệ quản lý!");
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

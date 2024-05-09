@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
 using DTO;
 using System.Data;
-using System.Windows.Forms;
 
 namespace DAL
 {
@@ -383,11 +382,11 @@ namespace DAL
             conn.Close();
         }
 
-        public static List<string> GetDSTenNhanVien()
+        public static List<string> GetDSTenNhanVien() // lấy danh sách mã nhân viên
         {
             connect();
             List<string> listTenNhanVien = new List<string>();
-            SqlCommand cmd = new SqlCommand("Select TenNV From TaiKhoan", conn);
+            SqlCommand cmd = new SqlCommand("Select MaNV From TaiKhoan", conn);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
@@ -400,8 +399,6 @@ namespace DAL
         //Lấy điêm tích lũy của khách hàng
         public static int layDiem(string sdt)
         {
-            //test
-            MessageBox.Show("Ham lay diem chay");
             try{
                 connect();
                 SqlCommand cmd = new SqlCommand("Select DiemUuDai From KhachHang Where SDT = @sdt", conn);
@@ -410,20 +407,17 @@ namespace DAL
                 {
                     int diem = Convert.ToInt32(cmd.ExecuteScalar());
                     conn.Close();
-                    MessageBox.Show("Diem: " + diem);//test
                     return diem;
                 }
                 else
                 {
                     conn.Close();
-                    MessageBox.Show("Diem: -1");//test
                     return -1;
                 }
             }
             catch
             {
                 conn.Close();
-                MessageBox.Show("Loi");//test
                 return -1;
             }
         }
@@ -440,12 +434,10 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@tenKH", "");
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Thêm khách hàng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information); //test
             }
             catch
             {
                 conn.Close();
-                //MessageBox.Show("Đã tồn tại số điện thoại này", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -556,6 +548,79 @@ namespace DAL
             {
                 conn.Close();
                 return "";
+            }
+        }
+
+        public static bool datLaiMatKhau(string email, string matKhau)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Update TaiKhoan Set Pass = @pass Where Email = @email", conn);
+                cmd.Parameters.AddWithValue("@pass", matKhau);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return true;
+            }
+            catch
+            {
+                conn.Close();
+                return false;
+            }
+        }
+        
+        public static bool getRole(string email)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select TypeAcc From TaiKhoan Where Email = @email", conn);
+                cmd.Parameters.AddWithValue("@email", email);
+                bool role = Convert.ToBoolean(cmd.ExecuteScalar());
+                conn.Close();
+                return role;
+            }
+            catch
+            {
+                conn.Close();
+                return false;
+            }
+        }
+
+        public static string getMaNV(string email)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select MaNV From TaiKhoan Where Email = @email", conn);
+                cmd.Parameters.AddWithValue("@email", email);
+                string maNV = Convert.ToString(cmd.ExecuteScalar());
+                conn.Close();
+                return maNV;
+            }
+            catch
+            {
+                conn.Close();
+                return "";
+            }
+        }
+
+        public static bool kiemTraTrangThaiTaiKhoan(string email)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select TrangThai From TaiKhoan Where Email = @email", conn);
+                cmd.Parameters.AddWithValue("@email", email);
+                bool trangThai = Convert.ToBoolean(cmd.ExecuteScalar());
+                conn.Close();
+                return trangThai;
+            }
+            catch
+            {
+                conn.Close();
+                return false;
             }
         }
     }

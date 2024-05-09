@@ -68,8 +68,14 @@ namespace GUI
 
         private void btXacThuc_Click(object sender, EventArgs e)
         {
+            //test
+            TaiKhoanBLL.TaiKhoan.Email = "thanhtien.z8436@gmail.com";
+            XacThuc?.Invoke();
+            return; //test
+
             if (tbMa.Texts == otp)
             {
+                TaiKhoanBLL.TaiKhoan.Email = tbEmail.Texts;
                 XacThuc?.Invoke(); // Xử lý ở FormDangNhap
             } else
             {

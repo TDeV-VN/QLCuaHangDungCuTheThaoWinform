@@ -69,7 +69,8 @@ namespace BLL
         //kiểm tra email có tồn tại trong hệ thống không
         public static bool kiemTraEmailTonTai(string email)
         {
-            return DatabaseAccess.kiemTraEmail(email);
+            taiKhoan.Email = email;
+            return DatabaseAccess.kiemTraEmail(taiKhoan.Email);
         }
 
         //Băm mật khẩu
@@ -83,7 +84,7 @@ namespace BLL
             }
         }
 
-        //Kiểm tra mật khẩu
+        //Kiểm tra mật khẩu đăng nhập
         public static bool verifyPassword(string enteredPassword)
         {
             string storedHash = DatabaseAccess.layMatKhau(TaiKhoan.Email);
@@ -91,9 +92,28 @@ namespace BLL
             return enteredHash == storedHash;
         }
 
-        public static void setEmail()
+        public static bool datLaiMatKhau(string matKhau)
         {
-            taiKhoan.Email = DatabaseAccess.layEmail(TaiKhoan.MaNV);
+            if (DatabaseAccess.datLaiMatKhau(TaiKhoan.Email, hashPassword(matKhau)))
+            {
+                return true;
+            }
+            return false;
         }
+        public static bool dangNhap()
+        {
+            taiKhoan.TrangThai = DatabaseAccess.kiemTraTrangThaiTaiKhoan(taiKhoan.Email);
+            taiKhoan.Role = DatabaseAccess.getRole(taiKhoan.Email);
+            taiKhoan.MaNV = DatabaseAccess.getMaNV(taiKhoan.Email);
+            if (taiKhoan.TrangThai)
+            {
+                return true;
+            } else
+            {
+                taiKhoan = new TaiKhoan();
+            }
+            return false;
+        }
+
     }
 }

@@ -80,6 +80,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Danh sách đơn hàng");
             RemoveAllPagePanel();
+            panelPageDanhSachDonHang = formDanhSachDonHang.PanelPageDanhSachDonHang;
             panelPageDanhSachDonHang.Location = new Point(227, 68);
             formDanhSachDonHang.setLbSoLuong_TongTien();
             this.Controls.Add(panelPageDanhSachDonHang);
@@ -89,6 +90,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Danh sách sản phẩm");
             RemoveAllPagePanel();
+            panelPageDanhSachSanPham = formDanhSachSanPham.PanelPageDanhSachSanPham;
             panelPageDanhSachSanPham.Location = new Point(227, 68);
             this.Controls.Add(panelPageDanhSachSanPham);
         }
@@ -97,6 +99,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Danh mục sản phẩm");
             RemoveAllPagePanel();
+            panelPageDanhMucSanPham = formDanhMucSanPham.PanelPageDanhMucSanPham;
             panelPageDanhMucSanPham.Location = new Point(227, 68);
             this.Controls.Add(panelPageDanhMucSanPham);
         }
@@ -105,6 +108,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Khách hàng");
             RemoveAllPagePanel();
+            panelPageKhachHang = formKhachHang.PanelPageKhachHang;
             panelPageKhachHang.Location = new Point(227, 68);
             this.Controls.Add(panelPageKhachHang);
         }
@@ -113,6 +117,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Phiếu thu");
             RemoveAllPagePanel();
+            panelPagePhieuThu = formPhieuThu.PanelPagePhieuThu;
             panelPagePhieuThu.Location = new Point(227, 68);
             this.Controls.Add(panelPagePhieuThu);
         }
@@ -121,6 +126,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Phiếu chi");
             RemoveAllPagePanel();
+            panelPagePhieuChi = formPhieuChi.PanelPagePhieuChi;
             panelPagePhieuChi.Location = new Point(227, 68);
             this.Controls.Add(panelPagePhieuChi);
         }
@@ -129,6 +135,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Sổ quỹ");
             RemoveAllPagePanel();
+            panelPageSoQuy = formSoQuy.PanelPageSoQuy;
             panelPageSoQuy.Location = new Point(227, 68);
             this.Controls.Add(panelPageSoQuy);
         }
@@ -137,6 +144,7 @@ namespace GUI
         {
             CapNhatViTriLbPageHeader("Báo cáo");
             RemoveAllPagePanel();
+            panelPageBaoCao = formBaoCao.PanelPageBaoCao;
             panelPageBaoCao.Location = new Point(227, 68);
             this.Controls.Add(panelPageBaoCao);
         }

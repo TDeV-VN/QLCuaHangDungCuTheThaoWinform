@@ -20,6 +20,7 @@ namespace BLL
             this.ListDonHang = DatabaseAccess.GetAllHoaDon();
         }
 
+
         public static int LaySoLuongDonHangHomNay()
         {
             return DatabaseAccess.laySoLuongDonHangHomNay();
