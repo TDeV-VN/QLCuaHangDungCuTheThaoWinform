@@ -254,12 +254,12 @@ namespace GUI
 
                 if (TaiKhoanBLL.TaiKhoan.Role == true) //Quan ly
                 {
-                    btTabPageBaoCao.Enabled = true;
+                    btTabPageQuanLy.Enabled = true;
                     iconPictureBox5.IconColor = Color.WhiteSmoke;
                 }
                 else //Nhan vien
                 {
-                    btTabPageBaoCao.Enabled = false;
+                    btTabPageQuanLy.Enabled = false;
                     iconPictureBox5.IconColor = Color.FromArgb(12, 14, 16);
                 }
 

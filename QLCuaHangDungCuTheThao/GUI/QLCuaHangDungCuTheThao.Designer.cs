@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btSportShop = new System.Windows.Forms.Button();
-            this.btTabPageBaoCao = new System.Windows.Forms.Button();
+            this.btTabPageQuanLy = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
@@ -113,7 +113,7 @@
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.btSportShop);
-            this.panel1.Controls.Add(this.btTabPageBaoCao);
+            this.panel1.Controls.Add(this.btTabPageQuanLy);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel9);
@@ -142,21 +142,21 @@
             this.btSportShop.UseVisualStyleBackColor = false;
             this.btSportShop.Click += new System.EventHandler(this.btSportShop_Click);
             // 
-            // btTabPageBaoCao
+            // btTabPageQuanLy
             // 
-            this.btTabPageBaoCao.FlatAppearance.BorderSize = 0;
-            this.btTabPageBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTabPageBaoCao.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btTabPageBaoCao.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btTabPageBaoCao.Location = new System.Drawing.Point(38, 694);
-            this.btTabPageBaoCao.Margin = new System.Windows.Forms.Padding(2);
-            this.btTabPageBaoCao.Name = "btTabPageBaoCao";
-            this.btTabPageBaoCao.Size = new System.Drawing.Size(180, 47);
-            this.btTabPageBaoCao.TabIndex = 4;
-            this.btTabPageBaoCao.Text = "Báo cáo";
-            this.btTabPageBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTabPageBaoCao.UseVisualStyleBackColor = true;
-            this.btTabPageBaoCao.Click += new System.EventHandler(this.btTabPageBaoCao_Click);
+            this.btTabPageQuanLy.FlatAppearance.BorderSize = 0;
+            this.btTabPageQuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTabPageQuanLy.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btTabPageQuanLy.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btTabPageQuanLy.Location = new System.Drawing.Point(27, 694);
+            this.btTabPageQuanLy.Margin = new System.Windows.Forms.Padding(2);
+            this.btTabPageQuanLy.Name = "btTabPageQuanLy";
+            this.btTabPageQuanLy.Size = new System.Drawing.Size(191, 47);
+            this.btTabPageQuanLy.TabIndex = 4;
+            this.btTabPageQuanLy.Text = "Quản lý";
+            this.btTabPageQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTabPageQuanLy.UseVisualStyleBackColor = true;
+            this.btTabPageQuanLy.Click += new System.EventHandler(this.btTabPageBaoCao_Click);
             // 
             // panel11
             // 
@@ -287,7 +287,7 @@
             // 
             this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.iconPictureBox5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.Gear;
             this.iconPictureBox5.IconColor = System.Drawing.Color.WhiteSmoke;
             this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox5.IconSize = 31;
@@ -859,7 +859,7 @@
         private System.Windows.Forms.Button btTabPageKhachHang;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button btTabPageBaoCao;
+        private System.Windows.Forms.Button btTabPageQuanLy;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
         private System.Windows.Forms.Panel panelFormHeader;
         private System.Windows.Forms.Panel pnlTaiKhoan_pageTaoDonHang;
