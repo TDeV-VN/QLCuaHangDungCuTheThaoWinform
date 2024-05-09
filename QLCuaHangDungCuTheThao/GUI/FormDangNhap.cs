@@ -66,7 +66,7 @@ namespace GUI
             this.Controls.Add(panelDangNhap);
         }
 
-        private void lbQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void lbQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Controls.Remove(panelDangNhap);
             panelDatLaiMatKhau.Location = new Point(76, 67);

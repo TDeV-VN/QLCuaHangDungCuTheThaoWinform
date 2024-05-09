@@ -74,9 +74,10 @@
             this.btIconUser = new FontAwesome.Sharp.IconButton();
             this.btIconUser_text = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.panelMenuQLTaiKhoan = new System.Windows.Forms.FlowLayoutPanel();
+            this.btDangNhap = new System.Windows.Forms.Button();
+            this.btDoiMK = new System.Windows.Forms.Button();
+            this.btDangXuat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -104,7 +105,7 @@
             this.panelFormHeader.SuspendLayout();
             this.panel12.SuspendLayout();
             this.pnlTaiKhoan_pageTaoDonHang.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.panelMenuQLTaiKhoan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -719,51 +720,72 @@
             this.panel17.Size = new System.Drawing.Size(910, 40);
             this.panel17.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // panelMenuQLTaiKhoan
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(698, 174);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(180, 100);
-            this.flowLayoutPanel1.TabIndex = 4;
+            this.panelMenuQLTaiKhoan.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelMenuQLTaiKhoan.Controls.Add(this.btDangNhap);
+            this.panelMenuQLTaiKhoan.Controls.Add(this.btDoiMK);
+            this.panelMenuQLTaiKhoan.Controls.Add(this.btDangXuat);
+            this.panelMenuQLTaiKhoan.Location = new System.Drawing.Point(1235, 66);
+            this.panelMenuQLTaiKhoan.Name = "panelMenuQLTaiKhoan";
+            this.panelMenuQLTaiKhoan.Size = new System.Drawing.Size(180, 93);
+            this.panelMenuQLTaiKhoan.TabIndex = 4;
             // 
-            // button1
+            // btDangNhap
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Quản lý tài khoản";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btDangNhap.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btDangNhap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btDangNhap.FlatAppearance.BorderSize = 0;
+            this.btDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDangNhap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btDangNhap.Location = new System.Drawing.Point(0, 0);
+            this.btDangNhap.Margin = new System.Windows.Forms.Padding(0);
+            this.btDangNhap.Name = "btDangNhap";
+            this.btDangNhap.Size = new System.Drawing.Size(180, 30);
+            this.btDangNhap.TabIndex = 2;
+            this.btDangNhap.Text = "Đăng nhập";
+            this.btDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDangNhap.UseVisualStyleBackColor = false;
+            this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
-            // button3
+            // btDoiMK
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Location = new System.Drawing.Point(0, 30);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 30);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Đăng nhập";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btDoiMK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btDoiMK.FlatAppearance.BorderSize = 0;
+            this.btDoiMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDoiMK.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btDoiMK.Location = new System.Drawing.Point(0, 30);
+            this.btDoiMK.Margin = new System.Windows.Forms.Padding(0);
+            this.btDoiMK.Name = "btDoiMK";
+            this.btDoiMK.Size = new System.Drawing.Size(180, 30);
+            this.btDoiMK.TabIndex = 3;
+            this.btDoiMK.Text = "Đổi mật khẩu";
+            this.btDoiMK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDoiMK.UseVisualStyleBackColor = true;
+            this.btDoiMK.Click += new System.EventHandler(this.btDoiMK_Click);
+            // 
+            // btDangXuat
+            // 
+            this.btDangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btDangXuat.FlatAppearance.BorderSize = 0;
+            this.btDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDangXuat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btDangXuat.Location = new System.Drawing.Point(0, 60);
+            this.btDangXuat.Margin = new System.Windows.Forms.Padding(0);
+            this.btDangXuat.Name = "btDangXuat";
+            this.btDangXuat.Size = new System.Drawing.Size(180, 30);
+            this.btDangXuat.TabIndex = 4;
+            this.btDangXuat.Text = "Đăng xuất";
+            this.btDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDangXuat.UseVisualStyleBackColor = true;
+            this.btDangXuat.Click += new System.EventHandler(this.btDangXuat_Click);
             // 
             // QLCuaHangDungCuTheThao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1415, 766);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panelMenuQLTaiKhoan);
             this.Controls.Add(this.panelFormHeader);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -802,7 +824,7 @@
             this.panelFormHeader.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.pnlTaiKhoan_pageTaoDonHang.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panelMenuQLTaiKhoan.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -856,8 +878,9 @@
         private System.Windows.Forms.Label lbPageHeader;
         private System.Windows.Forms.Panel panel12;
         private RJCodeAdvance.RJControls.RJButton btHuongDan;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.FlowLayoutPanel panelMenuQLTaiKhoan;
+        private System.Windows.Forms.Button btDangNhap;
+        private System.Windows.Forms.Button btDoiMK;
+        private System.Windows.Forms.Button btDangXuat;
     }
 }

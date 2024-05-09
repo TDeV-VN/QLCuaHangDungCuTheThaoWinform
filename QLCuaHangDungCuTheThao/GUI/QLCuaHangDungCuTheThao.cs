@@ -8,9 +8,11 @@ namespace GUI
 {
     public partial class QLCuaHangDungCuTheThao : Form
     {
+        //public static QLCuaHangDungCuTheThao instance { get; private set; } // dùng để gọi các hàng của form này ở những form khác mà không cần khởi tạo đối tượng cũng không cần static
         public QLCuaHangDungCuTheThao()
         {
             InitializeComponent();
+            //instance = this;
             Form_Load(this, EventArgs.Empty);
         }
         
@@ -50,6 +52,7 @@ namespace GUI
         public void Form_Load(object sender, EventArgs e)
         {
             btTabPageTongQuan_Click(sender, e);
+            panelMenuQLTaiKhoan.Visible = false;
             formDangNhap.ShowDialog();
             dangNhap();
         }
@@ -153,14 +156,53 @@ namespace GUI
         //sự kiện click vào group tài khoản trên header
         private void btIconUser_Click(object sender, EventArgs e)
         {
-
+            panelMenuQLTaiKhoan.Visible = !panelMenuQLTaiKhoan.Visible;
+            if (TaiKhoanBLL.TaiKhoan.MaNV == "")
+            {
+                btDangNhap.Enabled = true;
+                btDoiMK.Visible = false;
+                btDangXuat.Visible = false;
+                btDangNhap.Text = "Đăng nhập";
+            } else
+            {
+                btDangNhap.Enabled = false;
+                btDoiMK.Visible = true;
+                btDangXuat.Visible = true;
+                btDangNhap.Text = TaiKhoanBLL.TaiKhoan.MaNV;
+            }
         }
 
         private void btIconUser_text_Click(object sender, EventArgs e)
         {
-
+            btIconUser_Click(null, null);
         }
 
+        private void btDangNhap_Click(object sender, EventArgs e)
+        {
+            formDangNhap = new FormDangNhap();
+            formDangNhap.ShowDialog();
+            dangNhap();
+            btIconUser_Click(sender, e);
+            btTabPageTongQuan_Click(sender, e);
+        }
+
+        private void btDoiMK_Click(object sender, EventArgs e)
+        {
+            formDangNhap = new FormDangNhap();
+            formDangNhap.lbQuenMK_LinkClicked(sender, null);
+            formDangNhap.ShowDialog();
+            dangNhap();
+            btIconUser_Click(sender, e);
+            btTabPageTongQuan_Click(sender, e);
+        }
+
+        private void btDangXuat_Click(object sender, EventArgs e)
+        {
+            TaiKhoanBLL.TaiKhoan = new TaiKhoan();
+            dangNhap();
+            btIconUser_Click(sender, e);
+            btTabPageTongQuan_Click(sender, e);
+        }
         /*------------------------------------------------HẾT CÁC SỰ KIỆN-------------------------------------------------*/
 
         /*------------------------------------------------CÁC HÀM XỬ LÝ---------------------------------------------------*/
@@ -196,7 +238,7 @@ namespace GUI
 
         private void dangNhap()
         {
-            if (TaiKhoanBLL.TaiKhoan.MaNV != "" && TaiKhoanBLL.TaiKhoan.TrangThai == true) //Đã đăng nhập tài khoản đang hoạt động
+            if (TaiKhoanBLL.TaiKhoan.MaNV != "") //Đã đăng nhập
             {
                 //Kích hoạt tất cả chức năng
                 foreach (Control control in panel1.Controls)
@@ -236,11 +278,9 @@ namespace GUI
                 iconPictureBox6.IconColor = Color.FromArgb(12, 14, 16);
                 iconPictureBox5.IconColor = Color.FromArgb(12, 14, 16);
             }
-            if (TaiKhoanBLL.TaiKhoan.MaNV != "" && TaiKhoanBLL.TaiKhoan.TrangThai == false) //Đã đăng nhập tài khoản bị vô hiệu hóa
-            {
-                MessageBox.Show("Tài khoản của bạn đã bị vô hiệu hóa. Vui lòng liên hệ quản lý để biết thêm chi tiết.");
-            }
         }
+
+
         /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/
     }
 }
