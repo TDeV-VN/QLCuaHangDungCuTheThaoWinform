@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelPageBaoCao = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ThongTinCuaHang = new System.Windows.Forms.TabPage();
             this.TaiKhoanNhanVien = new System.Windows.Forms.TabPage();
             this.GrTao = new System.Windows.Forms.GroupBox();
+            this.cbQuyen_tao = new RJCodeAdvance.RJControls.RJComboBox();
             this.tbEmail_tao = new RJCodeAdvance.RJControls.RJTextBox();
             this.btTao = new RJCodeAdvance.RJControls.RJButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.GrThongTin = new System.Windows.Forms.GroupBox();
+            this.cbTrangThai = new RJCodeAdvance.RJControls.RJComboBox();
             this.tbMa = new RJCodeAdvance.RJControls.RJTextBox();
             this.cbQuyen = new RJCodeAdvance.RJControls.RJComboBox();
             this.btLuu = new RJCodeAdvance.RJControls.RJButton();
@@ -62,8 +64,6 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbTrangThai = new RJCodeAdvance.RJControls.RJComboBox();
-            this.cbQuyen_tao = new RJCodeAdvance.RJControls.RJComboBox();
             this.panelPageBaoCao.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.TaiKhoanNhanVien.SuspendLayout();
@@ -135,6 +135,26 @@
             this.GrTao.TabStop = false;
             this.GrTao.Text = "Cấp tài khoản";
             // 
+            // cbQuyen_tao
+            // 
+            this.cbQuyen_tao.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbQuyen_tao.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbQuyen_tao.BorderSize = 2;
+            this.cbQuyen_tao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbQuyen_tao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbQuyen_tao.ForeColor = System.Drawing.Color.DimGray;
+            this.cbQuyen_tao.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbQuyen_tao.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbQuyen_tao.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbQuyen_tao.Location = new System.Drawing.Point(160, 89);
+            this.cbQuyen_tao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbQuyen_tao.MinimumSize = new System.Drawing.Size(150, 24);
+            this.cbQuyen_tao.Name = "cbQuyen_tao";
+            this.cbQuyen_tao.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbQuyen_tao.Size = new System.Drawing.Size(222, 34);
+            this.cbQuyen_tao.TabIndex = 13;
+            this.cbQuyen_tao.Texts = "";
+            // 
             // tbEmail_tao
             // 
             this.tbEmail_tao.BackColor = System.Drawing.SystemColors.Window;
@@ -179,13 +199,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 102);
+            this.label9.Location = new System.Drawing.Point(12, 89);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 21);
             this.label9.TabIndex = 12;
             this.label9.Text = "Quyền";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -216,6 +235,26 @@
             this.GrThongTin.TabIndex = 2;
             this.GrThongTin.TabStop = false;
             this.GrThongTin.Text = "Thông tin tài khoản";
+            // 
+            // cbTrangThai
+            // 
+            this.cbTrangThai.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbTrangThai.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbTrangThai.BorderSize = 2;
+            this.cbTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbTrangThai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbTrangThai.ForeColor = System.Drawing.Color.DimGray;
+            this.cbTrangThai.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbTrangThai.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbTrangThai.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbTrangThai.Location = new System.Drawing.Point(160, 185);
+            this.cbTrangThai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTrangThai.MinimumSize = new System.Drawing.Size(150, 24);
+            this.cbTrangThai.Name = "cbTrangThai";
+            this.cbTrangThai.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTrangThai.Size = new System.Drawing.Size(222, 34);
+            this.cbTrangThai.TabIndex = 12;
+            this.cbTrangThai.Texts = "";
             // 
             // tbMa
             // 
@@ -255,7 +294,7 @@
             this.cbQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbQuyen.MinimumSize = new System.Drawing.Size(150, 24);
             this.cbQuyen.Name = "cbQuyen";
-            this.cbQuyen.Padding = new System.Windows.Forms.Padding(2);
+            this.cbQuyen.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbQuyen.Size = new System.Drawing.Size(222, 34);
             this.cbQuyen.TabIndex = 10;
             this.cbQuyen.Texts = "";
@@ -443,9 +482,9 @@
             this.GrVDanhSachTK.Name = "GrVDanhSachTK";
             this.GrVDanhSachTK.RowHeadersVisible = false;
             this.GrVDanhSachTK.RowHeadersWidth = 51;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            this.GrVDanhSachTK.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            this.GrVDanhSachTK.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.GrVDanhSachTK.RowTemplate.Height = 24;
             this.GrVDanhSachTK.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GrVDanhSachTK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -458,8 +497,8 @@
             // 
             this.MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.MaNV.DataPropertyName = "MaNV";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MaNV.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaNV.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaNV.HeaderText = "NV001";
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
@@ -470,8 +509,8 @@
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle2;
             this.Email.HeaderText = "thanhtien.z8436@gmail.com";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
@@ -482,8 +521,8 @@
             // 
             this.Quyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Quyen.DataPropertyName = "Role";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Quyen.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Quyen.DefaultCellStyle = dataGridViewCellStyle3;
             this.Quyen.HeaderText = "Quyen";
             this.Quyen.MinimumWidth = 6;
             this.Quyen.Name = "Quyen";
@@ -494,53 +533,13 @@
             // 
             this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.TrangThai.DataPropertyName = "TrangThai";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TrangThai.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TrangThai.DefaultCellStyle = dataGridViewCellStyle4;
             this.TrangThai.HeaderText = "TrangThai";
             this.TrangThai.MinimumWidth = 6;
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
             this.TrangThai.Width = 140;
-            // 
-            // cbTrangThai
-            // 
-            this.cbTrangThai.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbTrangThai.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbTrangThai.BorderSize = 2;
-            this.cbTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbTrangThai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbTrangThai.ForeColor = System.Drawing.Color.DimGray;
-            this.cbTrangThai.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbTrangThai.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbTrangThai.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbTrangThai.Location = new System.Drawing.Point(160, 185);
-            this.cbTrangThai.Margin = new System.Windows.Forms.Padding(2);
-            this.cbTrangThai.MinimumSize = new System.Drawing.Size(150, 24);
-            this.cbTrangThai.Name = "cbTrangThai";
-            this.cbTrangThai.Padding = new System.Windows.Forms.Padding(2);
-            this.cbTrangThai.Size = new System.Drawing.Size(222, 34);
-            this.cbTrangThai.TabIndex = 12;
-            this.cbTrangThai.Texts = "";
-            // 
-            // cbQuyen_tao
-            // 
-            this.cbQuyen_tao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbQuyen_tao.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbQuyen_tao.BorderSize = 2;
-            this.cbQuyen_tao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbQuyen_tao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbQuyen_tao.ForeColor = System.Drawing.Color.DimGray;
-            this.cbQuyen_tao.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbQuyen_tao.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbQuyen_tao.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbQuyen_tao.Location = new System.Drawing.Point(160, 102);
-            this.cbQuyen_tao.Margin = new System.Windows.Forms.Padding(2);
-            this.cbQuyen_tao.MinimumSize = new System.Drawing.Size(150, 24);
-            this.cbQuyen_tao.Name = "cbQuyen_tao";
-            this.cbQuyen_tao.Padding = new System.Windows.Forms.Padding(2);
-            this.cbQuyen_tao.Size = new System.Drawing.Size(222, 34);
-            this.cbQuyen_tao.TabIndex = 13;
-            this.cbQuyen_tao.Texts = "";
             // 
             // FormBaoCao
             // 
