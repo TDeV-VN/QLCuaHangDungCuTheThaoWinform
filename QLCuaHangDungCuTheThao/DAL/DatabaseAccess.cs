@@ -623,5 +623,27 @@ namespace DAL
                 return false;
             }
         }
+
+        // Lấy danh sách tài khoản từ cơ sở dữ liệu
+        public static List<TaiKhoan> layDanhSachTaiKhoan()
+        {
+            List<TaiKhoan> result = new List<TaiKhoan>();
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select * From TaiKhoan", conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    result.Add(new TaiKhoan(Convert.ToString(reader["MaNV"]), Convert.ToString(reader["Email"]), Convert.ToBoolean(reader["TypeAcc"]), Convert.ToBoolean(reader["TrangThai"])));
+                }
+            }
+            catch { }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
     }
 }

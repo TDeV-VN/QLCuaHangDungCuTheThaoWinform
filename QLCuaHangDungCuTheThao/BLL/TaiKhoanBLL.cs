@@ -5,13 +5,16 @@ using DAL;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace BLL
 {
     public class TaiKhoanBLL
     {
         private static TaiKhoan taiKhoan = new TaiKhoan();
+        private static List<TaiKhoan> danhSach = new List<TaiKhoan>();
         public static TaiKhoan TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
+        public static List<TaiKhoan> DanhSach { get => danhSach; set => danhSach = value; }
 
         private static String randomCode;
         public static String to;
@@ -115,5 +118,9 @@ namespace BLL
             return false;
         }
 
+        public static void layDanhSach()
+        {
+            danhSach = DatabaseAccess.layDanhSachTaiKhoan();
+        }
     }
 }

@@ -136,7 +136,7 @@
             this.panel4.Location = new System.Drawing.Point(3, 85);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel4.Size = new System.Drawing.Size(254, 36);
+            this.panel4.Size = new System.Drawing.Size(254, 42);
             this.panel4.TabIndex = 3;
             // 
             // btSDT
@@ -169,7 +169,7 @@
             this.tbSDT_pageTaoDonHang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbSDT_pageTaoDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbSDT_pageTaoDonHang.Location = new System.Drawing.Point(10, 0);
-            this.tbSDT_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(5);
+            this.tbSDT_pageTaoDonHang.Margin = new System.Windows.Forms.Padding(0);
             this.tbSDT_pageTaoDonHang.Multiline = false;
             this.tbSDT_pageTaoDonHang.Name = "tbSDT_pageTaoDonHang";
             this.tbSDT_pageTaoDonHang.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
@@ -255,9 +255,9 @@
             this.groupBox2_pageTaoDonHang.Controls.Add(this.tbSoTienKhachDua_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Controls.Add(this.label9_pageTaoDonHang);
             this.groupBox2_pageTaoDonHang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2_pageTaoDonHang.Location = new System.Drawing.Point(3, 119);
+            this.groupBox2_pageTaoDonHang.Location = new System.Drawing.Point(3, 124);
             this.groupBox2_pageTaoDonHang.Name = "groupBox2_pageTaoDonHang";
-            this.groupBox2_pageTaoDonHang.Size = new System.Drawing.Size(254, 576);
+            this.groupBox2_pageTaoDonHang.Size = new System.Drawing.Size(254, 571);
             this.groupBox2_pageTaoDonHang.TabIndex = 3;
             this.groupBox2_pageTaoDonHang.TabStop = false;
             // 

@@ -23,10 +23,9 @@ public class TaiKhoan {
         this.TrangThai = trangThai;
     }
 
-    public TaiKhoan(string maNV, string tenNV, string email, bool role, bool trangThai)
+    public TaiKhoan(string maNV, string email, bool role, bool trangThai)
     {
         this.MaNV = maNV;
-        this.TenNV = tenNV;
         this.Email = email;
         this.Role = role;
         this.TrangThai = trangThai;
