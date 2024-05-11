@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel12 = new System.Windows.Forms.Panel();
             this.lbHeader = new System.Windows.Forms.Label();
             this.btThem = new RJCodeAdvance.RJControls.RJButton();
@@ -200,6 +200,7 @@
             this.btnImage.Text = "Ảnh";
             this.btnImage.TextColor = System.Drawing.Color.White;
             this.btnImage.UseVisualStyleBackColor = false;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // btnAvatar
             // 
@@ -220,6 +221,7 @@
             this.btnAvatar.Text = "Ảnh chính";
             this.btnAvatar.TextColor = System.Drawing.Color.White;
             this.btnAvatar.UseVisualStyleBackColor = false;
+            this.btnAvatar.Click += new System.EventHandler(this.btnAvatar_Click);
             // 
             // pictureBox2
             // 
@@ -247,14 +249,14 @@
             this.GrVDanhMuc.ColumnHeadersVisible = false;
             this.GrVDanhMuc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GrVDanhMuc.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GrVDanhMuc.DefaultCellStyle = dataGridViewCellStyle3;
             this.GrVDanhMuc.GridColor = System.Drawing.Color.Moccasin;
             this.GrVDanhMuc.Location = new System.Drawing.Point(574, 145);
             this.GrVDanhMuc.Name = "GrVDanhMuc";
@@ -289,14 +291,14 @@
             this.GrVTrangThai.ColumnHeadersVisible = false;
             this.GrVTrangThai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.trangThai});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GrVTrangThai.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Moccasin;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GrVTrangThai.DefaultCellStyle = dataGridViewCellStyle4;
             this.GrVTrangThai.GridColor = System.Drawing.Color.Moccasin;
             this.GrVTrangThai.Location = new System.Drawing.Point(574, 290);
             this.GrVTrangThai.Name = "GrVTrangThai";

@@ -1,13 +1,10 @@
 ﻿using BLL;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace GUI
 {
@@ -176,6 +173,107 @@ namespace GUI
             GrVTrangThai.Visible = false;
         }
         /*---------------------------------------------*/
+        //hiển thị các ảnh
+        public void populateImages()
+        {
+            // Thêm ảnh chính, tên file ảnh chính
+            if (urlAvatar != "")
+            {
+                ListImage avatar = new ListImage();
+                avatar.Icon = System.Drawing.Image.FromFile(urlAvatar);
+                avatar.FileName = getBriefFileName(urlAvatar);
+                avatar.BtnDel.Click += AvatarButtonDelete_Click;
+                panelAvatar.Controls.Add(avatar);
+            }
 
+            // Thêm các ảnh phụ, tên file ảnh phụ
+            ListImage[] lstImg = new ListImage[urlNonAvatar.Count];
+            for (int i = 0; i < lstImg.Length; i++)
+            {
+                lstImg[i] = new ListImage();
+                lstImg[i].Icon = System.Drawing.Image.FromFile(urlNonAvatar[i]);
+                lstImg[i].FileName = getBriefFileName(urlNonAvatar[i]);
+                lstImg[i].BtnDel.Click += ListImageButtonDelete_Click;
+                flowLayoutPanel1.Controls.Add(lstImg[i]);
+            }
+        }
+        //thu ngắn tên file ảnh
+        public string getBriefFileName(string name)
+        {
+            name = Path.GetFileName(name);
+            if (name.Length > 14)
+            {
+                name = name.Substring(0, 14) + "...";
+            }
+            return name;
+        }
+        //xóa ảnh phụ
+        private void ListImageButtonDelete_Click(object sender, EventArgs e)
+        {
+            IconButton clickedButton = (IconButton)sender;
+            int imageIndex = flowLayoutPanel1.Controls.IndexOf(clickedButton.Parent);
+
+            if (imageIndex >= 0 && imageIndex < urlNonAvatar.Count)
+            {
+                string deletedFileName = Path.GetFileName(urlNonAvatar[imageIndex]);
+                if (MessageBox.Show($"Bạn có muốn xóa file ảnh {deletedFileName} không ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    flowLayoutPanel1.Controls.RemoveAt(imageIndex);
+                    suaChiTietSPBLL.deleteImage(product.MaSP, urlNonAvatar[imageIndex]);
+                    urlNonAvatar.RemoveAt(imageIndex);
+                }
+            }
+        }
+        //xóa ảnh chính
+        private void AvatarButtonDelete_Click(object sender, EventArgs e)
+        {
+            IconButton clickedButton = (IconButton)sender;
+            string deletedFileName = Path.GetFileName(urlAvatar);
+            if (MessageBox.Show($"Bạn có muốn xóa file ảnh {deletedFileName} khỏi ảnh chính không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                panelAvatar.Controls.RemoveAt(0);
+                suaChiTietSPBLL.deleteImage(product.MaSP, urlAvatar);
+                urlAvatar = "";
+            }
+        }
+
+        private void btnAvatar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg;*.jpeg;*.png";
+            // Chỉ được chọn 1 ảnh
+            dialog.Multiselect = false;
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                urlAvatar = dialog.FileName;
+                if (panelAvatar.Controls.Count > 0)
+                {
+                    panelAvatar.Controls.RemoveAt(0);
+                }
+
+                flowLayoutPanel1.Controls.Clear();
+                // Xóa ảnh phụ trùng với ảnh chính vừa thêm
+
+                populateImages();
+           
+
+            }
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg;*.jpeg;*.png";
+            // Cho phép chọn nhiều ảnh
+            dialog.Multiselect = true;
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                // Tạo lại danh sách hình ảnh
+                urlNonAvatar.AddRange(dialog.FileNames);
+                // Xóa danh sách ảnh hiện tại
+                flowLayoutPanel1.Controls.Clear();
+                populateImages();
+            }
+        }
     }
 }

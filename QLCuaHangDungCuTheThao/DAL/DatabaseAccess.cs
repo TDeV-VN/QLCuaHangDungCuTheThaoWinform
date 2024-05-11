@@ -352,8 +352,6 @@ namespace DAL
                 return true;
             } catch (Exception e)
             {
-                //test
-                MessageBox.Show("Lôi: " + e);
                 return false;
             }
 
@@ -687,14 +685,116 @@ namespace DAL
             }
             catch (Exception e)
             {
-                //test
-                MessageBox.Show("Lôi: " + e);
                 return false;
             }
             finally
             {
                 conn.Close();
             }
+        }
+
+        //lấy danh sách chi tiết hóa đơn có mã sản phẩm tương ứng
+        public static List<ChiTietHoaDon> layChiTietHoaDon(string maSP)
+        {
+            List<ChiTietHoaDon> result = new List<ChiTietHoaDon>();
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select * From ChiTietHoaDon Where MaSP = @maSP", conn);
+                cmd.Parameters.AddWithValue("@maSP", maSP);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    result.Add(new ChiTietHoaDon(Convert.ToString(reader["MaHD"]), maSP , Convert.ToInt32(reader["SoLuong"]), Convert.ToInt32(reader["DonGia"]), Convert.ToInt32(reader["ThanhTien"])));
+                }
+            }
+            catch { }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
+
+        public static bool xoaChiTietHoaDon(string maHD)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Delete ChiTietHoaDon Where MaHD = @maHD", conn);
+                cmd.Parameters.AddWithValue("@maHD", maHD);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static bool xoaHoaDon(string maHD)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Delete HoaDon Where MaHD = @maHD", conn);
+                cmd.Parameters.AddWithValue("@maHD", maHD);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static bool xoaHinhAnhSanPham(string maSP)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Delete HinhAnhSanPham Where MaSP = @maSP", conn);
+                cmd.Parameters.AddWithValue("@maSP", maSP);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static bool xoaSanPham(string maSP)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Delete SanPham Where MaSP = @maSP", conn);
+                cmd.Parameters.AddWithValue("@maSP", maSP);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
     }
 }

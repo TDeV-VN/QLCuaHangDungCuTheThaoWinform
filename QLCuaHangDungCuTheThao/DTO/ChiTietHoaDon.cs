@@ -28,6 +28,14 @@ namespace DTO
             this.DonGia = donGia;
             this.thanhTien = soLuong * donGia;
         }
+        public ChiTietHoaDon(string maHD, string maSP, int soLuong, int donGia, int thanhTien)
+        {
+            this.MaHD = maHD;
+            this.MaSP = maSP;
+            this.SoLuong = soLuong;
+            this.DonGia = donGia;
+            this.thanhTien = thanhTien;
+        }
 
     }
 }

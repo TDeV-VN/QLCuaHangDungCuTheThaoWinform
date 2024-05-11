@@ -14,6 +14,7 @@ namespace GUI
     public partial class FormChiTietSP : Form
     {
         string productID;
+        private XemChiTietSPBLL xemChiTietSPBLL;
         private FormXemChiTietSP formXemChiTietSP;
         private FormSuaChiTietSP formSuaChiTietSP;
         public FormChiTietSP(string maSP)
@@ -21,6 +22,7 @@ namespace GUI
             formXemChiTietSP = new FormXemChiTietSP(maSP);
             formSuaChiTietSP = new FormSuaChiTietSP(maSP);
             productID = maSP;
+            xemChiTietSPBLL = new XemChiTietSPBLL(maSP);
             InitializeComponent();
             btQuayLai_Click(null, null);
         }
@@ -79,6 +81,36 @@ namespace GUI
         private void btXoa_Click(object sender, EventArgs e)
         {
 
+            if (formXemChiTietSP.xemChiTietSPBLL.layChiTietHoaDon(productID))
+            {
+                if (MessageBox.Show("Sản phẩm này đã được bán, thao tác xóa sẽ xóa tất cả các hóa đơn có chứa nó.\nBạn có chắc chắn muốn xóa?", "Nhắc nhở", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (formXemChiTietSP.xemChiTietSPBLL.xoaSanPhamDaBan())
+                    {
+                        MessageBox.Show("Xóa sản phẩm thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa sản phẩm thất bại");
+                    }
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này?", "Nhắc nhở", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (formXemChiTietSP.xemChiTietSPBLL.xoaSanPhamChuaBan())
+                    {
+                        MessageBox.Show("Xóa sản phẩm thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa sản phẩm thất bại");
+                    }
+                }
+            }
         }
     }
 }

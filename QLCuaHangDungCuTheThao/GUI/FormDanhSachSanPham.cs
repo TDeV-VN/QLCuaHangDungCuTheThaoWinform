@@ -13,19 +13,21 @@ namespace GUI
 {
     public partial class FormDanhSachSanPham : Form
     {
-        DanhSachSanPhamBLL danhSachSanPhamBLL = new DanhSachSanPhamBLL();
+        DanhSachSanPhamBLL danhSachSanPhamBLL;
         public FormDanhSachSanPham()
         {
             InitializeComponent();
             tbTimKiem.Focus();
             GrVDanhSach.AutoGenerateColumns = false;
-            GrVDanhSach.DataSource = danhSachSanPhamBLL.Listsanpham;
-            GrVDanhSach.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            
         }
         public Panel PanelPageDanhSachSanPham
         {
             get
             {
+                danhSachSanPhamBLL = new DanhSachSanPhamBLL();
+                GrVDanhSach.DataSource = danhSachSanPhamBLL.Listsanpham;
+                GrVDanhSach.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 taoDataChoComboBox();
                 return panelPageDanhSachSanPham;
             }
@@ -53,6 +55,15 @@ namespace GUI
         {
             FormChiTietSP formChiTietSP = new FormChiTietSP(danhSachSanPhamBLL.Listsanpham.Rows[e.RowIndex]["MaSP"].ToString());
             formChiTietSP.ShowDialog();
+            //refresh lại danh sách sản phẩm phòng trường hợp xóa sản phẩm
+            if (XemChiTietSPBLL.xoa)
+            {
+                danhSachSanPhamBLL = new DanhSachSanPhamBLL();
+                GrVDanhSach.DataSource = danhSachSanPhamBLL.Listsanpham;
+                GrVDanhSach.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                XemChiTietSPBLL.xoa = false;
+            }
+
         }
     /*----------------------------------------------- HẾT SỰ KIỆN------------------------------------------------*/
     private void taoDataChoComboBox()
