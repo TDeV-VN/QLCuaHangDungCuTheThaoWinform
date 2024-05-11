@@ -37,7 +37,6 @@ public class TaiKhoan {
         this.email = "";
         this.maNV = "";
         this.password = "";
-        this.tenNV = "";
         this.trangThai = false;
     }
 }

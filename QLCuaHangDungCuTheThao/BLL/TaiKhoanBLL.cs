@@ -134,5 +134,36 @@ namespace BLL
                 return false;
             }
         }
+
+        public static string themTaiKhoan(string email, bool role)
+        {
+            TaiKhoan taiKhoan = new TaiKhoan();
+            //Tạo mã nhân viên chưa tồn tại trong danhSach
+            int max = 0;
+            foreach (var tk in danhSach)
+            {
+                int maNV;
+                if (int.TryParse(tk.MaNV.Replace("NV", ""), out maNV))
+                {
+                    if (maNV > max)
+                    {
+                        max = maNV;
+                    }
+                }
+            }
+            taiKhoan.MaNV = "NV" + (max + 1).ToString("D3");
+            taiKhoan.Email = email;
+            taiKhoan.Role = role;
+            taiKhoan.TrangThai = true;
+            taiKhoan.Password = hashPassword("12345678"); //Mật khẩu mặc định
+            if (DatabaseAccess.themTaiKhoan(taiKhoan))
+            {
+                layDanhSach();
+                return taiKhoan.MaNV;
+            } else
+            {
+                return "";
+            }
+        }
     }
 }

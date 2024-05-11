@@ -27,4 +27,15 @@ public class SanPham {
         this.MoBan = MoBan;
         this.MoTa = MoTa;
     }
+    public SanPham()
+    {
+        this.MaSP = "";
+        this.MaDM = "";
+        this.TenSP = "";
+        this.TonKho = 0; 
+        this.GiaNhap = 0; 
+        this.GiaBan = 0; 
+        this.MoBan = false;
+        this.MoTa = "";
+    }
 }

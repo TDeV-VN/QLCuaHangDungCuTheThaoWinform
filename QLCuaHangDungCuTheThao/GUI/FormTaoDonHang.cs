@@ -110,7 +110,6 @@ namespace GUI
             lbTongTien_pageTaoDonHang.Text = "";
             lbSoTienKhachPhaiTra_pageTaoDonHang.Text = "";
             lbMaDH.Text = "";
-            lbMaNV_pageTaoDonHang.Text = "";
             lbTienThua_pageTaoDonHang.Text = "";
             tbSDT_pageTaoDonHang.Texts = "";
             tbSoTienKhachDua_pageTaoDonHang.Texts = "";

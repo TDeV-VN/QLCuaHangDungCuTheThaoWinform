@@ -252,6 +252,7 @@ namespace GUI
             }
         }
 
+        /*click ra ngoài chỗ khác thì gv gợi ý danh mục và gv gợi ý trạng thái sẽ ẩn*/
         private void tbMoTa_Enter(object sender, EventArgs e)
         {
             GrVDanhMuc.Visible = false;
@@ -281,7 +282,7 @@ namespace GUI
             GrVDanhMuc.Visible = false;
             GrVTrangThai.Visible = false;
         }
-
+        /*---------------------------------------------*/
         private void btnImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();

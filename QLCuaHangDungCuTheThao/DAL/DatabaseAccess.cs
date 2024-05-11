@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
 using DTO;
 using System.Data;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -661,6 +662,33 @@ namespace DAL
             }
             catch
             {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static bool themTaiKhoan(TaiKhoan taiKhoan)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Insert into TaiKhoan values(@maNV, @tenNV, @email,@matKhau, @typeAcc, @trangThai)", conn);
+                cmd.Parameters.AddWithValue("@maNV", taiKhoan.MaNV);
+                cmd.Parameters.AddWithValue("@email", taiKhoan.Email);
+                cmd.Parameters.AddWithValue("@typeAcc", taiKhoan.Role);
+                cmd.Parameters.AddWithValue("@trangThai", taiKhoan.TrangThai);
+                cmd.Parameters.AddWithValue("@tenNV", "");
+                cmd.Parameters.AddWithValue("@matKhau", taiKhoan.Password);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                //test
+                MessageBox.Show("Lôi: " + e);
                 return false;
             }
             finally

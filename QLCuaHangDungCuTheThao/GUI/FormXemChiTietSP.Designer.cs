@@ -518,7 +518,7 @@
             this.picBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(265, 343);
-            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox.TabIndex = 1;
             this.picBox.TabStop = false;
             // 

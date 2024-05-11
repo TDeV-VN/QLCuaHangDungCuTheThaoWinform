@@ -84,5 +84,24 @@ namespace GUI
                 }
             }
         }
+
+        private void btTao_Click(object sender, EventArgs e)
+        {
+            if (TaiKhoanBLL.kiemTraDinhDangEmail(tbEmail_tao.Texts))
+            {
+                string manv = TaiKhoanBLL.themTaiKhoan(tbEmail_tao.Texts, cbQuyen_tao.SelectedIndex == 0 ? true : false);
+                if (manv != "")
+                {
+                    MessageBox.Show("Tạo tài khoản thành công\n " +
+                        "Mã nhân viên: " +  manv + "\n" +
+                        "Mật khẩu mặc định: 12345678\n " +
+                        "Vui lòng đặt lại mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

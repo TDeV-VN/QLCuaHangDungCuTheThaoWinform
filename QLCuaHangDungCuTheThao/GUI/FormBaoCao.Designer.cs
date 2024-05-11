@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelPageBaoCao = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ThongTinCuaHang = new System.Windows.Forms.TabPage();
@@ -78,7 +78,7 @@
             // 
             this.panelPageBaoCao.Controls.Add(this.tabControl1);
             this.panelPageBaoCao.Location = new System.Drawing.Point(13, 70);
-            this.panelPageBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelPageBaoCao.Margin = new System.Windows.Forms.Padding(4);
             this.panelPageBaoCao.Name = "panelPageBaoCao";
             this.panelPageBaoCao.Size = new System.Drawing.Size(1584, 859);
             this.panelPageBaoCao.TabIndex = 6;
@@ -89,7 +89,7 @@
             this.tabControl1.Controls.Add(this.TaiKhoanNhanVien);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tabControl1.Location = new System.Drawing.Point(4, 4);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1576, 852);
@@ -99,9 +99,9 @@
             // 
             this.ThongTinCuaHang.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ThongTinCuaHang.Location = new System.Drawing.Point(4, 40);
-            this.ThongTinCuaHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ThongTinCuaHang.Margin = new System.Windows.Forms.Padding(4);
             this.ThongTinCuaHang.Name = "ThongTinCuaHang";
-            this.ThongTinCuaHang.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ThongTinCuaHang.Padding = new System.Windows.Forms.Padding(4);
             this.ThongTinCuaHang.Size = new System.Drawing.Size(1568, 808);
             this.ThongTinCuaHang.TabIndex = 0;
             this.ThongTinCuaHang.Text = "Thông tin cửa hàng";
@@ -115,9 +115,9 @@
             this.TaiKhoanNhanVien.Controls.Add(this.GrVDanhSachTK);
             this.TaiKhoanNhanVien.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.TaiKhoanNhanVien.Location = new System.Drawing.Point(4, 40);
-            this.TaiKhoanNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TaiKhoanNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.TaiKhoanNhanVien.Name = "TaiKhoanNhanVien";
-            this.TaiKhoanNhanVien.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TaiKhoanNhanVien.Padding = new System.Windows.Forms.Padding(4);
             this.TaiKhoanNhanVien.Size = new System.Drawing.Size(1568, 808);
             this.TaiKhoanNhanVien.TabIndex = 1;
             this.TaiKhoanNhanVien.Text = "Tài khoản nhân viên";
@@ -169,7 +169,7 @@
             this.tbEmail_tao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbEmail_tao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbEmail_tao.Location = new System.Drawing.Point(211, 49);
-            this.tbEmail_tao.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbEmail_tao.Margin = new System.Windows.Forms.Padding(5);
             this.tbEmail_tao.Multiline = false;
             this.tbEmail_tao.Name = "tbEmail_tao";
             this.tbEmail_tao.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -199,6 +199,7 @@
             this.btTao.Text = "Tạo";
             this.btTao.TextColor = System.Drawing.Color.White;
             this.btTao.UseVisualStyleBackColor = false;
+            this.btTao.Click += new System.EventHandler(this.btTao_Click);
             // 
             // label9
             // 
@@ -269,7 +270,7 @@
             this.tbMa.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbMa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbMa.Location = new System.Drawing.Point(211, 38);
-            this.tbMa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbMa.Margin = new System.Windows.Forms.Padding(5);
             this.tbMa.Multiline = false;
             this.tbMa.Name = "tbMa";
             this.tbMa.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -350,7 +351,7 @@
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbEmail.Location = new System.Drawing.Point(209, 106);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(5);
             this.tbEmail.Multiline = false;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -478,9 +479,9 @@
             this.GrVDanhSachTK.Name = "GrVDanhSachTK";
             this.GrVDanhSachTK.RowHeadersVisible = false;
             this.GrVDanhSachTK.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            this.GrVDanhSachTK.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            this.GrVDanhSachTK.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.GrVDanhSachTK.RowTemplate.Height = 24;
             this.GrVDanhSachTK.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GrVDanhSachTK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -493,8 +494,8 @@
             // 
             this.MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.MaNV.DataPropertyName = "MaNV";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MaNV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaNV.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaNV.HeaderText = "NV001";
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
@@ -505,8 +506,8 @@
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle2;
             this.Email.HeaderText = "thanhtien.z8436@gmail.com";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
@@ -517,8 +518,8 @@
             // 
             this.Quyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Quyen.DataPropertyName = "Role";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Quyen.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Quyen.DefaultCellStyle = dataGridViewCellStyle3;
             this.Quyen.HeaderText = "Quyen";
             this.Quyen.MinimumWidth = 6;
             this.Quyen.Name = "Quyen";
@@ -529,8 +530,8 @@
             // 
             this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.TrangThai.DataPropertyName = "TrangThai";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TrangThai.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TrangThai.DefaultCellStyle = dataGridViewCellStyle4;
             this.TrangThai.HeaderText = "TrangThai";
             this.TrangThai.MinimumWidth = 6;
             this.TrangThai.Name = "TrangThai";
@@ -543,7 +544,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1540, 846);
             this.Controls.Add(this.panelPageBaoCao);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBaoCao";
             this.Text = "FormQuanLy";
             this.panelPageBaoCao.ResumeLayout(false);
