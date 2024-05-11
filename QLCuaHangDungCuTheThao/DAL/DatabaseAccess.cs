@@ -645,5 +645,28 @@ namespace DAL
             }
             return result;
         }
+
+        public static bool capNhatTaiKhoan(TaiKhoan taiKhoan)
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Update TaiKhoan Set Email = @email, TypeAcc = @typeAcc, TrangThai = @trangThai Where MaNV = @maNV", conn);
+                cmd.Parameters.AddWithValue("@email", taiKhoan.Email);
+                cmd.Parameters.AddWithValue("@typeAcc", taiKhoan.Role);
+                cmd.Parameters.AddWithValue("@trangThai", taiKhoan.TrangThai);
+                cmd.Parameters.AddWithValue("@maNV", taiKhoan.MaNV);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

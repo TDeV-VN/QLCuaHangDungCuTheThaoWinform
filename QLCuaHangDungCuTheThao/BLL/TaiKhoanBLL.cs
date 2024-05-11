@@ -122,5 +122,17 @@ namespace BLL
         {
             danhSach = DatabaseAccess.layDanhSachTaiKhoan();
         }
+
+        public static bool capNhat(TaiKhoan taiKhoan)
+        {
+            if (DatabaseAccess.capNhatTaiKhoan(taiKhoan))
+            {
+                layDanhSach();
+                return true;
+            }else
+            {
+                return false;
+            }
+        }
     }
 }
