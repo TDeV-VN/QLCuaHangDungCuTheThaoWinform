@@ -335,12 +335,10 @@ namespace DAL
                 cmdHD.Parameters.AddWithValue("@trangThai", 1);
                 cmdHD.ExecuteNonQuery();
 
-                // Gọi đến thủ tục add_ChiTietHoaDon trong SQL để thêm các chi tiết hóa đơn của hóa đơn bên trên vào CSDL
-                SqlCommand cmdCTHD = new SqlCommand("addChiTietHoaDon", conn);
-                cmdCTHD.CommandType = CommandType.StoredProcedure;
                 foreach (ChiTietHoaDon cthd in listChiTietHD)
                 {
-                    // Truyền các tham số của thủ tục add_ChiTietHoaDon
+                    connect();
+                    SqlCommand cmdCTHD = new SqlCommand("Insert into ChiTietHoaDon values(@maHD, @maSP, @soLuong, @donGia, @thanhTien)", conn);
                     cmdCTHD.Parameters.AddWithValue("@maHD", hoaDon.MaHD);
                     cmdCTHD.Parameters.AddWithValue("@maSP", cthd.MaSP);
                     cmdCTHD.Parameters.AddWithValue("@soLuong", cthd.SoLuong);
@@ -354,6 +352,8 @@ namespace DAL
                 return true;
             } catch (Exception e)
             {
+                //test
+                MessageBox.Show("Lôi: " + e);
                 return false;
             }
 

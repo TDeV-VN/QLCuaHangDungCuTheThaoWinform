@@ -91,7 +91,7 @@
             this.panel12.Controls.Add(this.panelSuaChiTietSP);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 41);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(975, 510);
             this.panel12.TabIndex = 16;
@@ -120,7 +120,7 @@
             this.btThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThem.ForeColor = System.Drawing.Color.White;
             this.btThem.Location = new System.Drawing.Point(607, 443);
-            this.btThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btThem.Margin = new System.Windows.Forms.Padding(2);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(352, 41);
             this.btThem.TabIndex = 14;
@@ -147,7 +147,7 @@
             this.panelSuaChiTietSP.Controls.Add(this.panel5);
             this.panelSuaChiTietSP.Controls.Add(this.panel4);
             this.panelSuaChiTietSP.Location = new System.Drawing.Point(0, 58);
-            this.panelSuaChiTietSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSuaChiTietSP.Margin = new System.Windows.Forms.Padding(2);
             this.panelSuaChiTietSP.Name = "panelSuaChiTietSP";
             this.panelSuaChiTietSP.Size = new System.Drawing.Size(975, 364);
             this.panelSuaChiTietSP.TabIndex = 12;
@@ -155,7 +155,7 @@
             // panelAvatar
             // 
             this.panelAvatar.Location = new System.Drawing.Point(9, 89);
-            this.panelAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.panelAvatar.Name = "panelAvatar";
             this.panelAvatar.Size = new System.Drawing.Size(217, 50);
             this.panelAvatar.TabIndex = 13;
@@ -164,7 +164,7 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 203);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(217, 151);
             this.flowLayoutPanel1.TabIndex = 13;
@@ -174,7 +174,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::GUI.Properties.Resources.camera;
             this.pictureBox3.Location = new System.Drawing.Point(9, 52);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,7 +193,7 @@
             this.btnImage.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.btnImage.ForeColor = System.Drawing.Color.White;
             this.btnImage.Location = new System.Drawing.Point(40, 170);
-            this.btnImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImage.Margin = new System.Windows.Forms.Padding(2);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(186, 28);
             this.btnImage.TabIndex = 18;
@@ -213,7 +213,7 @@
             this.btnAvatar.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.btnAvatar.ForeColor = System.Drawing.Color.White;
             this.btnAvatar.Location = new System.Drawing.Point(40, 52);
-            this.btnAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAvatar.Name = "btnAvatar";
             this.btnAvatar.Size = new System.Drawing.Size(186, 28);
             this.btnAvatar.TabIndex = 17;
@@ -226,7 +226,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::GUI.Properties.Resources.camera;
             this.pictureBox2.Location = new System.Drawing.Point(9, 170);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -334,7 +334,7 @@
             this.panel3.Controls.Add(this.tbMaSP);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(230, 43);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(728, 41);
             this.panel3.TabIndex = 5;
@@ -381,7 +381,7 @@
             this.panel9.Controls.Add(this.tbTrangThai);
             this.panel9.Controls.Add(this.label8);
             this.panel9.Location = new System.Drawing.Point(230, 314);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(329, 41);
             this.panel9.TabIndex = 10;
@@ -429,7 +429,7 @@
             this.panel8.Controls.Add(this.tbTonKho);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Location = new System.Drawing.Point(230, 268);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(329, 42);
             this.panel8.TabIndex = 9;
@@ -476,7 +476,7 @@
             this.panel7.Controls.Add(this.tbGiaBan);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Location = new System.Drawing.Point(230, 223);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(329, 41);
             this.panel7.TabIndex = 9;
@@ -523,7 +523,7 @@
             this.panel6.Controls.Add(this.tbGiaNhap);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(230, 180);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(329, 41);
             this.panel6.TabIndex = 8;
@@ -570,7 +570,7 @@
             this.panel5.Controls.Add(this.tbDanhMuc);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(230, 134);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(329, 41);
             this.panel5.TabIndex = 7;
@@ -618,7 +618,7 @@
             this.panel4.Controls.Add(this.tbTenSP);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(230, 89);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(728, 41);
             this.panel4.TabIndex = 6;
@@ -666,7 +666,7 @@
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
-            this.panel11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Padding = new System.Windows.Forms.Padding(4);
             this.panel11.Size = new System.Drawing.Size(975, 41);
             this.panel11.TabIndex = 17;
             // 
@@ -701,7 +701,7 @@
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormThemSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormChiTietSP";

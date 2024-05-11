@@ -112,7 +112,9 @@ namespace GUI
             lbMaDH.Text = "";
             lbTienThua_pageTaoDonHang.Text = "";
             tbSDT_pageTaoDonHang.Texts = "";
+            tbGhiChu_pageTaoDonHang._TextChanged -= tbSoTienKhachDua_pageTaoDonHang__TextChanged;
             tbSoTienKhachDua_pageTaoDonHang.Texts = "";
+            tbGhiChu_pageTaoDonHang._TextChanged += tbSoTienKhachDua_pageTaoDonHang__TextChanged;
             tbGhiChu_pageTaoDonHang.Texts = "";
             radioTienMat_pageTaoDonHang.Checked = true;
 
@@ -190,6 +192,10 @@ namespace GUI
             {
                 MessageBox.Show("Định dạng số tiền khách đưa không hợp lệ.\nYêu cầu: chuỗi chỉ được bắt đầu bằng chữ số," +
                     "thể chứa dấu phẩy và khoảng trắng, kết thúc bằng chữ số hoặc khoảng trắng, ngoài ra không chứa chữ nào khác");
+                tbSoTienKhachDua_pageTaoDonHang._TextChanged -= tbSoTienKhachDua_pageTaoDonHang__TextChanged;
+                tbSoTienKhachDua_pageTaoDonHang.Texts = "";
+                tbSoTienKhachDua_pageTaoDonHang._TextChanged += tbSoTienKhachDua_pageTaoDonHang__TextChanged;
+
             }
         }
         /*------------------------------------------------HẾT CÁC SỰ KIỆN-------------------------------------------------*/
