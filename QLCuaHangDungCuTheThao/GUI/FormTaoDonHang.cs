@@ -193,7 +193,7 @@ namespace GUI
                     }
                     else
                     {
-                        MessageBox.Show("Tạo đơn hàng không thành công");
+                        MessageBox.Show("Lỗi lưu thông tin đơn hàng!");
                     }
                 } 
             }

@@ -435,3 +435,4 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Googl
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.xml
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Core.pdb
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Core.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.FormXacThucGiaoDich.resources
