@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "qlcuahangdungcuthethao-423116",
+  "private_key_id": "9b628af787304012caa5b35ffbb6a927da33197d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC949uGLc+Oyzx6\nnfsCIqNHnF8SaxkqYViZmnGUPnhyYkI1QL+l6psbTDeKq37Sk2yCqOb7CGqTRa05\nlN0jGnpSVx7/8rVegJzBRTMV8UJ5t4cmvQOZXVdNOvoMFZTGJoxvDul53LA7T+B6\ny6K7RbNE+RsjfhC7Pn3Svhjg6H1o/vBx3tAHAYUH0GmjrZLU4X8iDv4vY7tO4fS0\nY0Fd+hHX775DCeAgwATdgu2vnYVK0USyh2ZmsSrehMwHFanFWgnjgXhvKhgElR4g\n1iRImiRY0AfYhe0PgggKsG5bTYK1jiZlxX1aiR0PbJqyXXkHbeY32W7mGTe7aPc9\nepcSeuKxAgMBAAECggEAEp/DQ2MBWTA6P414lbJHgOnHklMiPfubuL8C1kcVQaS8\n+SOfWFrM+S2tweJFl0ohyaPeua7O4yBhl8TvtnZtml9UmUZY/wqOtU7/7m5B9pWn\nQgemT3et7RN0fFRuicu0mNzlzc+1EjAopGqODJ+OsFxdSssdwXuk1BNUddSfnjk9\nPCoXBFi8yKjNjsZkk5ODjRK8n3EwTRVd9p4+eRpC0kiB/qUZlgjcz/SDGsrVcDj5\np2tHxEemiLV6v6XPjVU7i04Ieq8EtbC4CxhO2xQVj1ugHmQWDlBQNpuDzo8ULEjn\ntus8JzKD0mtDdmlgVxkT5YM39lfGrvgW6L/D/tog8QKBgQD86iA46E7cs4099mKe\nVyH/KGUSoZ+tYkt2AjBkdWLowBA54D+rnftTmJoEmin3RHfrRvWIShU6279/9s/U\nhQzOqn+DiZtwVbqVC0hbGfMFGBjFtRd7MrcNqwxvsXs7nucTuFtvsUDt0Udl3FyO\nqxDEfbRjWtVRUQMPTmlgj/PtmQKBgQDANOaUZO7kIkuqQ9J0FtSnMRT6ZGwyE5eO\n9MgctUN/DwnK7xPqkOi47FxbhoDwAfixfheUlpBLo59pv/BQ2Xnkgda5BIXoPqcr\nOoT+9q2MdiqrO2jFgPnp1qU+J7XKu68WlmVmkYc6/AdSGh/pN3821P5iPFP1mZev\nXZdNPx/c2QKBgAEA3MfdBBMUE0dfptyB8/yTKHN+eKezcCEzuQVtActyl53jKd2A\nbvLR9Cp4ghodB2zDh03XHWZyYLwdOo3ZSUe4nXDkJt23OVpGBS93VuN6SP7fzQwM\nE3XWa+I1jguagcguPw6eYWeQIPxid2uJejONXB3YymfcLmrtILXlXE5hAoGBALz+\nB1AY4xFta4sy/yfpHxZ6247N2dlvjFIj/PTFg2XXKqDhbmryK/NRbgsM+ZGFzrzw\nKE2Rsra9X82CztEg1otK5BCvEuBnYsbN1uJBOiroMlKGqyGxDYvR5E92inmbDLGg\nFnrBVAA6uxQO3hva1vraenurqD7R1OW5mEF7dWAZAoGBANDlSdydmNTioLiugE93\nAZKhqK6g9IQUcplkbcFU7Gea6ZU5SVFSopW0FjqGi3jF6HDFVZf05QbhWy1L9A25\nlOZ35MbM1Dw5mJq+dUZkNnFbcDAFN6dw9FdRvlEn8k/6p2Hoqu+R+tfUEAzltVRd\nIvPqFmtb20lvU5VCrm2nlIpT\n-----END PRIVATE KEY-----\n",
+  "client_email": "sportshop@qlcuahangdungcuthethao-423116.iam.gserviceaccount.com",
+  "client_id": "108538824194264894562",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sportshop%40qlcuahangdungcuthethao-423116.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

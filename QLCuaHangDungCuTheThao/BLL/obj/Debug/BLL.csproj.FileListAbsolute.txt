@@ -347,3 +347,5 @@ D:\CNPM\Project\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Deb
 D:\CNPM\Project\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\CNPM\Project\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.dll
 D:\CNPM\Project\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.Properties.Resources.resources
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\BLL\obj\Debug\BLL.csproj.GenerateResource.cache

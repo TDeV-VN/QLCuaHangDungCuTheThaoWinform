@@ -88,6 +88,7 @@ namespace BLL
         /*Đọc dữ liệu giao dịc từ google sheet*/
         public static string readDataFromGoogleSheet(int dong, int cot)
         {
+            //lấy đường dẫn file json chứa thông tin xác thực
             // Phạm vi truy cập và dịch vụ Google Sheets API
             string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
             string ApplicationName = "Google Sheet Reader"; // Tên ứng dụng
@@ -97,7 +98,9 @@ namespace BLL
 
             // Đọc file json chứa thông tin xác thực
             GoogleCredential credential;
-            using (var stream = new FileStream("E:\\CNPM\\sportShop_googleConsoleCloud_key.json", FileMode.Open, FileAccess.Read))
+            byte[] jsonBytes = Properties.Resources.sportShop_googleConsoleCloud_key;
+            string jsonCredentials = Encoding.UTF8.GetString(jsonBytes);
+            using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(jsonCredentials)))
             {
                 credential = GoogleCredential.FromStream(stream)
                     .CreateScoped(Scopes);

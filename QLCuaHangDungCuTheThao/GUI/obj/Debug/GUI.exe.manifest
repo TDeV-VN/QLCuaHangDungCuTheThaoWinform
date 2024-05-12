@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="29184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="32768">
       <assemblyIdentity name="BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>24KFHw7w0vgUSWM6DGyBzrCsWX1w7h33TiZmruD41JQ=</dsig:DigestValue>
+        <dsig:DigestValue>lwI5gu4B0wW+N1V/9NNlqXNw2DvcQXp35XzVEYkItOs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
