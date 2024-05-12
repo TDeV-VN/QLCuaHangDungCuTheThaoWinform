@@ -85,19 +85,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ot1ZzchSSrf0CoOEAGmxK+AggdastA0VRI8SWpcr/n8=</dsig:DigestValue>
+        <dsig:DigestValue>24KFHw7w0vgUSWM6DGyBzrCsWX1w7h33TiZmruD41JQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="19968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="20480">
       <assemblyIdentity name="DAL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ar/QR8DwDD3jSn/f3tLcSd9uAcVxwrIg7A/rhXXVpHA=</dsig:DigestValue>
+        <dsig:DigestValue>lW57sHwuI17I/vHytoCswvaj+ySOW/oT+ZkwRHOutnY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -174,14 +174,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI.exe" size="293320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GUI.exe" size="294856">
       <assemblyIdentity name="GUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OhYYv1CA43GcUMbx/492DkoQ41YEOJOih+rMQ7qAmU4=</dsig:DigestValue>
+        <dsig:DigestValue>/DTyWOGc+AYklObmmzrwGQ0/9DndYE6z+xUobdKQKhs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

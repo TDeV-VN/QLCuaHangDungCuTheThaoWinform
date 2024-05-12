@@ -833,5 +833,11 @@ namespace DAL
             }
             return "";
         }
+
+        //kiểm tra tính năng xác thực giao dịch có bật không
+        public static bool kiemTraTinhNangXacThucGiaoDich()
+        {
+            return true;
+        }
     }
 }

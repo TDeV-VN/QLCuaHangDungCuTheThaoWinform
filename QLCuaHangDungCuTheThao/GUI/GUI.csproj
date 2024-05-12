@@ -196,6 +196,12 @@
     <Compile Include="FormBaoCao.Designer.cs">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXacThucGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXacThucGiaoDich.Designer.cs">
+      <DependentUpon>FormXacThucGiaoDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXemChiTietSP.cs">
       <SubType>Form</SubType>
     </Compile>

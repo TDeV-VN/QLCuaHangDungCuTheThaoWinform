@@ -159,6 +159,13 @@ namespace BLL
             hoaDon.GhiChu = ghiChu;
             hoaDon.PhuongThucThanhToan = pttt;
             hoaDon.ThoiGianLap = DateTime.Now;
+
+            if (pttt == "Chuyển khoản")
+            {
+                hoaDon.TienKhachDua = hoaDon.TienKhachPhaiTra;
+                hoaDon.TraLai = 0;
+            }
+
             //Thêm hóa đơn vào database
             if (DatabaseAccess.ThemDonHang(hoaDon, listChiTietHD))
             {

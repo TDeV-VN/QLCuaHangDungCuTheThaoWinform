@@ -169,18 +169,50 @@ namespace GUI
         private void btThanhToan_pageTaoDonHang_Click(object sender, EventArgs e)
         {
             string pttt = radioTienMat_pageTaoDonHang.Checked ? "Tiền mặt" : "Chuyển khoản";
-            if (DonHangBLL.TaoDonHang(lbMaNV_pageTaoDonHang.Text, tbGhiChu_pageTaoDonHang.Texts, pttt))
+            if (pttt == "Chuyển khoản")
             {
-                notifyIcon1.ShowBalloonTip(5000);
                 //in hóa đơn
-                printPreviewDialog1.Document = printDocument1;
-                printPreviewDialog1.Size = new Size(1400, 1000); //Đặt kích thước của PrintPreviewDialog
-                printPreviewDialog1.ShowDialog();
+                try
+                {
+                    printPreviewDialog1.Document = printDocument1;
+                    printPreviewDialog1.Size = new Size(1400, 1000); //Đặt kích thước của PrintPreviewDialog
+                    printPreviewDialog1.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tạo đơn hàng không thành công\nLỗi: " + ex.Message);
+                    return;
+                }
+
+                FormXacThucGiaoDich formXacThucGiaoDich = new FormXacThucGiaoDich(DonHangBLL.HoaDon.MaHD, DonHangBLL.HoaDon.TienKhachPhaiTra);
+                if (formXacThucGiaoDich.ShowDialog() == DialogResult.Yes) //giao dịch thành công
+                {
+                    if (DonHangBLL.TaoDonHang(lbMaNV_pageTaoDonHang.Text, tbGhiChu_pageTaoDonHang.Texts, pttt))
+                    {
+                        notifyIcon1.ShowBalloonTip(5000);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tạo đơn hàng không thành công");
+                    }
+                } 
             }
             else
             {
-                MessageBox.Show("Tạo đơn hàng không thành công");
+                if (DonHangBLL.TaoDonHang(lbMaNV_pageTaoDonHang.Text, tbGhiChu_pageTaoDonHang.Texts, pttt))
+                {
+                    notifyIcon1.ShowBalloonTip(5000);
+                    //in hóa đơn
+                    printPreviewDialog1.Document = printDocument1;
+                    printPreviewDialog1.Size = new Size(1400, 1000); //Đặt kích thước của PrintPreviewDialog
+                    printPreviewDialog1.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Tạo đơn hàng không thành công");
+                }
             }
+            
         }
 
         private void tbSoTienKhachDua_pageTaoDonHang__TextChanged(object sender, EventArgs e)
