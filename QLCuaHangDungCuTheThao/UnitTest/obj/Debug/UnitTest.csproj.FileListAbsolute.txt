@@ -99,3 +99,15 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Sheets.v4.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Auth.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Core.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Sheets.v4.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Sheets.v4.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Auth.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Auth.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Core.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Core.xml

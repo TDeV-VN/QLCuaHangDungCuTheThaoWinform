@@ -4,7 +4,7 @@ using BLL;
 namespace UnitTest
 {
     [TestFixture]
-    public class TaiKhoanTest
+    public class UnitTest
     {
         [Test]
         public void testGuiOTP()
@@ -20,6 +20,13 @@ namespace UnitTest
             string password = "123456";
             string result = TaiKhoanBLL.hashPassword(password);
             Assert.AreNotEqual(password, result);
+        }
+
+        [Test]
+        public void testReadDataFromGoogleSheet()
+        {
+            string result = Payment.readDataFromGoogleSheet(0, 0);
+            Assert.IsNotNull(result);
         }
 
     }

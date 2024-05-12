@@ -8,6 +8,12 @@ using System.Text;
 using DTO;
 using DAL;
 using System.Windows.Forms;
+
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Services;
+using Google.Apis.Sheets.v4;
+using Google.Apis.Sheets.v4.Data;
+using System.Collections.Generic;
 namespace BLL
 {
     public class Payment
@@ -40,10 +46,10 @@ namespace BLL
                 apiRequest.accountName = tenTaiKhoan;
                 apiRequest.amount = soTienCanThanhToan;
                 apiRequest.addInfo = noiDungChuyenKhoan;
-                apiRequest.format = "text"; 
+                apiRequest.format = "text";
                 apiRequest.template = "qr_only"; //compact, compact2, print, qr_only
                 var jsonRequest = JsonConvert.SerializeObject(apiRequest);
-            
+
                 var client = new RestClient("https://api.vietqr.io/v2/generate");
                 var request = new RestRequest();
 
@@ -77,6 +83,49 @@ namespace BLL
                 var listBankData = JsonConvert.DeserializeObject<Bank>(bankRawJson);
                 return listBankData;
             }
-        }       
-    }
+        }
+
+        /*Đọc dữ liệu giao dịc từ google sheet*/
+        public static string readDataFromGoogleSheet(int dong, int cot)
+        {
+            // Phạm vi truy cập và dịch vụ Google Sheets API
+            string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
+            string ApplicationName = "Google Sheet Reader"; // Tên ứng dụng
+            string SpreadsheetId = "1UBrY6t5scdSkiqUxpnyaZypojaNN-R_uj_UVjSQKmxo"; // ID của Google Spreadsheet
+            string SheetName = "Trang tính1";//"YOUR_SHEET_NAME"; // Tên của Sheet
+            SheetsService service; // Đối tượng dịch vụ Sheets
+
+            // Đọc file json chứa thông tin xác thực
+            GoogleCredential credential;
+            using (var stream = new FileStream("E:\\CNPM\\sportShop_googleConsoleCloud_key.json", FileMode.Open, FileAccess.Read))
+            {
+                credential = GoogleCredential.FromStream(stream)
+                    .CreateScoped(Scopes);
+            }
+
+            // Tạo dịch vụ Google Sheets API.
+            service = new SheetsService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = ApplicationName,
+            });
+
+            // Định nghĩa yêu cầu để đọc dữ liệu từ Google Sheet
+            SpreadsheetsResource.ValuesResource.GetRequest request =
+                service.Spreadsheets.Values.Get(SpreadsheetId, SheetName);
+
+            // Thực thi yêu cầu để đọc dữ liệu
+            ValueRange response = request.Execute();
+
+            // Xử lý dữ liệu
+            IList<IList<Object>> values = response.Values;
+            if (values != null)
+            {
+                return values[dong][cot].ToString();
+            }
+            else
+            
+                return null;
+            }
+        }
 }

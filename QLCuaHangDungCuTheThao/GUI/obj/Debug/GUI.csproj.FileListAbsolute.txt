@@ -423,3 +423,15 @@ D:\CNPM\Project\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Deb
 D:\CNPM\Project\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\CNPM\Project\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.exe
 D:\CNPM\Project\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\obj\Debug\GUI.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Sheets.v4.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Auth.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Core.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Sheets.v4.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Sheets.v4.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Auth.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Auth.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Core.pdb
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\GUI\bin\Debug\Google.Apis.Core.xml
