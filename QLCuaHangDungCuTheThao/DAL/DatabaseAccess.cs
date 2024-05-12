@@ -14,7 +14,7 @@ namespace DAL
         // Tạo kết nối đến cơ sở dữ liệu
         public static void connect()
         {
-            string connectionString = @"Data Source=tien-laptop;Initial Catalog=QuanLyCuaHangDungCuTheThao;Integrated Security=True;Trust Server Certificate=True";
+            string connectionString = @"Data Source=LAPTOP-PNPQD2F4;Initial Catalog=QuanLyCuaHangDungCuTheThao;Integrated Security=True;Trust Server Certificate=True";
             conn = new SqlConnection(connectionString);
             conn.Open();
         }
@@ -29,16 +29,36 @@ namespace DAL
             conn.Close();
         }
 
-        public static void addSanPham(DanhMucSanPham dmsp)
+        public static void addSanPham(SanPham sp)
         {
-            connect();
-            SqlCommand cmd = new SqlCommand("addSanPham", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ten", dmsp.TenDM);
-            cmd.Parameters.AddWithValue("@moTa", dmsp.MoTa);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("addSanPham", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maDM", sp.MaDM);
+                cmd.Parameters.AddWithValue("@tenSP", sp.TenSP);
+                cmd.Parameters.AddWithValue("@tonKho", sp.TonKho);
+                cmd.Parameters.AddWithValue("@giaNhap", sp.GiaNhap);
+                cmd.Parameters.AddWithValue("@giaBan", sp.GiaBan);
+                if(sp.MoBan)
+                {
+                    cmd.Parameters.AddWithValue("@moBan", 1);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@moBan", 0);
+                }
+                cmd.Parameters.AddWithValue("@moTa", sp.MoTa);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
+
         public static DataTable selectQuery(string sql)
         {
             connect();
@@ -795,6 +815,23 @@ namespace DAL
                 conn.Close();
             }
 
+        }
+
+        public static string getLastProductID()
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select dbo.generateSanPhamCode()", conn);
+                string prodID = Convert.ToString(cmd.ExecuteScalar());
+                conn.Close();
+                return prodID;
+            }
+            catch(Exception ex)
+            {
+                conn.Close();
+            }
+            return "";
         }
     }
 }

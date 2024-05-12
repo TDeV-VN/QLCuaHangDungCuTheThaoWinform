@@ -112,7 +112,14 @@ namespace GUI
             indexImage = (indexImage + urlNonAvatar.Count) % (urlNonAvatar.Count + 1);
             if (indexImage == 0)
             {
-                picBox.Image = Image.FromFile(urlAvatar);
+                if (urlAvatar == "")
+                {
+                    picBox.Image = null;
+                }
+                else
+                {
+                    picBox.Image = Image.FromFile(urlAvatar);
+                }
             }
             else
             {
@@ -126,7 +133,14 @@ namespace GUI
             indexImage = (indexImage + 1) % (urlNonAvatar.Count + 1);
             if(indexImage == 0)
             {
-                picBox.Image = Image.FromFile(urlAvatar);
+                if(urlAvatar == "")
+                {
+                    picBox.Image = null;
+                }
+                else
+                {
+                    picBox.Image = Image.FromFile(urlAvatar);
+                }
             }
             else
             {

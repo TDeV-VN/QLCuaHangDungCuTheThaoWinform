@@ -12,14 +12,17 @@ namespace GUI
     {
         bool isClickOnCate = false;
         bool isClickOnState = false;
-        public string urlAvatar;
+        public string urlAvatar = "";
         public List<string> urlNonAvatar = new List<string>();
-        DataTable category = new DataTable();
+        DataTable category;
         private SanPham product = new SanPham();
         private SuaChiTietSPBLL suaChiTietSPBLL = new  SuaChiTietSPBLL("");
+        string lastProductID;
         public FormThemSP()
         {
             InitializeComponent();
+            lastProductID = suaChiTietSPBLL.getLastProductID();
+            category = suaChiTietSPBLL.ListDanhMuc;
             GrVTrangThai.Visible = false;
             GrVDanhMuc.Visible = false;
             tbMoTa.ScrollBars = ScrollBars.Vertical;
@@ -35,19 +38,12 @@ namespace GUI
         {
             if (isClickOnState)
             {
-                isClickOnCate = false;
+                isClickOnState = false;
                 return;
             }
             else
             {
-                if (product.MoBan)
-                {
-                    tbTrangThai.Texts = "Đang mở bán";
-                }
-                else
-                {
-                    tbTrangThai.Texts = "Dừng bán";
-                }
+                tbTrangThai.Texts = "Đang mở bán";
             }
         }
 
@@ -75,7 +71,7 @@ namespace GUI
             }
             else
             {
-                tbDanhMuc.Texts = suaChiTietSPBLL.getTenDanhMucByMaDM(product.MaDM);
+                tbDanhMuc.Texts = "";
             }
         }
 
@@ -89,6 +85,18 @@ namespace GUI
             dtTrangThai.Rows.Add("Dừng bán");
             GrVTrangThai.DataSource = dtTrangThai;
             GrVTrangThai.Visible = true;
+        }
+
+        private void setCategoryIDForProd(string name)
+        {
+            foreach (DataRow dr in category.Rows)
+            {
+                if (dr["TenDM"].ToString() == name)
+                {
+                    product.MaDM = dr["MaDM"].ToString();
+                    break;
+                }
+            }
         }
 
         public void updateProduct()
@@ -219,7 +227,6 @@ namespace GUI
                 if (MessageBox.Show($"Bạn có muốn xóa file ảnh {deletedFileName} không ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     flowLayoutPanel1.Controls.RemoveAt(imageIndex);
-                    suaChiTietSPBLL.deleteImage(product.MaSP, urlNonAvatar[imageIndex]);
                     urlNonAvatar.RemoveAt(imageIndex);
                 }
             }
@@ -232,9 +239,21 @@ namespace GUI
             if (MessageBox.Show($"Bạn có muốn xóa file ảnh {deletedFileName} khỏi ảnh chính không?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 panelAvatar.Controls.RemoveAt(0);
-                suaChiTietSPBLL.deleteImage(product.MaSP, urlAvatar);
                 urlAvatar = "";
             }
+        }
+
+        private string isOverlapImage(string url)
+        {
+            if(urlNonAvatar.Contains(url))
+            {
+                return "ExistInImage";
+            }
+            else if(url == urlAvatar)
+            {
+                return "ExistInAvatar";
+            }
+            return "NonExist";
         }
 
         private void btnAvatar_Click(object sender, EventArgs e)
@@ -245,7 +264,20 @@ namespace GUI
             dialog.Multiselect = false;
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                urlAvatar = dialog.FileName;
+                string checkExist = isOverlapImage(dialog.FileName);
+                if(checkExist == "NonExist")
+                {
+                    urlAvatar = dialog.FileName;
+                }
+                else if(checkExist == "ExistInImage")
+                {
+                    MessageBox.Show("Đã tồn tại ảnh này ở ảnh phụ. Vui lòng xóa ở ảnh phụ trước khi thêm !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if(checkExist == "ExistInAvatar")
+                {
+                    return;
+                }
                 if (panelAvatar.Controls.Count > 0)
                 {
                     panelAvatar.Controls.RemoveAt(0);
@@ -266,13 +298,127 @@ namespace GUI
             dialog.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg;*.jpeg;*.png";
             // Cho phép chọn nhiều ảnh
             dialog.Multiselect = true;
+            bool isOverlap = false;
+            bool isAdded = false;
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 // Tạo lại danh sách hình ảnh
-                urlNonAvatar.AddRange(dialog.FileNames);
+                string[] fileNames = dialog.FileNames;
+                for(int i = 0; i < fileNames.Length; i++)
+                {
+                    if (isOverlapImage(fileNames[i]) == "NonExist")
+                    {
+                        urlNonAvatar.Add(fileNames[i]);
+                        isAdded = true;
+                    }
+                    else if (isOverlapImage(fileNames[i]) == "ExistInImage")
+                    {
+                        isOverlap = true;
+                    }
+                    else
+                    {
+                        isOverlap = true;
+                    }
+                }
+                if(isOverlap)
+                {
+                    if(isAdded)
+                    {
+                        MessageBox.Show("Đã thêm ảnh không trùng lặp vào ảnh phụ !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thêm được ảnh. Đã có ảnh trùng với ảnh chính hoặc ảnh phụ !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Đã thêm ảnh vào ảnh phụ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 // Xóa danh sách ảnh hiện tại
                 flowLayoutPanel1.Controls.Clear();
                 populateImages();
+            }
+        }
+
+        private void tbGiaNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbGiaBan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbTonKho_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        // set to default
+        private void setTextBoxesToDefault()
+        {
+            isClickOnCate = true;
+            isClickOnState = true;
+
+            tbDanhMuc.Texts = string.Empty;
+            tbGiaBan.Texts = string.Empty;
+            tbGiaNhap.Texts = string.Empty;
+            tbTrangThai.Texts = string.Empty;
+            tbMoTa.Text = string.Empty;
+            tbTenSP.Texts = string.Empty;
+            tbTonKho.Texts = string.Empty;
+            urlAvatar = "";
+            urlNonAvatar.Clear();
+            flowLayoutPanel1.Controls.Clear();
+            panelAvatar.Controls.Clear();
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            if(tbDanhMuc.Texts == "" || tbGiaBan.Texts == "" || tbGiaNhap.Texts == "" || tbTenSP.Texts == "" || tbTonKho.Texts == "" || tbTrangThai.Texts == "") 
+            {
+                MessageBox.Show("Nhập thiếu thông tin. Vui lòng kiểm tra !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            product.TenSP = tbTenSP.Texts;
+            if(tbTrangThai.Texts == "Đang mở bán")
+            {
+                product.MoBan = true;
+            }
+            else
+            {
+                product.MoBan = false;
+            }
+            // product.MaDM = CategoryID
+            setCategoryIDForProd(tbDanhMuc.Texts);
+            product.MoTa = tbMoTa.Text;
+            product.GiaBan = Convert.ToInt32(tbGiaBan.Texts);
+            product.GiaNhap = Convert.ToInt32(tbGiaNhap.Texts);
+            product.TonKho = Convert.ToInt32(tbTonKho.Texts);
+
+            if (MessageBox.Show($"Bạn chắc chắn muốn thêm sản phẩm này ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                suaChiTietSPBLL.addSanPham(product);
+                if (urlAvatar != "")
+                {
+                    suaChiTietSPBLL.addAvatarForAdd(lastProductID, urlAvatar);
+                }
+                if (urlNonAvatar.Count != 0)
+                {
+                    suaChiTietSPBLL.addImageForAdd(lastProductID, urlNonAvatar.ToArray());
+                }
+                MessageBox.Show("Thêm sản phẩm thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                setTextBoxesToDefault();
             }
         }
     }

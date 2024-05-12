@@ -65,7 +65,7 @@ namespace GUI
         {
             if (isClickOnState)
             {
-                isClickOnCate = false;
+                isClickOnState = false;
                 return;
             }
             else

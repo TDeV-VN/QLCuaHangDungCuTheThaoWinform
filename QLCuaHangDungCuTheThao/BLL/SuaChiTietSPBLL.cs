@@ -147,5 +147,25 @@ namespace BLL
             }
             return false;
         }
+
+        public void addImageForAdd(string maSP, string[] URL)
+        {
+            DatabaseAccess.addImage(maSP, URL);
+        }
+
+        public void addAvatarForAdd(string maSP, string URL)
+        {
+            DatabaseAccess.addAvatar(maSP, URL);
+        }
+
+        public void addSanPham(SanPham product)
+        {
+            DatabaseAccess.addSanPham(product);
+        }
+
+        public string getLastProductID()
+        {
+            return DatabaseAccess.getLastProductID();
+        }
     }
 }
