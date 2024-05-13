@@ -32,7 +32,14 @@ namespace BLL
                     string urlImg = DatabaseAccess.GetAvatarURLSanPham(sp.MaSP);
                     if (urlImg != "")
                     {
-                        this.Listsanpham.Rows.Add(Image.FromFile(urlImg), sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
+                        try
+                        {
+                            this.Listsanpham.Rows.Add(Image.FromFile(urlImg), sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
+                        }
+                        catch
+                        {
+                            this.Listsanpham.Rows.Add(null, sp.MaSP, sp.TenSP, sp.MaDM, sp.TonKho);
+                        }
                     }
                     else
                     {
