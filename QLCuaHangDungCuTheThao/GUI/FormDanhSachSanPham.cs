@@ -56,9 +56,8 @@ namespace GUI
             if (!TaiKhoanBLL.TaiKhoan.Role)
             {
                 MessageBox.Show("Bạn không có quyền xóa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                return;
             }
-
 
             //lấy danh sách mã sản phẩm được chọn
             List<string> selectedMa = new List<string>();

@@ -35,6 +35,12 @@ namespace GUI
 
         private void btSua_Click(object sender, EventArgs e)
         {
+            if (!TaiKhoanBLL.TaiKhoan.Role)
+            {
+                MessageBox.Show("Bạn không có quyền sửa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             if (btSua.Text == "Sửa")
             {
                 formSuaChiTietSP.formSuaChiTietSP_Load();
@@ -80,7 +86,11 @@ namespace GUI
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-
+            if (!TaiKhoanBLL.TaiKhoan.Role)
+            {
+                MessageBox.Show("Bạn không có quyền xóa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (formXemChiTietSP.xemChiTietSPBLL.layChiTietHoaDon(productID))
             {
                 if (MessageBox.Show("Sản phẩm này đã được bán, thao tác xóa sẽ xóa tất cả các hóa đơn có chứa nó.\nBạn có chắc chắn muốn xóa?", "Nhắc nhở", MessageBoxButtons.YesNo) == DialogResult.Yes)
