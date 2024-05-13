@@ -19,7 +19,6 @@ namespace GUI
             tbMatKhau.PasswordChar = true;
             lbSaiMatKhau.Visible = false;
             lbSaiEmail.Visible = false;
-            tbEmail.Focus();
             formOTP.XacThuc += formOTP_btXacThucThanhCong;
             formDatLaiMatKhau.DatLaiMK += formDatLaiMatKhau_btDatLaiMK;
         }
@@ -94,6 +93,11 @@ namespace GUI
             {
                 this.Close();
             }
+        }
+
+        private void formLoad(object sender, EventArgs e)
+        {
+            tbEmail.Select();
         }
     }
 }

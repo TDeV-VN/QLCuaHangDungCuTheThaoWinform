@@ -79,7 +79,7 @@
             this.tbMatKhau.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbMatKhau.Location = new System.Drawing.Point(12, 174);
-            this.tbMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.tbMatKhau.Multiline = false;
             this.tbMatKhau.Name = "tbMatKhau";
             this.tbMatKhau.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -112,7 +112,7 @@
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbEmail.Location = new System.Drawing.Point(12, 92);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmail.Multiline = false;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -286,6 +286,7 @@
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangNhap";
+            this.Load += new System.EventHandler(this.formLoad);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panelDangNhap.ResumeLayout(false);

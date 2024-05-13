@@ -18,8 +18,7 @@ namespace GUI
         {
             InitializeComponent();
             tbTimKiem.Focus();
-            GrVDanhSach.AutoGenerateColumns = false;
-            
+            GrVDanhSach.AutoGenerateColumns = false;  
         }
         public Panel PanelPageDanhSachSanPham
         {
