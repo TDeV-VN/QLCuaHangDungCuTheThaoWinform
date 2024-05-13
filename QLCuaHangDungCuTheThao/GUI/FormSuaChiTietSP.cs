@@ -196,6 +196,10 @@ namespace GUI
             {
                 product.MoBan = false;
             }
+            if (tbTonKho.Texts == "0")
+            {
+                product.MoBan = false;
+            }
             product.MoTa = tbMoTa.Text;
             suaChiTietSPBLL.updateProduct(product);
         }
@@ -360,5 +364,15 @@ namespace GUI
             }
         }
 
+        private void tbTonKho__TextChanged(object sender, EventArgs e)
+        {
+            
+            if (tbTonKho.Texts.Equals("0"))
+            {
+                tbTrangThai._TextChanged -= tbTrangThai__TextChanged;
+                tbTrangThai.Texts = "Dừng bán";
+                tbTrangThai._TextChanged += tbTrangThai__TextChanged;
+            }
+        }
     }
 }
