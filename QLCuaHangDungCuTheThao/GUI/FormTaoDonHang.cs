@@ -21,6 +21,7 @@ namespace GUI
             InitializeComponent();
             btTaoDonMoi_pageTaoDonHang_Click(null, null);
             notifyIcon1.Icon = SystemIcons.Information;
+            notifyIcon2.Icon = SystemIcons.Information;
         }
         public Panel PanelPageTaoDonHang
         {          
@@ -52,6 +53,7 @@ namespace GUI
                 CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
                 lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
                 lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";
+                notifyIcon2.ShowBalloonTip(5000);
             } else
             {
                 MessageBox.Show("Định dạng số điện thoại không hợp lệ \n " +
@@ -168,6 +170,12 @@ namespace GUI
 
         private void btThanhToan_pageTaoDonHang_Click(object sender, EventArgs e)
         {
+            if (flpRows_DanhSach1.Controls.Count == 0)
+            {
+                MessageBox.Show("Không thể thanh toán đơn hàng không có sản phẩm");
+                return;
+            }
+
             string pttt = radioTienMat_pageTaoDonHang.Checked ? "Tiền mặt" : "Chuyển khoản";
             if (pttt == "Chuyển khoản" && DonHangBLL.kiemTraTinhNangXacThucGiaoDich())
             {
@@ -319,6 +327,18 @@ namespace GUI
             DonHangBLL.veHoaDon(e, pageWidth, pageHeight);
         }
 
-       /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/
+        private void radioChuyenKhoan_pageTaoDonHang_CheckedChanged(object sender, EventArgs e)
+        {
+            tbSoTienKhachDua_pageTaoDonHang.Enabled = false;
+            lbTienThua_pageTaoDonHang.Enabled = false;
+        }
+
+        private void radioTienMat_pageTaoDonHang_CheckedChanged(object sender, EventArgs e)
+        {
+            tbSoTienKhachDua_pageTaoDonHang.Enabled = true;
+            lbTienThua_pageTaoDonHang.Enabled = true;
+        }
+
+        /*-----------------------------------------------HẾT CÁC HÀM XỬ LÝ------------------------------------------------*/
     }
 }

@@ -49,6 +49,9 @@ namespace GUI
 
             FormThemSP formThemSP = new FormThemSP();
             formThemSP.ShowDialog();
+            danhSachSanPhamBLL = new DanhSachSanPhamBLL();
+            GrVDanhSach.DataSource = danhSachSanPhamBLL.Listsanpham;
+            GrVDanhSach.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void btXoaSP_Click(object sender, EventArgs e)
@@ -122,13 +125,14 @@ namespace GUI
         {
             FormChiTietSP formChiTietSP = new FormChiTietSP(danhSachSanPhamBLL.Listsanpham.Rows[e.RowIndex]["MaSP"].ToString());
             formChiTietSP.ShowDialog();
-            //refresh lại danh sách sản phẩm phòng trường hợp xóa sản phẩm
-            if (XemChiTietSPBLL.xoa)
+            //refresh lại danh sách sản phẩm phòng trường hợp xóa, sửa sản phẩm
+            if (XemChiTietSPBLL.xoa || XemChiTietSPBLL.sua)
             {
                 danhSachSanPhamBLL = new DanhSachSanPhamBLL();
                 GrVDanhSach.DataSource = danhSachSanPhamBLL.Listsanpham;
                 GrVDanhSach.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 XemChiTietSPBLL.xoa = false;
+                XemChiTietSPBLL.sua = false;
             }
 
         }

@@ -112,7 +112,14 @@ namespace GUI
             for (int i = 0; i < lstImg.Length; i++)
             {
                 lstImg[i] = new ListImage();
-                lstImg[i].Icon = System.Drawing.Image.FromFile(urlNonAvatar[i]);
+                try
+                {
+                    lstImg[i].Icon = System.Drawing.Image.FromFile(urlNonAvatar[i]);
+                }
+                catch
+                {
+                    lstImg[i].Icon = null;
+                }
                 lstImg[i].FileName = getBriefFileName(urlNonAvatar[i]);
                 lstImg[i].BtnDel.Click += ListImageButtonDelete_Click;
                 flowLayoutPanel1.Controls.Add(lstImg[i]);

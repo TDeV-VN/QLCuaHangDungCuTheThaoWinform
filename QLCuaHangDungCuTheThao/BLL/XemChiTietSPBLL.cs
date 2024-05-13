@@ -15,6 +15,8 @@ namespace BLL
     {
         private List<String> maHDs = new List<String>();
         public static bool xoa = false; //xác định sản phẩm có bị xóa không để refresh lại danh sách sản phẩm
+        public static bool sua = false; //xác định sản phẩm có bị sửa không để refresh lại danh sách sản phẩm
+
         private List<ChiTietHoaDon> chiTietHoaDons;
         private DataTable listDanhMuc;
         private SanPham product;
