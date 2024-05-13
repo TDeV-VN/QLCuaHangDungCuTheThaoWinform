@@ -130,6 +130,12 @@ namespace BLL
 
         public bool tinhTienThua(string tienKhachDua)
         {
+            if (tienKhachDua == "" || tienKhachDua == null)
+            {
+                hoaDon.TienKhachDua = 0;
+                hoaDon.TraLai = 0;
+                return true;
+            }
             //Kiểm tra định dạng (ràng buộc chuỗi chỉ được bắt đầu bằng chữ số,
             //thể chứa dấu phẩy và khoảng trắng, kết thúc bằng chữ số hoặc khoảng trắng
             //hoặc "VNĐ" hoặc "VND", ngoài ra không chứa chữ nào khác)
@@ -140,13 +146,12 @@ namespace BLL
             //Chuyển đổi sang int
             regex = new Regex(@"[^\d]");
             string cleanedInput = regex.Replace(tienKhachDua, ""); // Loại bỏ tất cả các ký tự không phải là chữ số
+
             if (int.TryParse(cleanedInput, out int result))
             {
                 hoaDon.TienKhachDua = result;
                 hoaDon.TraLai = hoaDon.TienKhachDua - hoaDon.TienKhachPhaiTra;
                 return true;
-                //test
-                MessageBox.Show(hoaDon.TraLai.ToString());
             }
             else
             {

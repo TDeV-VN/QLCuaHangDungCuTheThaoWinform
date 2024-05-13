@@ -41,12 +41,25 @@ namespace GUI
 
         private void btThemSP_Click(object sender, EventArgs e)
         {
+            if (!TaiKhoanBLL.TaiKhoan.Role)
+            {
+                MessageBox.Show("Bạn không có quyền thêm sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             FormThemSP formThemSP = new FormThemSP();
             formThemSP.ShowDialog();
         }
 
         private void btXoaSP_Click(object sender, EventArgs e)
         {
+            if (!TaiKhoanBLL.TaiKhoan.Role)
+            {
+                MessageBox.Show("Bạn không có quyền xóa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+
             //lấy danh sách mã sản phẩm được chọn
             List<string> selectedMa = new List<string>();
             foreach (DataGridViewRow row in GrVDanhSach.Rows)

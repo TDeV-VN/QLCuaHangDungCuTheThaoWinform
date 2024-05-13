@@ -112,9 +112,9 @@ namespace GUI
             lbMaDH.Text = "";
             lbTienThua_pageTaoDonHang.Text = "";
             tbSDT_pageTaoDonHang.Texts = "";
-            tbGhiChu_pageTaoDonHang._TextChanged -= tbSoTienKhachDua_pageTaoDonHang__TextChanged;
+            tbSoTienKhachDua_pageTaoDonHang._TextChanged -= tbSoTienKhachDua_pageTaoDonHang__TextChanged;
             tbSoTienKhachDua_pageTaoDonHang.Texts = "";
-            tbGhiChu_pageTaoDonHang._TextChanged += tbSoTienKhachDua_pageTaoDonHang__TextChanged;
+            tbSoTienKhachDua_pageTaoDonHang._TextChanged += tbSoTienKhachDua_pageTaoDonHang__TextChanged;
             tbGhiChu_pageTaoDonHang.Texts = "";
             radioTienMat_pageTaoDonHang.Checked = true;
 
