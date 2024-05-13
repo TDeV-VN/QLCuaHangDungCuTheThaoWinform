@@ -65,7 +65,7 @@ namespace GUI
             //đọc dữ liệu từ sheet
             
             string mota = Payment.readDataFromGoogleSheet(1, 1).Trim();
-            if (mota == noiDungCK)
+            if (mota.Contains(noiDungCK))
             {
                 string soTienNhanStr = Payment.readDataFromGoogleSheet(1, 2).Trim().Replace(".", "");
                 int soTienNhan = int.Parse(soTienNhanStr);

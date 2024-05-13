@@ -169,7 +169,7 @@ namespace GUI
         private void btThanhToan_pageTaoDonHang_Click(object sender, EventArgs e)
         {
             string pttt = radioTienMat_pageTaoDonHang.Checked ? "Tiền mặt" : "Chuyển khoản";
-            if (pttt == "Chuyển khoản")
+            if (pttt == "Chuyển khoản" && DonHangBLL.kiemTraTinhNangXacThucGiaoDich())
             {
                 //in hóa đơn
                 try
@@ -190,6 +190,7 @@ namespace GUI
                     if (DonHangBLL.TaoDonHang(lbMaNV_pageTaoDonHang.Text, tbGhiChu_pageTaoDonHang.Texts, pttt))
                     {
                         notifyIcon1.ShowBalloonTip(5000);
+                        btTaoDonMoi_pageTaoDonHang_Click(null, null);
                     }
                     else
                     {
@@ -206,6 +207,7 @@ namespace GUI
                     printPreviewDialog1.Document = printDocument1;
                     printPreviewDialog1.Size = new Size(1400, 1000); //Đặt kích thước của PrintPreviewDialog
                     printPreviewDialog1.ShowDialog();
+                    btTaoDonMoi_pageTaoDonHang_Click(null, null);
                 }
                 else
                 {
@@ -299,7 +301,7 @@ namespace GUI
                 {
                     lbTienThua_pageTaoDonHang.Text = DonHangBLL.HoaDon.TraLai.ToString("N0") + " VNĐ";
                 }
-                ucRowTaoDH.ThanhTien = DonHangBLL.GetChiTietHoaDon(ucRowTaoDH.MaSP).ThanhTien.ToString();
+                ucRowTaoDH.ThanhTien = DonHangBLL.GetChiTietHoaDon(ucRowTaoDH.MaSP).ThanhTien.ToString("N0");
                 CapNhatViTriLbSoTienKhachPhaiTra(DonHangBLL.HoaDon.TienKhachPhaiTra.ToString("N0") + " VNĐ");
                 lbTongTien_pageTaoDonHang.Text = DonHangBLL.HoaDon.TongTienHang.ToString("N0") + " VNĐ";
                 lbChietKhau_pageTaoDonHang.Text = DonHangBLL.HoaDon.ChietKhau.ToString("N0") + " VNĐ";

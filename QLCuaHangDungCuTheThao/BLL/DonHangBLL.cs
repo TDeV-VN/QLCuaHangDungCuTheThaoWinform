@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using DAL;
 using DTO;
 using System.Text.RegularExpressions;
+using System.Diagnostics.Eventing.Reader;
 
 namespace BLL
 {
@@ -482,6 +483,11 @@ namespace BLL
             }
 
             return digitCount >= 10;
+        }
+
+        public static bool kiemTraTinhNangXacThucGiaoDich()
+        {
+            return DatabaseAccess.kiemTraTinhNangXacThucGiaoDich();
         }
 
     }

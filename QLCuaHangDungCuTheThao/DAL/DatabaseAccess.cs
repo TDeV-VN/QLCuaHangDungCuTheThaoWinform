@@ -257,6 +257,7 @@ namespace DAL
             SqlDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
             {
+                if (Convert.ToInt32(reader["TonKho"]) <= 0 || !Convert.ToBoolean(reader["MoBan"])) continue;
                 listSanPhamResult.Rows.Add(Convert.ToString(reader["MaSP"]), Convert.ToString(reader["TenSP"]));
             }
             conn.Close();
