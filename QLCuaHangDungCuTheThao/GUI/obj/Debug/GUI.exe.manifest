@@ -85,19 +85,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lwI5gu4B0wW+N1V/9NNlqXNw2DvcQXp35XzVEYkItOs=</dsig:DigestValue>
+        <dsig:DigestValue>q8FBBqJldZOXHCdGCn8eQZurxe27dLMNrJwcls+7IZc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="20480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="21504">
       <assemblyIdentity name="DAL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lW57sHwuI17I/vHytoCswvaj+ySOW/oT+ZkwRHOutnY=</dsig:DigestValue>
+        <dsig:DigestValue>ofSZ9l0goDbTM50gUpHyWhuANTbIGTAAVHGN6Q863ww=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

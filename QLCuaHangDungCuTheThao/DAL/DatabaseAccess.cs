@@ -478,20 +478,6 @@ namespace DAL
             }
         }
 
-        public static string layTenTaiKhoan()
-        {
-            return "Nguyễn Văn A";
-        }
-
-        public static int layNganHangId()
-        {
-            return 970422;
-        }
-
-        public static long laySoTaiKhoan()
-        {
-            return 8471739304;
-        }
 
         public static bool kiemTraEmail(string email)
         {
@@ -837,7 +823,104 @@ namespace DAL
         //kiểm tra tính năng xác thực giao dịch có bật không
         public static bool kiemTraTinhNangXacThucGiaoDich()
         {
-            return true;
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select BatXacThucGiaoDich From ThongTinCuaHang", conn);
+                bool result = Convert.ToBoolean(cmd.ExecuteScalar());
+                conn.Close();
+                return result;
+            }catch
+            {
+                conn.Close();
+                return false;
+            }
+        }
+ 
+
+        public static string layTenTaiKhoan()
+        {
+            return "Nguyễn Văn A";
+        }
+
+        public static int layNganHangId()
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select IDNganHang From ThongTinCuaHang", conn);
+                int result = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
+                return result;
+            }catch
+            {
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public static long laySoTaiKhoan()
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select SoTaiKhoanCuaHang From ThongTinCuaHang", conn);
+                long result = Convert.ToInt64(cmd.ExecuteScalar());
+                conn.Close();
+                return result;
+            }catch (Exception ex)
+            {
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public static string layDiaChiCH()
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select DiaChi From ThongTinCuaHang", conn);
+                string result = Convert.ToString(cmd.ExecuteScalar());
+                conn.Close();
+                return result;
+            }catch
+            {
+                conn.Close();
+                return "";
+            }
+        }
+
+        public static string laySdtCH()
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select SDT From ThongTinCuaHang", conn);
+                string result = Convert.ToString(cmd.ExecuteScalar());
+                conn.Close();
+                return result;
+            }catch
+            {
+                conn.Close();
+                return "";
+            }
+        }
+
+        public static string layEmailCH()
+        {
+            try
+            {
+                connect();
+                SqlCommand cmd = new SqlCommand("Select Email From ThongTinCuaHang", conn);
+                string result = Convert.ToString(cmd.ExecuteScalar());
+                conn.Close();
+                return result;
+            }catch
+            {
+                conn.Close();
+                return "";
+            }
         }
     }
 }

@@ -196,10 +196,10 @@ namespace BLL
             const string storeName = "Sport Shop";
             string goodbye = "Cảm ơn quý khách. Hẹn gặp lại!";
             //Các biến cần thiết
-            string storeAddress = "19 Nguyễn Hữu Thọ, Quận 7, TP.HCM";
+            string storeAddress = DatabaseAccess.layDiaChiCH();
             string title = "Hóa đơn bán hàng";
-            string storePhone = "0123456789";
-            string storeEmail = "sportshoptdtu@gmail.com";
+            string storePhone = DatabaseAccess.laySdtCH();
+            string storeEmail = DatabaseAccess.layEmailCH();
             string billCode = hoaDon.MaHD;
             string billDate = hoaDon.ThoiGianLap.ToString();
             string staffCode = TaiKhoanBLL.TaiKhoan.MaNV;

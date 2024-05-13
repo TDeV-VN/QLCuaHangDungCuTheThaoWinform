@@ -28,8 +28,8 @@ namespace BLL
                 randomCode = (rand.Next(999999)).ToString();
                 MailMessage message = new MailMessage();
                 to = (email).ToString();
-                from = "sportshoptdtu@gmail.com";
-                pass = "agtmgguxvnmdnhuy"; //Mật khẩu ứng dụng tạo trên gmail
+                from = "xacthucsportshoptdtu@gmail.com";
+                pass = "jmdh uycd chir jroh"; //Mật khẩu ứng dụng tạo trên gmail
                 messageBody = "Mã xác thực để đặt lại mật khẩu tài khoản Sport Shop của bạn: " + randomCode + "\nMã này chỉ có hiệu lực trong 5 phút.";
                 message.To.Add(to);
                 message.From = new MailAddress(from);

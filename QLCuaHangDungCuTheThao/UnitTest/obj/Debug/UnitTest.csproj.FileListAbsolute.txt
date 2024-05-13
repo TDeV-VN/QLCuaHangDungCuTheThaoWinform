@@ -111,3 +111,7 @@ E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.xml
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Core.pdb
 E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\Google.Apis.Core.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\System.Security.Permissions.dll
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\CNPM\QLCuaHangDungCuTheThaoWinform\QLCuaHangDungCuTheThao\UnitTest\bin\Debug\System.Security.Permissions.xml
