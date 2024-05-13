@@ -101,7 +101,14 @@ namespace GUI
             if(urlAvatar != "")
             {
                 ListImage avatar = new ListImage();
-                avatar.Icon = System.Drawing.Image.FromFile(urlAvatar);
+                try
+                {
+                    avatar.Icon = System.Drawing.Image.FromFile(urlAvatar);
+                }
+                catch
+                {
+                    avatar.Icon = null;
+                }
                 avatar.FileName = getBriefFileName(urlAvatar);
                 avatar.BtnDel.Click += AvatarButtonDelete_Click;
                 panelAvatar.Controls.Add(avatar);
