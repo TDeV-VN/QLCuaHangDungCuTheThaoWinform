@@ -88,13 +88,18 @@ namespace GUI
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-            
+            timer1.Stop();
+            timer2.Stop();
+            timer3.Stop();
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn lưu hóa đơn bỏ qua việc xác thực giao dịch?", "Cảnh báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes) this.DialogResult = DialogResult.Yes;
         }
 
         private void btDoi_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
+            timer2.Stop();
+            timer3.Stop();
             this.DialogResult = DialogResult.No;
         }
     }
