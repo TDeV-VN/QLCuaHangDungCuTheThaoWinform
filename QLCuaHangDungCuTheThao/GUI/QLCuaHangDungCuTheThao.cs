@@ -240,6 +240,7 @@ namespace GUI
         {
             if (TaiKhoanBLL.TaiKhoan.MaNV != "") //Đã đăng nhập
             {
+                btIconUser_text.Text = TaiKhoanBLL.TaiKhoan.MaNV;
                 //Kích hoạt tất cả chức năng
                 foreach (Control control in panel1.Controls)
                 {
@@ -266,6 +267,7 @@ namespace GUI
             }
             else //Chưa đăng nhập
             {
+                btIconUser_text.Text = "Đăng nhập";
                 //Vô hiệu hóa tất cả chức năng
                 foreach (Control control in panel1.Controls)
                 {

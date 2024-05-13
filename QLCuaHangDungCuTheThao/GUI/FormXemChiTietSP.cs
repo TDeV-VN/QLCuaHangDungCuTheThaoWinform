@@ -63,7 +63,15 @@ namespace GUI
             this.urlNonAvatar = urlImg; 
             if (urlAvatar != "")
             {
-                picBox.Image = Image.FromFile(urlAvatar);
+                try
+                {
+                    picBox.Image = Image.FromFile(urlAvatar);
+                }
+                catch
+                {
+                    MessageBox.Show("Không tìm thấy file ảnh. Có thể file ảnh đã bị chuyển đi nơi khác hoặc đổi tên. Vui lòng kiểm tra !");
+                    picBox.Image = null;
+                }
             }
             else
             {
@@ -90,7 +98,15 @@ namespace GUI
             tbMoTa.Text = product.MoTa;
             if (urlAvatar != "")
             {
-                picBox.Image = Image.FromFile(urlAvatar);
+                try
+                {
+                    picBox.Image = Image.FromFile(urlAvatar);
+                }
+                catch
+                {
+                    MessageBox.Show("Không tìm thấy file ảnh. Có thể file ảnh đã bị chuyển đi nơi khác hoặc đổi tên. Vui lòng kiểm tra !");
+                    picBox.Image = null;
+                }
             }
             else
             {
@@ -118,12 +134,28 @@ namespace GUI
                 }
                 else
                 {
-                    picBox.Image = Image.FromFile(urlAvatar);
+                    try
+                    {
+                        picBox.Image = Image.FromFile(urlAvatar);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không tìm thấy file ảnh. Có thể file ảnh đã bị chuyển đi nơi khác hoặc đổi tên. Vui lòng kiểm tra !");
+                        picBox.Image = null;
+                    }
                 }
             }
             else
             {
-                picBox.Image = Image.FromFile(urlNonAvatar[indexImage - 1]);
+                try
+                {
+                    picBox.Image = Image.FromFile(urlNonAvatar[indexImage - 1]);
+                }
+                catch
+                {
+                    MessageBox.Show("Không tìm thấy file ảnh. Có thể file ảnh đã bị chuyển đi nơi khác hoặc đổi tên. Vui lòng kiểm tra !");
+                    picBox.Image = null;
+                }
             }
             picBox.Refresh();
         }
@@ -139,12 +171,28 @@ namespace GUI
                 }
                 else
                 {
-                    picBox.Image = Image.FromFile(urlAvatar);
+                    try
+                    {
+                        picBox.Image = Image.FromFile(urlAvatar);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không tìm thấy file ảnh. Có thể file ảnh đã bị chuyển đi nơi khác hoặc đổi tên. Vui lòng kiểm tra !");
+                        picBox.Image = null;
+                    }
                 }
             }
             else
             {
-                picBox.Image = Image.FromFile(urlNonAvatar[indexImage-1]);
+                try
+                {
+                    picBox.Image = Image.FromFile(urlNonAvatar[indexImage - 1]);
+                }
+                catch
+                {
+                    MessageBox.Show("Không tìm thấy file ảnh. Có thể file ảnh đã bị chuyển đi nơi khác hoặc đổi tên. Vui lòng kiểm tra !");
+                    picBox.Image = null;
+                }
             }
             picBox.Refresh();
         }
